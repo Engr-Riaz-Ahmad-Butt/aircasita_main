@@ -1,9 +1,11 @@
 import React from "react";
+import { Header } from "../components/Header";
 
 const Main = ({ children }) => {
   return (
     <>
-      <header>Main Header</header>
+    
+      <Header />
       {children}
       <footer>Main Footer</footer>
     </>

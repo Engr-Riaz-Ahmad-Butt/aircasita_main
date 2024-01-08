@@ -1,8 +1,7 @@
 import { useEffect } from "react";
-import Default from "../layout/Default";
 import "../assets/scss/index.scss";
-import { wrapper, store } from "../store/store";
-import { Provider } from "react-redux";
+import Default from "../layout/Default";
+import Providers from "../store/Providers";
 
 // export default function App({ Component, pageProps }) {
 //   return <Component {...pageProps} />
@@ -16,11 +15,11 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   return (
-    <Provider store={store}>
+    <Providers>
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </Provider>
+    </Providers>
   );
 }
-export default wrapper.withRedux(MyApp);
+export default MyApp;
