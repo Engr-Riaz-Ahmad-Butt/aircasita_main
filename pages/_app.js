@@ -1,26 +1,26 @@
 import { useEffect } from "react";
-import Default from "../layout/Default";
 import "../assets/scss/index.scss";
-import { wrapper, store } from "../store/store";
-import { Provider } from "react-redux";
+import Default from "../layout/Default";
+import Providers from "../store/Providers";
+
 
 // export default function App({ Component, pageProps }) {
 //   return <Component {...pageProps} />
 // }
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {``
   // Use the layout defined at the page level, if available
   const Layout = Component.Layout || Default;
   useEffect(() => {
-    require("bootstrap/dist/js/bootstrap.bundle.min.js");
+    require("../assets/scss/index.scss");
   }, []);
 
   return (
-    <Provider store={store}>
+    <Providers>
       <Layout>
         <Component {...pageProps} />
       </Layout>
-    </Provider>
+    </Providers>
   );
 }
-export default wrapper.withRedux(MyApp);
+export default MyApp;
