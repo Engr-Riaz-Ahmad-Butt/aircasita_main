@@ -7,7 +7,6 @@ const Main = ({ children }) => {
     
       <Header />
       {children}
-      <footer>Main Footer</footer>
     </>
   );
 };
