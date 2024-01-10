@@ -16,7 +16,8 @@ const config: Config = {
     colors:{
       primary: "#F67172",
       secondary: "#FCB973",
-      gray:'#FCFCFF'
+      gray:'#FCFCFF',
+      linkColor : '#000FFF'
     }
   },
   plugins: [],
