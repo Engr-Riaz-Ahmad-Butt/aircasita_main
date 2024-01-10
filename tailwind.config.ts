@@ -17,7 +17,9 @@ const config: Config = {
       primary: "#F67172",
       secondary: "#FCB973",
       gray:'#FCFCFF',
-      darkGray:'rgb(156 163 175)'
+      darkGray:'rgb(156 163 175)',
+      lite_gray:"#eeeeee"
+      // white:"#ffffff"
     }
   },
   plugins: [],
