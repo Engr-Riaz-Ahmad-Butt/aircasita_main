@@ -9,3 +9,21 @@ $theme-colors: (
      "site-primary": #F67172,
      "site-secondary": #FCB973,
 );
+::-webkit-scrollbar {
+     width: 0.0rem;
+     height: 0rem;
+   }
+   ::-webkit-scrollbar-track {
+     background: theme-color("site-secondary1");
+   }
+   ::-webkit-scrollbar-thumb {
+     background-color: #CECECE; /* color of the scroll thumb */
+     border-radius: 1.25rem; /* roundness of the scroll thumb */
+   }
+   ::-webkit-scrollbar-thumb:hover {
+     background: #A8A8A8;
+   }
+.home-container{
+     max-height: 90vh;
+     overflow: auto;
+}
