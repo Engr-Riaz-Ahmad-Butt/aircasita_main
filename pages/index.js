@@ -1,4 +1,5 @@
 import MapComponent from "../components/home/Map";
+import NavBar from "../components/home/NavBar";
 import { PropertyCard } from "../components/home/PropertyCard";
 import Main from "../layout/Main";
 import PropertyImg from "../public/property.jpg";
@@ -74,21 +75,26 @@ export default function Home() {
   ];
 
   return (
-    <div
-      className="px-8 grid grid-cols-12 gap-5 "
-      style={{ overflow: "hidden" }}
-    >
-      <div className="col-span-8 grid grid-cols-3 gap-5">
-        {propertyData.map((property, index) => (
-          <div key={index} className="col-span-1">
-            <PropertyCard {...property} />
+    <>
+            <NavBar />
+
+      <div className="px-4 md:px-8 grid grid-cols-1 md:grid-cols-12 gap-5 h-screen">
+        <div className="col-span-12 md:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-5 home-container">
+          {propertyData.map((property, index) => (
+            <div key={index} className="col-span-1 md:col-span-1/3">
+              <PropertyCard {...property} />
+            </div>
+          ))}
+        </div>
+        <div className="col-span-12 md:col-span-5 mt-8">
+          <div className="sticky top-0">
+            <div className="md:h-screen h-64">
+              <MapComponent />
+            </div>
           </div>
-        ))}
+        </div>
       </div>
-      <div className="col-span-4 grid grid-cols-1 mt-8">
-        <MapComponent />
-      </div>
-    </div>
+    </>
   );
 }
 
