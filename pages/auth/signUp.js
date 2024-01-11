@@ -1,18 +1,26 @@
 import React, { useEffect, useRef, useState } from "react";
 import Auth from "../../layout/Auth";
 import { IoIosCamera } from "react-icons/io";
-const signUp = () => {
+import { FaEye } from "react-icons/fa";
+import { FaEyeSlash } from "react-icons/fa";
+const SignUp = () => {
   const fileInputRef = useRef(null);
-  const dumy = "../../assets/imgs/dumy.png";
   const [imageUrl, setImageUrl] = useState("");
 
   const [selectedFile, setSelectedFile] = useState(null);
+
+  const [showPassword, setShowPassword] = useState(false);
+
+  const handleTogglePassword = () => {
+    setShowPassword(!showPassword);
+  };
 
   const handleCameraIconClick = () => {
     if (fileInputRef.current) {
       fileInputRef.current.click();
     }
   };
+
   const handleFileChange = (e) => {
     e.preventDefault();
     const file = e.target.files[0];
@@ -108,15 +116,19 @@ const signUp = () => {
             >
               Password
             </label>
-            <input
-              className="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
-              id="password"
-              type="password"
-              placeholder="*********"
-            />
-            <p className="text-primary text-xs italic">
-              Please choose a password.
-            </p>
+            <div className="flex flex-row justify-center items-center border border-red-500 rounded w-full py-2 px-3  mb-3 leading-tight focus:outline-none focus:shadow-outline">
+              <input
+                className=" appearance-none  focus:outline-none w-full h-full"
+                type={showPassword ? "text" : "password"}
+                placeholder="*********"
+                name="password"
+                // value="password"
+                onClick={(e) => setShowPassword(e.target.value)}
+              />
+              <span className="password-icon" onClick={handleTogglePassword}>
+                {showPassword ? <FaEye /> : <FaEyeSlash />}
+              </span>
+            </div>
           </div>
 
           <div className="mb-2">
@@ -146,8 +158,8 @@ const signUp = () => {
           <div className="flex ">
             <p className="pr-2 text-sm mt-3 mb-1">
               Already have an acount :
-              <a href="/auth/signIn" className="text-primary pl-1">
-                Sign In
+              <a href="/auth/LogIn" className="text-primary pl-1">
+                Log In
               </a>
             </p>
           </div>
@@ -160,7 +172,7 @@ const signUp = () => {
               acount:
             </p>
             <p className="text-sm">
-              <a href="signIn">signIn</a> by your name & phone number
+              <a href="signIn">LogIn</a> by your name & phone number
             </p>
           </div>
         </form>
@@ -169,4 +181,4 @@ const signUp = () => {
   );
 };
 
-export default signUp;
+export default SignUp;
