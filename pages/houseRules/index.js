@@ -15,7 +15,7 @@ import Picture13 from "../../assets/imgs/Picture13.jpg";
 import Picture14 from "../../assets/imgs/Picture14.jpg";
 import Picture15 from "../../assets/imgs/Picture15.png";
 
-const houseRules = () => {
+const HouseRules = () => {
   const houseRulesData = [
     {
       img: Picture1.src,
@@ -107,7 +107,7 @@ const houseRules = () => {
   };
 
   return (
-    <div className="md:container md:mx-auto">
+    <div className="md:container md:mx-auto p-5">
       <div className="flex h-screen justify-center8">
         <div className="flex-1 p-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
@@ -153,4 +153,6 @@ const houseRules = () => {
   );
 };
 
-export default houseRules;
+export default HouseRules;
+
+

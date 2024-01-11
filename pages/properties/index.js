@@ -1,15 +1,23 @@
-import React from "react";
+"use-Client"
+
+import React, { useState } from "react";
 import { FaHome, FaStar, FaWifi } from "react-icons/fa";
 import { LuParkingCircle } from "react-icons/lu";
-import Dropdown from "../components/dropDown";
+import Dropdown from "../../components/dropDown";
 import { TbBrandCarbon, TbToolsKitchen2 } from "react-icons/tb";
 import { MdElevator } from "react-icons/md";
 import { GiSmokeBomb } from "react-icons/gi";
 import { CiStar } from "react-icons/ci";
 
-const properties = (props) => {
+const Properties = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className="flex flex-col sm:flex-row h-screen">
+    <div className="flex flex-col sm:flex-row h-screen md:p-5">
       <div className="flex-1 p-4">
         <div>
           <h3 className="text-2xl font-bold py-2">ENTER APPATRMENT</h3>
@@ -99,19 +107,19 @@ const properties = (props) => {
         </div>
       </div>
       <div className="bg-gray-800 text-white w-full sm:w-96 flex items-center justify-center">
-        <div class="flex justify-center items-center rounded h-96 p-5">
+        <div class="flex justify-center items-center rounded p-5">
           <div class="bg-white rounded-md shadow-lg p-6 w-full h-full">
             <div className="flex items-center">
               <span className="line-through text-1xl p-1">$1,999</span>
-              <span className="text-2xl font-bold p-1">$1,499</span>
+              <span className="text-1xl font-bold p-1">$1,499</span>
               <span className="text-1xl p-1">/month</span>
               <span className="text-1xl p-1">
                 <CiStar />
               </span>
-              <span>4.89(9 Reviews)</span>
+              <span>4.89(9.Reviews)</span>
             </div>
-            <div>
-              <div className="grid grid-cols-2 border rounded">
+            <div className="border-2 rounded">
+              <div className="grid grid-cols-2">
                 <div className="border-r-2 p-3">
                   <label className="block text-sm font-medium text-gray-700">
                     Check-in
@@ -126,16 +134,93 @@ const properties = (props) => {
                   <p className="mt-1 text-sm text-gray-500">3/1/2024</p>
                 </div>
               </div>
-              <div className="border p-2">
-                <Dropdown title="Guests" />
+              <div className=" border-t-2 border-b-2 p-2">
+                {/* <Dropdown title="Guests" /> */}
+
+                <div className="relative text-left flex">
+                  <button
+                    id="dropdownDefaultButton"
+                    onClick={toggleDropdown}
+                    className="text-white bg-blue-700 hover:bg-blue-300 w-full justify-between focus:outline-none focus:ring-blue-300 rounded-lg text-2xl py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                    type="button"
+                  >
+                    Guests
+                    <svg
+                      className="w-2.5 h-2.5 ms-3"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 10 6"
+                    >
+                      <path
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="m1 1 4 4 4-4"
+                      />
+                    </svg>
+                  </button>
+                  {isOpen && (
+                    <div className="z-10 mt-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-full dark:bg-gray-700">
+                      <ul className="py-2 text-sm text-gray-700 dark:text-gray-200 bg-gray">
+                        <li>
+                          <a
+                            href="#"
+                            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >
+                            Dashboard
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >
+                            Settings
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >
+                            Earnings
+                          </a>
+                        </li>
+                        <li>
+                          <a
+                            href="#"
+                            className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >
+                            Sign out
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  )}
+                </div>
               </div>
+
+              <div className="grid grid-cols-2 p-3 border-b-2">
+                  <p className="mt-1 text-sm text-gray-500">$1234 x 2 nights</p>
+                  <p className="mt-1 text-sm text-gray-500">$2468</p>
+              </div>
+              <div className="grid grid-cols-2 p-3 border-b-2">
+                  <p className="mt-1 text-sm text-gray-500">Cleaning fee</p>
+                  <p className="mt-1 text-sm text-gray-500">$800</p>
+              </div>
+              <div className="grid grid-cols-2 p-3">
+                  <p className="mt-1 text-sm text-gray-500">3/1/2024</p>
+                  <p className="mt-1 text-sm text-gray-500">3/1/2024</p>
+              </div>
+
             </div>
           </div>
-          <div></div>
         </div>
       </div>
     </div>
   );
 };
 
-export default properties;
+export default Properties;
