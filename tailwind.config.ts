@@ -17,12 +17,7 @@ const config: Config = {
       primary: "#F67172",
       secondary: "#FCB973",
       gray:'#FCFCFF',
-// <<<<<<< HEAD
-      linkColor : '#000FFF'
-// =======
-      // lite_gray: "#eeeeee"
-      // white:"#ffffff"
-// >>>>>>> main
+      linkColor : '#000FFF',
     }
   },
   plugins: [],
