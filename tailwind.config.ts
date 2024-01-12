@@ -20,6 +20,7 @@ const config: Config = {
       darkGray:'rgb(156 163 175)',
       lite_gray:"#eeeeee",
       // white:"#ffffff"
+      linkColor : '#000FFF'
     }
   },
   plugins: [],
