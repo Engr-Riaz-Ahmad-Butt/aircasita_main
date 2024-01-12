@@ -18,6 +18,7 @@ const config: Config = {
       secondary: "#FCB973",
       gray:'#FCFCFF',
       linkColor : '#000FFF',
+      light:"#ffffff"
     }
   },
   plugins: [],

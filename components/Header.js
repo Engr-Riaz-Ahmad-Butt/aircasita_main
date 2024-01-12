@@ -3,7 +3,10 @@
 import React, { useEffect, useRef, useState } from 'react'
 import logo from '../public/logo.svg'
 import Image from 'next/image'
+import { useRouter } from "next/navigation";
+
 export const Header = () => {
+  const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
 
@@ -12,11 +15,15 @@ export const Header = () => {
   const toggleDropDown = () => setIsDropDownOpen(!isDropDownOpen);
  
 
+  const navigate = (url) => {
+    
+    router.push(url);
+  };
 
   return (
   
 
-<nav className="bg-secondary shadow-sm  dark:bg-gray-900">
+<nav className="bg-primary shadow-sm  dark:bg-gray-900">
   <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
   <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
       {/* <Image src={logo} className="h-8" alt="" /> */}
@@ -30,12 +37,12 @@ export const Header = () => {
       {/* <!-- Dropdown menu --> */}
 
      
-      <div className={`z-50 absolute top-5 right-0 my-4 text-base list-none bg-white dark:divide-y dark:divide-gray-200 rounded-lg shadow ${isDropDownOpen ? "block" : "hidden"}`}>
+      <div className={`z-50 absolute top-5 right-0 my-4  bg-light text-base list-none dark:divide-y dark:divide-gray-200 rounded-lg shadow ${isDropDownOpen ? "block" : "hidden"}`}>
   <div className="px-4 py-3">
     <span className="block text-sm text-gray-900 dark:text-white">Bonnie Green</span>
     <span className="block text-sm text-gray-500 truncate dark:text-gray-400">name@flowbite.com</span>
   </div>
-  <ul className="py-2" aria-labelledby="user-menu-button">
+  <ul className="py-2" aria-labelledby="user-menu-button ">
     <li>
       <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
     </li>
@@ -43,7 +50,7 @@ export const Header = () => {
       <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
     </li>
     <li>
-      <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+    <a href="/auth/login" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
     </li>
   </ul>
 </div>

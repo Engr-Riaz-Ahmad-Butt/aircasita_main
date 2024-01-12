@@ -1,13 +1,20 @@
-import Auth from "../../layout/Auth";
-import logo from "../../assets/imgs/airCasita_logo.png";
+import Auth from "../../../layout/Auth";
+import logo from "../../../assets/imgs/airCasita_logo.png";
 import { useState } from "react";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
-export default function Home() {
+import { useRouter } from 'next/router';
+
+
+
+export default function Login() {
+  const router = useRouter();
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
   });
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -21,8 +28,9 @@ export default function Home() {
     console.log(formData, "formdata");
   };
   // state for password
-  const [showPassword, setShowPassword] = useState(false);
-
+ const navigate = (url) => {
+    router.push(url);
+  };
   const handleTogglePassword = () => {
     setShowPassword(!showPassword);
   };
@@ -84,6 +92,7 @@ export default function Home() {
               <button
                 className="bg-primary text-white w-full  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
                 type="button"
+                onClick={()=>{navigate("/")}}
               >
                 Log In
               </button>
@@ -92,7 +101,7 @@ export default function Home() {
             <div className="flex justify-center mt-4">
               <p className="pr-2 text-sm">
                 Don't have an acount ?
-                <a href="/auth/signUp" className="text-primary pl-1">
+                <a href="/auth/register" className="text-primary pl-1">
                   Sign Up
                 </a>
               </p>
@@ -104,4 +113,4 @@ export default function Home() {
   );
 }
 
-Home.Layout = Auth;
+Login.Layout = Auth;
