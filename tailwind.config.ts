@@ -18,6 +18,8 @@ const config: Config = {
       secondary: "#FCB973",
       gray:'#FCFCFF',
       linkColor : '#000FFF',
+      slate : '#7B808E',
+      dodgerBlue: '#1E90FF',
     }
   },
   plugins: [],
