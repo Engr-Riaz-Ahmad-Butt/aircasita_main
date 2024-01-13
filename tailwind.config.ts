@@ -18,11 +18,13 @@ const config: Config = {
       secondary: "#FCB973",
       gray:'#FCFCFF',
       linkColor : '#000FFF',
-      light:"#ffffff"
+      light:"#ffffff",
       darkGray:'rgb(156 163 175)',
       lite_gray:"#eeeeee",
-      linkColor : '#000FFF',
-      transparent:'transparent'
+     
+      transparent:'transparent',
+      slate : '#7B808E',
+      dodgerBlue: '#1E90FF',
     }
   },
   plugins: [],
