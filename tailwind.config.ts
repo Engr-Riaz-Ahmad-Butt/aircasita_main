@@ -19,6 +19,10 @@ const config: Config = {
       gray:'#FCFCFF',
       linkColor : '#000FFF',
       light:"#ffffff"
+      darkGray:'rgb(156 163 175)',
+      lite_gray:"#eeeeee",
+      linkColor : '#000FFF',
+      transparent:'transparent'
     }
   },
   plugins: [],
