@@ -1,6 +1,6 @@
 import React from "react";
 
-const safety = () => {
+const Safety = () => {
   return (
     <div class="md:container md:mx-auto">
       <h1 className="text-3xl font-semibold p-3">
@@ -35,4 +35,4 @@ const safety = () => {
   );
 };
 
-export default safety;
+export default Safety;

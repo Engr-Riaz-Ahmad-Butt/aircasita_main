@@ -1,16 +1,23 @@
+"use client"
 import React, { useEffect, useRef, useState } from "react";
-import Auth from "../../layout/Auth";
+
+import Auth from "../../../layout/Auth";
 import { IoIosCamera } from "react-icons/io";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
+import { useRouter } from 'next/router';
+
 const SignUp = () => {
+  const router = useRouter();
   const fileInputRef = useRef(null);
   const [imageUrl, setImageUrl] = useState("");
 
   const [selectedFile, setSelectedFile] = useState(null);
 
   const [showPassword, setShowPassword] = useState(false);
-
+  const navigate = (url) => {
+    router.push(url);
+  };
   const handleTogglePassword = () => {
     setShowPassword(!showPassword);
   };
@@ -151,6 +158,7 @@ const SignUp = () => {
             <button
               className="bg-primary  w-full  hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
               type="button"
+              onClick={()=>{navigate("/auth/login")}}
             >
               Sign Up
             </button>
@@ -158,8 +166,8 @@ const SignUp = () => {
           <div className="flex ">
             <p className="pr-2 text-sm mt-3 mb-1">
               Already have an acount :
-              <a href="/auth/LogIn" className="text-primary pl-1">
-                Log In
+              <a href="/auth/login" className="text-primary pl-1">
+                LogIn
               </a>
             </p>
           </div>
@@ -172,7 +180,7 @@ const SignUp = () => {
               acount:
             </p>
             <p className="text-sm">
-              <a href="signIn">LogIn</a> by your name & phone number
+              <a href="/auth/register">LogIn</a> by your name & phone number
             </p>
           </div>
         </form>
@@ -182,3 +190,5 @@ const SignUp = () => {
 };
 
 export default SignUp;
+
+SignUp.Layout = Auth;
