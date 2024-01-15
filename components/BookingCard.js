@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import { CiCircleMinus, CiCirclePlus, CiStar } from "react-icons/ci";
+import DatePicker from "react-datepicker";
 
 const BookingCard = () => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const [startDate, setStartDate] = useState();
+  const [endDate, setEndDate] = useState();
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -25,13 +29,33 @@ const BookingCard = () => {
             <label className="block text-sm font-medium text-gray-700">
               Check-in
             </label>
-            <p className="mt-1 text-sm text-gray-500">3/1/2024</p>
+            <div className="flex justify-center">
+              <DatePicker
+                placeholderText="Check-in date"
+                className="hover:bg-transparent focus:border-white focus:outline-none bg-transparent font-customFont"
+                selectsStart
+                selected={startDate}
+                onChange={(date) => setStartDate(date)}
+                startDate={startDate}
+              />
+            </div>
           </div>
           <div className="p-3 w-full">
             <label className="block text-sm font-medium text-gray-700">
               Check-out
             </label>
-            <p className="mt-1 text-sm text-gray-500">7/1/2024</p>
+            <div className="flex justify-center">
+              <DatePicker
+                placeholderText="Check-out date"
+                className="hover:bg-transparent focus:border-white focus:outline-none bg-transparent font-customFont"
+                selectsEnd
+                selected={endDate}
+                onChange={(date) => setEndDate(date)}
+                endDate={endDate}
+                startDate={startDate}
+                minDate={startDate}
+              />
+            </div>
           </div>
         </div>
 

@@ -10,7 +10,6 @@ import BookingCard from "../../components/BookingCard";
 
 const Properties = (props) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
@@ -18,7 +17,7 @@ const Properties = (props) => {
   return (
     <>
       <div className="flex flex-col sm:flex-row md:h-screen md:p-5">
-        <div className="flex-1 p-4 col-span-3 w-full md:w-3/4">
+        <div className="flex-1 p-4 col-span-3 w-full md:w-4/6">
           <h3 className="text-2xl font-bold py-2">ENTER APPATRMENT</h3>
           <div className="flex flex-col sm:flex-row justify-between">
             <div>
@@ -48,30 +47,28 @@ const Properties = (props) => {
               <span>2 baths</span>
             </div>
           </div>
-          <hr className="my-8 border border-slate-300 rounded dark:bg-gray-700" />
-          <div>
-            <p className="text-slate">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
-              <br></br>
-              <br></br>
-              It was popularised in the 1960s with the release of Letraset
-              sheets containing Lorem Ipsum passages, and more recently with
-              desktop publishing software like Aldus PageMaker including
-              versions of Lorem Ipsum.
-            </p>
-          </div>
+          <hr className="my-8 border border-slate-300 rounded dark:bg-gray-700 mr-6" />
+          <p className="text-slate">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged.
+            <br></br>
+            <br></br>
+            It was popularised in the 1960s with the release of Letraset sheets
+            containing Lorem Ipsum passages, and more recently with desktop
+            publishing software like Aldus PageMaker including versions of Lorem
+            Ipsum.
+          </p>
           <div className="py-5">
             <Dropdown title="Read more about the space" />
           </div>
           <div>
             <h3 className="text-2xl font-bold text-dodgerBlue">Contact Host</h3>
           </div>
-          <hr className="my-8 border border-slate-300 rounded dark:bg-gray-700" />
+          <hr className="my-8 border border-slate-300 rounded dark:bg-gray-700 mr-6" />
           <div>
             <h2 className="text-2xl font-bold">Amenities</h2>
             <div>
@@ -104,9 +101,8 @@ const Properties = (props) => {
             </div>
           </div>
         </div>
-
-        <div className="bg-gray-800 text-white w-full sm:w-96 flex items-center justify-center flex-shrink-0">
-          <div class="flex justify-center items-center rounded p-5 ">
+        <div className="bg-gray-800 text-white w-full sm:w-96 flex items-center justify-center flex-shrink-0 z-20">
+          <div class="flex justify-center items-center rounded p-5">
             {/* <div class="rounded-md shadow-xl md:p-3 md:fixed w-full md:w-fit items-center flex flex-col justify-center h-auto">
               <div className="flex items-center">
                 <span className="line-through text-1xl p-1">$1,999</span>
