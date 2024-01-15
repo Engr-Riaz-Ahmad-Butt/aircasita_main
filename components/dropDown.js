@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Dropdown = ({title}) => {
+const Dropdown = ({ title }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {

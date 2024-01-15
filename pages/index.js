@@ -76,8 +76,7 @@ export default function Home() {
 
   return (
     <>
-            <NavBar />
-
+      <NavBar />
       <div className="px-4 md:px-8 grid grid-cols-1 md:grid-cols-12 gap-5 h-screen">
         <div className="col-span-12 md:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-5 home-container">
           {propertyData.map((property, index) => (
