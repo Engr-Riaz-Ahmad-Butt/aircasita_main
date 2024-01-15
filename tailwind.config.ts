@@ -21,7 +21,7 @@ const config: Config = {
       light:"#ffffff",
       darkGray:'rgb(156 163 175)',
       lite_gray:"#eeeeee",
-     
+     text_dark : '#11172D',
       transparent:'transparent',
       slate : '#7B808E',
       dodgerBlue: '#1E90FF',

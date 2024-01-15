@@ -27,14 +27,14 @@ const Properties = (props) => {
               </h1>
               <p className="text-2xl font-bold py-2 text-slate">Georgetown</p>
             </div>
-            <figure className="flex flex-col items-center justify-center">
+            {/* <figure className="flex flex-col items-center justify-center">
               <img
                 src="https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2022/11/05183143/Avatar-1600x900.jpg"
                 alt="Trulli"
                 className="rounded-full w-20 h-20"
               />
               <figcaption>Italy.</figcaption>
-            </figure>
+            </figure> */}
           </div>
           <div>
             <div className="flex items-center gap-3 py-1">
@@ -248,9 +248,9 @@ const Properties = (props) => {
                 </div>
               </div>
             </div> */}
-<div className=" md:fixed w-full md:w-fit items-center flex flex-col justify-center h-auto">
-<BookingCard />
-</div>
+            <div className=" md:fixed w-full md:w-fit items-center flex flex-col justify-center h-auto">
+              <BookingCard />
+            </div>
           </div>
         </div>
       </div>
