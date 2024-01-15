@@ -1,36 +1,56 @@
 import React, { useState } from "react";
 import { MdOutlineLocationOn } from "react-icons/md";
-import DestinationModal from "./DestinationModal";
+import DatePicker from "react-datepicker";
 const NavBar = () => {
+  const [date, setDate] = useState(new Date());
+  const [startDate, setStartDate] = useState();
+  const [endDate, setEndDate] = useState();
+
+  const handleChange = (range) => {
+    const [startDate, endDate] = range;
+    setStartDate(startDate);
+    setEndDate(endDate);
+  };
+
   return (
     <>
-      <div className="   mt-3  w-9/12 m-auto rounded-md">
-        <div className="flex pt-1 pb-1 ml-1 mr-1 h-16 rounded">
-          <div className="flex    bg-lite_gray rounded-md w-2/4 pt-3 pl-4 pb-3 ">
-            <MdOutlineLocationOn className="text-3xl text-darkGray" />
+      <div className=" flex flex-col justify-center bg-primary opacity-95 p-4 md:justify-center items-center">
+        <div className="flex flex-col sm:flex-row pt-1 pb-1   md:my-24 sm:my-3 sm:mx-6 sm:h-16 rounded w-full sm:w-9/12 align-middle">
+          <div className="flex bg-lite_gray rounded-md sm:w-2/4 sm:mr-2 mb-2 sm:mb-0">
+            <MdOutlineLocationOn className="text-3xl text-darkGray self-center mx-2" />
             <input
               type="text"
-              placeholder="search your destination"
-              className=" hover:bg-transparent focus:border-white focus:outline-none bg-transparent w-full  text-3xl border-b-2 "
-            />
-          </div>
-          <div className="flex  bg-lite_gray rounded-md pt-2 pl-2 pb-2 ml-2 ">
-            <input
-              type="text"
-              placeholder="Move-In date"
-              className=" hover:bg-transparent focus:border-white focus:outline-none bg-transparent    border-b-2 "
-            />
-          </div>
-          <div className="flex  bg-lite_gray rounded-md pt-2  pl-2 pb-2 ml-3 ">
-            <input
-              type="text"
-              placeholder="Move-out date"
-              className=" hover:bg-transparent focus:border-white focus:outline-none bg-transparent border-b-2 "
+              placeholder="Search your destination"
+              className="hover:bg-transparent focus:border-white focus:outline-none bg-transparent text-2xl p-2 overflow-hidden font-customFont"
             />
           </div>
 
-          <div className="rounded-md ml-3">
-            <button class="bg-primary   text-gray  rounded   text-lg  w-52 h-14">
+          <div className="flex bg-lite_gray rounded-md sm:mr-2 mb-2 sm:mb-0">
+            <DatePicker
+              placeholderText="Move-in date"
+              className="hover:bg-transparent focus:border-white focus:outline-none bg-transparent p-4 font-customFont"
+              selectsStart
+              selected={startDate}
+              onChange={(date) => setStartDate(date)}
+              startDate={startDate}
+            />
+          </div>
+
+          <div className="flex bg-lite_gray rounded-md mb-2 sm:mb-0">
+            <DatePicker
+              placeholderText="Move-out date"
+              className="hover:bg-transparent focus:border-white focus:outline-none bg-transparent p-4 font-customFont"
+              selectsEnd
+              selected={endDate}
+              onChange={(date) => setEndDate(date)}
+              endDate={endDate}
+              startDate={startDate}
+              minDate={startDate}
+            />
+          </div>
+
+          <div className="rounded-md md:ml-3 mt-2 sm:mt-0">
+            <button class="bg-secondary text-text_dark rounded text-lg w-full sm:w-52 h-14 font-customFont ">
               Search
             </button>
           </div>
