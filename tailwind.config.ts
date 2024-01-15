@@ -17,6 +17,8 @@ const config: Config = {
       primary: "#F67172",
       secondary: "#FCB973",
       gray:'#FCFCFF',
+      linkColor : '#000FFF',
+      light:"#ffffff",
       darkGray:'rgb(156 163 175)',
       lite_gray:"#eeeeee",
       linkColor : '#000FFF',
