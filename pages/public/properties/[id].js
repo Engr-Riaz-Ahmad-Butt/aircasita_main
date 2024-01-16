@@ -3,7 +3,11 @@ import { FaHome, FaStar, FaWifi } from "react-icons/fa";
 import { LuParkingCircle } from "react-icons/lu";
 import Dropdown from "../../../components/dropDown";
 import { TbBrandCarbon, TbToolsKitchen2 } from "react-icons/tb";
-import { MdElevator } from "react-icons/md";
+import {
+  MdElevator,
+  MdKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
 import { GiSmokeBomb } from "react-icons/gi";
 import { CiCircleMinus, CiCirclePlus, CiStar } from "react-icons/ci";
 import BookingCard from "../../../components/BookingCard";
@@ -13,10 +17,32 @@ const Properties = (props) => {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+  const [currentIndex, setCurrentIndex] = useState(1);
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+    );
+  };
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+    );
+  };
+
+  const images = [
+    "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aG91c2V8ZW58MHx8MHx8fDA%3D",
+    "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGhvdXNlfGVufDB8fDB8fHww",
+    "https://plus.unsplash.com/premium_photo-1661915661139-5b6a4e4a6fcc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGhvdXNlfGVufDB8fDB8fHww",
+    "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aG91c2V8ZW58MHx8MHx8fDA%3D",
+    "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGhvdXNlfGVufDB8fDB8fHww",
+    "https://plus.unsplash.com/premium_photo-1661915661139-5b6a4e4a6fcc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGhvdXNlfGVufDB8fDB8fHww",
+  ];
 
   return (
     <>
-      <div className="flex flex-col sm:flex-row md:container md:mx-auto md:h-screen md:p-5 font-customFont">
+      <div className="flex flex-col md:flex-row md:container md:mx-auto md:p-5 font-customFont">
         <div className="flex-1 p-4 col-span-3 w-full md:w-4/6">
           <h3 className="text-2xl font-bold py-2">ENTER APPATRMENT</h3>
           <div className="flex flex-col sm:flex-row justify-between">
@@ -48,6 +74,40 @@ const Properties = (props) => {
             </div>
           </div>
           <hr className="my-8 border border-lite_gray rounded dark:bg-gray-700 mr-6" />
+
+          <div>
+            <div className="relative overflow-hidden product-card-border rounded-md mr-5">
+              <div
+                className="flex transition-transform ease-out duration-300"
+                style={{
+                  transform: `translateX(-${currentIndex * (100 / 3)}%)`,
+                }}
+              >
+                {images.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`Slide ${index + 1}`}
+                    className="w-52 h-48 object-cover p-3 rounded"
+                  />
+                ))}
+              </div>
+
+              <button
+                onClick={prevSlide}
+                className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
+              >
+                <MdKeyboardArrowLeft className="text-3xl" />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
+              >
+                <MdOutlineKeyboardArrowRight className="text-3xl" />
+              </button>
+            </div>
+          </div>
+
           <p className="text-slate mr-5">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
@@ -101,8 +161,8 @@ const Properties = (props) => {
             </div>
           </div>
         </div>
-        <div className="bg-gray-800 text-white w-full sm:w-96 flex items-center justify-center flex-shrink-0 z-20">
-          <div class="flex justify-center items-center rounded p-5">
+        <div className="bg-gray-800 text-white w-full sm:w-96 flex justify-center flex-shrink-0 z-20">
+          <div class="flex justify-center rounded md:p-5">
             {/* <div class="rounded-md shadow-xl md:p-3 md:fixed w-full md:w-fit items-center flex flex-col justify-center h-auto">
               <div className="flex items-center">
                 <span className="line-through text-1xl p-1">$1,999</span>
@@ -244,7 +304,7 @@ const Properties = (props) => {
                 </div>
               </div>
             </div> */}
-            <div className=" md:fixed w-full md:w-fit items-center flex flex-col justify-center h-auto">
+            <div className="w-full md:w-fit items-center flex flex-col justify-center">
               <BookingCard />
             </div>
           </div>
