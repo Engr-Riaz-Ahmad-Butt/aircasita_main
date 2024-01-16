@@ -218,7 +218,7 @@ export default function Home() {
               role="button"
               onClick={() => {
                 router.push({
-                  pathname: `${`/properties/${encodeURIComponent(card.id)}`}`,
+                  pathname: `${`public/properties/${encodeURIComponent(card.id)}`}`,
                 });
               }}
             >
