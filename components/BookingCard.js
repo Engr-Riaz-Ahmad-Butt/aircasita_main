@@ -13,11 +13,11 @@ const BookingCard = () => {
   };
 
   return (
-    <div className="w-full max-w-md p-4 bg-white border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <div className=" max-w-md bg-white border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
       <div className="flex items-center justify-between mb-4">
         <span className="line-through text-1xl p-1">$1,999</span>
         <span className="text-1xl font-bold p-1">$1,499</span>
-        <span className="text-1xl p-1">/month</span>
+        <span className="text-1xl p-1">/night</span>
         <span className="text-1xl p-1">
           <CiStar />
         </span>

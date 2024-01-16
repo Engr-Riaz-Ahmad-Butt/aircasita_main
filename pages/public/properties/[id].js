@@ -16,7 +16,7 @@ const Properties = (props) => {
 
   return (
     <>
-      <div className="flex flex-col sm:flex-row md:h-screen md:p-5">
+      <div className="flex flex-col sm:flex-row md:container md:mx-auto md:h-screen md:p-5 font-customFont">
         <div className="flex-1 p-4 col-span-3 w-full md:w-4/6">
           <h3 className="text-2xl font-bold py-2">ENTER APPATRMENT</h3>
           <div className="flex flex-col sm:flex-row justify-between">
@@ -47,8 +47,8 @@ const Properties = (props) => {
               <span>2 baths</span>
             </div>
           </div>
-          <hr className="my-8 border border-slate-300 rounded dark:bg-gray-700 mr-6" />
-          <p className="text-slate">
+          <hr className="my-8 border border-lite_gray rounded dark:bg-gray-700 mr-6" />
+          <p className="text-slate mr-5">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -68,7 +68,7 @@ const Properties = (props) => {
           <div>
             <h3 className="text-2xl font-bold text-dodgerBlue">Contact Host</h3>
           </div>
-          <hr className="my-8 border border-slate-300 rounded dark:bg-gray-700 mr-6" />
+          <hr className="my-8 border border-lite_gray rounded dark:bg-gray-700 mr-6" />
           <div>
             <h2 className="text-2xl font-bold">Amenities</h2>
             <div>

@@ -1,224 +1,42 @@
-import MapComponent from "../components/home/Map";
-import NavBar from "../components/home/NavBar";
-import { PropertyCard } from "../components/home/PropertyCard";
-import Main from "../layout/Main";
-import PropertyImg from "../public/property.jpg";
-import { Card } from "../components/card";
+import React from "react";
+import logo from "../assets/imgs/airCasita_logo-bg-remove.png";
 
-export default function Home() {
-  const propertyData = [
-    {
-      title: "Beautiful Beach House",
-      image: PropertyImg, // Replace with the actual image path
-      guests: 4,
-      bedrooms: 2,
-      beds: 3,
-      baths: 2,
-      price: 150,
-      cancellation: "Free cancellation up to 7 days before check-in",
-      distance: 4369, // Distance in kilometers
-    },
-    {
-      title: "Cozy Mountain Cabin",
-      image: PropertyImg, // Replace with the actual image path
-      guests: 2,
-      bedrooms: 1,
-      beds: 1,
-      baths: 1,
-      price: 100,
-      cancellation: "Non-refundable",
-      distance: 2500, // Distance in kilometers
-    },
-    {
-      title: "Beautiful Beach House",
-      image: PropertyImg, // Replace with the actual image path
-      guests: 4,
-      bedrooms: 2,
-      beds: 3,
-      baths: 2,
-      price: 150,
-      cancellation: "Free cancellation up to 7 days before check-in",
-      distance: 4369, // Distance in kilometers
-    },
-    {
-      title: "Cozy Mountain Cabin",
-      image: PropertyImg, // Replace with the actual image path
-      guests: 2,
-      bedrooms: 1,
-      beds: 1,
-      baths: 1,
-      price: 100,
-      cancellation: "Non-refundable",
-      distance: 2500, // Distance in kilometers
-    },
-    {
-      title: "Beautiful Beach House",
-      image: PropertyImg, // Replace with the actual image path
-      guests: 4,
-      bedrooms: 2,
-      beds: 3,
-      baths: 2,
-      price: 150,
-      cancellation: "Free cancellation up to 7 days before check-in",
-      distance: 4369, // Distance in kilometers
-    },
-    {
-      title: "Cozy Mountain Cabin",
-      image: PropertyImg, // Replace with the actual image path
-      guests: 2,
-      bedrooms: 1,
-      beds: 1,
-      baths: 1,
-      price: 100,
-      cancellation: "Non-refundable",
-      distance: 2500, // Distance in kilometers
-    },
-  ];
-
-  const cardDetails = [
-    {
-      title: "Joshua Tree",
-      description:
-        "Stunning newly upgraded four bedroom apartment centrally located in the Dubai Marina.",
-      viewed: "Viewed 20 time last week",
-      date: "Jan 20 - Feb 04",
-      price: "$2345 night",
-      slider: [
-        "https://images.unsplash.com/photo-1520330979108-7d66e04b35e5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJ1aWxkaW5nc3xlbnwwfHwwfHx8MA%3D%3D",
-        "https://i.ibb.co/B3s7v4h/2.png",
-        "https://i.ibb.co/XXR8kzF/3.png",
-        "https://i.ibb.co/yg7BSdM/4.png",
-      ],
-    },
-    {
-      title: "Joshua Tree",
-      description:
-        "Stunning newly upgraded four bedroom apartment centrally located in the Dubai Marina.",
-      viewed: "Viewed 200 time last week",
-      date: "Jan 20 - Feb 04",
-      price: "$2345 night",
-      slider: [
-        "https://plus.unsplash.com/premium_photo-1679916744942-089b32c2f9cb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGJ1aWxkaW5nc3xlbnwwfHwwfHx8MA%3D%3D",
-        "https://i.ibb.co/B3s7v4h/2.png",
-        "https://i.ibb.co/XXR8kzF/3.png",
-        "https://i.ibb.co/yg7BSdM/4.png",
-      ],
-    },
-    {
-      title: "Joshua Tree",
-      description:
-        "Stunning newly upgraded four bedroom apartment centrally located in the Dubai Marina.",
-      viewed: "Viewed 10 time last week",
-      date: "Jan 20 - Feb 04",
-      price: "$2345 night",
-      slider: [
-        "https://images.unsplash.com/photo-1580895456895-cfdf02e4c23f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8YnVpbGRpbmdzJTIwYXQlMjBuaWdodHxlbnwwfHwwfHx8MA%3D%3D",
-        "https://i.ibb.co/B3s7v4h/2.png",
-        "https://i.ibb.co/XXR8kzF/3.png",
-        "https://i.ibb.co/yg7BSdM/4.png",
-      ],
-    },
-    {
-      title: "Joshua Tree",
-      description:
-        "Stunning newly upgraded four bedroom apartment centrally located in the Dubai Marina.",
-      viewed: "Viewed 40 time last week",
-      date: "Jan 20 - Feb 04",
-      price: "$2345 night",
-      slider: [
-        "https://images.unsplash.com/photo-1524282592407-25bf4101ac81?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJ1aWxkaW5ncyUyMGF0JTIwbmlnaHR8ZW58MHx8MHx8fDA%3D",
-        "https://i.ibb.co/B3s7v4h/2.png",
-        "https://i.ibb.co/XXR8kzF/3.png",
-        "https://i.ibb.co/yg7BSdM/4.png",
-      ],
-    },
-    {
-      title: "Joshua Tree",
-      description:
-        "Stunning newly upgraded four bedroom apartment centrally located in the Dubai Marina.",
-      viewed: "Viewed 23 time last week",
-      date: "Jan 20 - Feb 04",
-      price: "$2345 night",
-      slider: [
-        "https://i.ibb.co/ncrXc2V/1.png",
-        "https://i.ibb.co/B3s7v4h/2.png",
-        "https://i.ibb.co/XXR8kzF/3.png",
-        "https://i.ibb.co/yg7BSdM/4.png",
-      ],
-    },
-    {
-      title: "Joshua Tree",
-      description:
-        "Stunning newly upgraded four bedroom apartment centrally located in the Dubai Marina.",
-      viewed: "Viewed 23 time last week",
-      date: "Jan 20 - Feb 04",
-      price: "$2345 night",
-      slider: [
-        "https://i.ibb.co/ncrXc2V/1.png",
-        "https://i.ibb.co/B3s7v4h/2.png",
-        "https://i.ibb.co/XXR8kzF/3.png",
-        "https://i.ibb.co/yg7BSdM/4.png",
-      ],
-    },
-    {
-      title: "Joshua Tree",
-      description:
-        "Stunning newly upgraded four bedroom apartment centrally located in the Dubai Marina.",
-      viewed: "Viewed 45 time last week",
-      date: "Jan 20 - Feb 04",
-      price: "$2345 night",
-      slider: [
-        "https://i.ibb.co/ncrXc2V/1.png",
-        "https://i.ibb.co/B3s7v4h/2.png",
-        "https://i.ibb.co/XXR8kzF/3.png",
-        "https://i.ibb.co/yg7BSdM/4.png",
-      ],
-    },
-    {
-      title: "Joshua Tree",
-      description:
-        "Stunning newly upgraded four bedroom apartment centrally located in the Dubai Marina.",
-      viewed: "Viewed 96 time last week",
-      date: "Jan 20 - Feb 04",
-      price: "$2345 night",
-      slider: [
-        "https://i.ibb.co/ncrXc2V/1.png",
-        "https://i.ibb.co/B3s7v4h/2.png",
-        "https://i.ibb.co/XXR8kzF/3.png",
-        "https://i.ibb.co/yg7BSdM/4.png",
-      ],
-    },
-  ];
-
+const Main = () => {
   return (
-    <>
-      <NavBar />
-
-      <div className="px-4 md:px-8 grid grid-cols-1 md:grid-cols-12 gap-5 h-screen">
-        <div className="col-span-12 md:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-5 home-container">
-          {/* {propertyData.map((property, index) => (
-            <div key={index} className="col-span-1 md:col-span-1/3">
-              <PropertyCard {...property} />
-            </div>
-          ))} */}
-
-          
-            {cardDetails.map((card, index) => (
-              <div key={index} >
-                <Card {...card} className="col-span-1 md:col-span-1/3"/>
-              </div>
-            ))}
+    <div className="container mx-auto font-Montserrat flex flex-col items-center justify-center p-8 bg-gray-800 text-white">
+      <div className="text-center p-6 rounded-md flex justify-center flex-col">
+      <h1 className="text-4xl font-bold mb-4 font-Montserrat">What we Believe:</h1>
+        <p className="text-2xl font-bold mb-4 font-Montserrat">
+          Hosts should get more rentals & Guests should get better deals!
+        </p>
+        <img
+          src={logo.src}
+          alt="Hero Image"
+          className="mx-auto w-full md:w-2/3 lg:w-1/2 object-cover"
+        />
+        <div className="flex flex-col justify-center md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
+         <a href="https://aircasita-host.web.app/admin/create-listing ">
+          <button className="bg-primary text-gray hover:bg-blue-700 text-white py-2 px-4 rounded font-Montserrat font-semibold">
+            Register Rental Property
+          </button>
+          </a>
+          <a href="/home">
+          <button className="bg-primary text-gray hover:bg-blue-700 text-white py-2 px-4 rounded font-Montserrat font-semibold">
+            Traveler Books A Rental
+          </button>
+          </a>
         </div>
-        <div className="col-span-12 md:col-span-5 mt-8">
-          <div className="sticky top-0">
-            <div className="md:h-screen h-64">
-              <MapComponent />
-            </div>
-          </div>
+        <div className="py-5">
+          <p className="text-2xl font-bold font-Montserrat">
+            The airCasita.com Deal: <br></br> You pay for 2 nights, <br></br> then YOU Stay the 3rd
+            night for free <br></br> (Bookings for small rentals to very large, <br></br> USA now &
+            soon all around the world)
+          </p>
+          <span className="font-Montserrat font-bold">(Not affiliated with airbnb)</span>
         </div>
       </div>
-    </>
+    </div>
   );
-}
+};
 
-Home.Layout = Main;
+export default Main;

@@ -8,7 +8,7 @@ const Dropdown = ({ title }) => {
   };
 
   return (
-    <div className="relative inline-block text-left">
+    <div className="relative inline-block text-left w-full">
       <button
         id="dropdownDefaultButton"
         onClick={toggleDropdown}
@@ -33,8 +33,63 @@ const Dropdown = ({ title }) => {
         </svg>
       </button>
       {isOpen && (
-        <div className="z-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-          <ul className="py-2 text-sm text-gray-700 dark:text-gray-200 bg-gray">
+        <div className="z-10 absolute bg-text_light p-3 rounded-lg shadow w-full dark:bg-gray-700">
+          <div >
+            <h1 className="text-2xl font-bold py-2">Descriptive sentence</h1>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged.
+            </p>
+          </div>
+          <div >
+            {/* <h1 className="text-2xl font-bold py-2">General description</h1> */}
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book. It has
+              survived not only five centuries, but also the leap into
+              electronic typesetting, remaining essentially unchanged. It was
+              popularised in the 1960s with the release of Letraset sheets
+              containing Lorem Ipsum passages, and more recently with desktop
+              publishing software like Aldus PageMaker including versions of
+              Lorem Ipsum
+            </p>
+          </div>
+          <div className="my-3">
+            {/* <h1 className="text-2xl font-bold py-2">Usable space</h1> */}
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+          <div className="my-3">
+            {/* <h1 className="text-2xl font-bold py-2">Usable space</h1> */}
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div>
+          {/* <div >
+            <h1 className="text-2xl font-bold py-2">Communications/transportation</h1>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div> */}
+          {/* <div >
+            <h1 className="text-2xl font-bold py-2">Other noteworthy items</h1>
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry.
+            </p>
+          </div> */}
+
+          {/* <ul className="py-2 text-sm text-gray-700 dark:text-gray-200 bg-gray">
             <li>
               <a
                 href="#"
@@ -67,7 +122,7 @@ const Dropdown = ({ title }) => {
                 Sign out
               </a>
             </li>
-          </ul>
+          </ul> */}
         </div>
       )}
     </div>
