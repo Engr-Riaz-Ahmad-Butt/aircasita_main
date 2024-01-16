@@ -30,7 +30,7 @@ export const Card = ({ title, description, slider, viewed,date, price }) => {
   };
 
   return (
-    <div className="mt-6 max-w-md mx-auto bg-white shadow-md overflow-hidden sm:max-w-lg border-gray-200 rounded-xl dark:bg-gray-800 dark:border-gray-700">
+    <div className="mt-6 max-w-md mx-auto cursor-pointer overflow-hidden sm:max-w-lg card-border border-lite_gray rounded-xl dark:bg-gray-800 dark:border-gray-700">
       <div className="relative h-56 overflow-hidden">
         <div
           className="flex transition-transform ease-out duration-500"
@@ -45,7 +45,7 @@ export const Card = ({ title, description, slider, viewed,date, price }) => {
             />
           ))}
         </div>
-        {/* <div className="absolute inset-0 flex items-center justify-between p-4">
+        <div className="absolute inset-0 flex items-center justify-between p-4">
           <button
             onClick={prev}
             className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
@@ -58,9 +58,9 @@ export const Card = ({ title, description, slider, viewed,date, price }) => {
           >
             <MdOutlineKeyboardArrowRight className="text-2xl" />
           </button>
-        </div> */}
+        </div>
 
-        <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+        {/* <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
           {slider.map((_, index) => (
             <button
               key={index}
@@ -77,19 +77,19 @@ export const Card = ({ title, description, slider, viewed,date, price }) => {
               />
             </button>
           ))}
-        </div>
+        </div> */}
       </div>
       <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2">{title}</div>
-        <p className="text-gray-700 text-base">{viewed}</p>
-        <p className="text-gray-700 text-base">{date}</p>
+        <div className="font-bold text-xl mb-2 font-customFont">{title}</div>
+        <p className="text-gray-700 text-base font-customFont">{viewed}</p>
+        <p className="text-gray-700 text-base font-customFont">{date}</p>
         <p className="font-bold">{price}</p>
       </div>
-      <div className="px-6 pb-4">
+      {/* <div className="px-6 pb-4">
         <button className="bg-primary text-light hover:bg-blue-700 text-white py-2 px-4 rounded">
           Button
         </button>
-      </div>
+      </div> */}
     </div>
   );
 };

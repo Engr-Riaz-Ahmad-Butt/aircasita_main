@@ -4,79 +4,82 @@ import { PropertyCard } from "../components/home/PropertyCard";
 import Main from "../layout/Main";
 import PropertyImg from "../public/property.jpg";
 import { Card } from "../components/card";
+import { useRouter } from "next/router";
 
 export default function Home() {
-  const propertyData = [
-    {
-      title: "Beautiful Beach House",
-      image: PropertyImg, // Replace with the actual image path
-      guests: 4,
-      bedrooms: 2,
-      beds: 3,
-      baths: 2,
-      price: 150,
-      cancellation: "Free cancellation up to 7 days before check-in",
-      distance: 4369, // Distance in kilometers
-    },
-    {
-      title: "Cozy Mountain Cabin",
-      image: PropertyImg, // Replace with the actual image path
-      guests: 2,
-      bedrooms: 1,
-      beds: 1,
-      baths: 1,
-      price: 100,
-      cancellation: "Non-refundable",
-      distance: 2500, // Distance in kilometers
-    },
-    {
-      title: "Beautiful Beach House",
-      image: PropertyImg, // Replace with the actual image path
-      guests: 4,
-      bedrooms: 2,
-      beds: 3,
-      baths: 2,
-      price: 150,
-      cancellation: "Free cancellation up to 7 days before check-in",
-      distance: 4369, // Distance in kilometers
-    },
-    {
-      title: "Cozy Mountain Cabin",
-      image: PropertyImg, // Replace with the actual image path
-      guests: 2,
-      bedrooms: 1,
-      beds: 1,
-      baths: 1,
-      price: 100,
-      cancellation: "Non-refundable",
-      distance: 2500, // Distance in kilometers
-    },
-    {
-      title: "Beautiful Beach House",
-      image: PropertyImg, // Replace with the actual image path
-      guests: 4,
-      bedrooms: 2,
-      beds: 3,
-      baths: 2,
-      price: 150,
-      cancellation: "Free cancellation up to 7 days before check-in",
-      distance: 4369, // Distance in kilometers
-    },
-    {
-      title: "Cozy Mountain Cabin",
-      image: PropertyImg, // Replace with the actual image path
-      guests: 2,
-      bedrooms: 1,
-      beds: 1,
-      baths: 1,
-      price: 100,
-      cancellation: "Non-refundable",
-      distance: 2500, // Distance in kilometers
-    },
-  ];
+  const router = useRouter();
+  // const propertyData = [
+  //   {
+  //     title: "Beautiful Beach House",
+  //     image: PropertyImg, // Replace with the actual image path
+  //     guests: 4,
+  //     bedrooms: 2,
+  //     beds: 3,
+  //     baths: 2,
+  //     price: 150,
+  //     cancellation: "Free cancellation up to 7 days before check-in",
+  //     distance: 4369, // Distance in kilometers
+  //   },
+  //   {
+  //     title: "Cozy Mountain Cabin",
+  //     image: PropertyImg, // Replace with the actual image path
+  //     guests: 2,
+  //     bedrooms: 1,
+  //     beds: 1,
+  //     baths: 1,
+  //     price: 100,
+  //     cancellation: "Non-refundable",
+  //     distance: 2500, // Distance in kilometers
+  //   },
+  //   {
+  //     title: "Beautiful Beach House",
+  //     image: PropertyImg, // Replace with the actual image path
+  //     guests: 4,
+  //     bedrooms: 2,
+  //     beds: 3,
+  //     baths: 2,
+  //     price: 150,
+  //     cancellation: "Free cancellation up to 7 days before check-in",
+  //     distance: 4369, // Distance in kilometers
+  //   },
+  //   {
+  //     title: "Cozy Mountain Cabin",
+  //     image: PropertyImg, // Replace with the actual image path
+  //     guests: 2,
+  //     bedrooms: 1,
+  //     beds: 1,
+  //     baths: 1,
+  //     price: 100,
+  //     cancellation: "Non-refundable",
+  //     distance: 2500, // Distance in kilometers
+  //   },
+  //   {
+  //     title: "Beautiful Beach House",
+  //     image: PropertyImg, // Replace with the actual image path
+  //     guests: 4,
+  //     bedrooms: 2,
+  //     beds: 3,
+  //     baths: 2,
+  //     price: 150,
+  //     cancellation: "Free cancellation up to 7 days before check-in",
+  //     distance: 4369, // Distance in kilometers
+  //   },
+  //   {
+  //     title: "Cozy Mountain Cabin",
+  //     image: PropertyImg, // Replace with the actual image path
+  //     guests: 2,
+  //     bedrooms: 1,
+  //     beds: 1,
+  //     baths: 1,
+  //     price: 100,
+  //     cancellation: "Non-refundable",
+  //     distance: 2500, // Distance in kilometers
+  //   },
+  // ];
 
   const cardDetails = [
     {
+      id: 1,
       title: "Joshua Tree",
       description:
         "Stunning newly upgraded four bedroom apartment centrally located in the Dubai Marina.",
@@ -91,6 +94,7 @@ export default function Home() {
       ],
     },
     {
+      id: 2,
       title: "Joshua Tree",
       description:
         "Stunning newly upgraded four bedroom apartment centrally located in the Dubai Marina.",
@@ -105,6 +109,7 @@ export default function Home() {
       ],
     },
     {
+      id: 3,
       title: "Joshua Tree",
       description:
         "Stunning newly upgraded four bedroom apartment centrally located in the Dubai Marina.",
@@ -119,6 +124,7 @@ export default function Home() {
       ],
     },
     {
+      id: 4,
       title: "Joshua Tree",
       description:
         "Stunning newly upgraded four bedroom apartment centrally located in the Dubai Marina.",
@@ -133,6 +139,7 @@ export default function Home() {
       ],
     },
     {
+      id: 5,
       title: "Joshua Tree",
       description:
         "Stunning newly upgraded four bedroom apartment centrally located in the Dubai Marina.",
@@ -202,16 +209,23 @@ export default function Home() {
             </div>
           ))} */}
 
-          
-            {cardDetails.map((card, index) => (
-              <div key={index} >
-                <Card {...card} className="col-span-1 md:col-span-1/3"/>
-              </div>
-            ))}
+          {cardDetails.map((card, index) => (
+            <div
+              key={index}
+              role="button"
+              onClick={() => {
+                router.push({
+                  pathname: `${`/properties/${encodeURIComponent(card.id)}`}`,
+                });
+              }}
+            >
+              <Card {...card} className="col-span-1 md:col-span-1/3" />
+            </div>
+          ))}
         </div>
         <div className="col-span-12 md:col-span-5 mt-8">
           <div className="sticky top-0">
-            <div className="md:h-screen h-64">
+            <div className="md:h-screen h-64 font-customFont">
               <MapComponent />
             </div>
           </div>
