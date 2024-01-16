@@ -52,7 +52,7 @@ export default function Login() {
                 Email
               </label>
               <input
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow appearance-none input-border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 name="email"
                 value={formData.email}
                 type="email"
@@ -64,7 +64,7 @@ export default function Login() {
               <label className="block text-gray-700 text-sm font-bold mb-2">
                 Password
               </label>
-              <div className="flex flex-row justify-center items-center border border-red-500 rounded w-full py-2 px-3  mb-3 leading-tight focus:outline-none focus:shadow-outline">
+              <div className="flex flex-row justify-center items-center input-border border-red-500 rounded w-full py-2 px-3  mb-3 leading-tight focus:outline-none focus:shadow-outline">
                 <input
                   className=" appearance-none  focus:outline-none w-full h-full"
                   type={showPassword ? "text" : "password"}
