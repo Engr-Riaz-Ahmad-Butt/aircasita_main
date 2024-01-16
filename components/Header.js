@@ -142,7 +142,7 @@ export const Header = () => {
             isMenuOpen ? "translate-x-0" : "translate-x-full"
           } transition-transform duration-300 md:hidden w-full`}
         >
-          <div className=" text-center  h-full p-4">
+          <div className=" text-center  h-full p-2">
             <div className="flex justify-end text-end">
               <button onClick={toggleMenu}>
                 <RxCross2 />
