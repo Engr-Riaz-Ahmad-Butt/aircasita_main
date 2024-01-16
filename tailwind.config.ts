@@ -13,7 +13,8 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
       fontFamily:{
-        customFont:['Montserrat', 'sans-serif']
+        Montserrat:['Montserrat', 'sans-serif'],
+       sans_serif :['Open Sans', 'sans-serif']
       }
     },
     colors:{
