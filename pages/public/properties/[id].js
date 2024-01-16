@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { FaHome, FaStar, FaWifi } from "react-icons/fa";
 import { LuParkingCircle } from "react-icons/lu";
-import Dropdown from "../../components/dropDown";
+import Dropdown from "../../../components/dropDown";
 import { TbBrandCarbon, TbToolsKitchen2 } from "react-icons/tb";
 import { MdElevator } from "react-icons/md";
 import { GiSmokeBomb } from "react-icons/gi";
 import { CiCircleMinus, CiCirclePlus, CiStar } from "react-icons/ci";
-import BookingCard from "../../components/BookingCard";
+import BookingCard from "../../../components/BookingCard";
 
 const Properties = (props) => {
   const [isOpen, setIsOpen] = useState(false);
