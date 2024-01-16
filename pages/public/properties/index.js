@@ -3,16 +3,10 @@ import { FaHome, FaStar, FaWifi } from "react-icons/fa";
 import { LuParkingCircle } from "react-icons/lu";
 import Dropdown from "../../components/dropDown";
 import { TbBrandCarbon, TbToolsKitchen2 } from "react-icons/tb";
-import {
-  MdElevator
-} from "react-icons/md";
+import { MdElevator } from "react-icons/md";
 import { GiSmokeBomb } from "react-icons/gi";
 import { CiCircleMinus, CiCirclePlus, CiStar } from "react-icons/ci";
 import BookingCard from "../../components/BookingCard";
-import {
-  MdKeyboardArrowLeft,
-  MdOutlineKeyboardArrowRight,
-} from "react-icons/md";
 
 const Properties = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,31 +14,9 @@ const Properties = (props) => {
     setIsOpen(!isOpen);
   };
 
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const images = [
-    "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aG91c2V8ZW58MHx8MHx8fDA%3D",
-    "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGhvdXNlfGVufDB8fDB8fHww",
-    "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGhvdXNlfGVufDB8fDB8fHww",
-    "https://images.unsplash.com/photo-1576941089067-2de3c901e126?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGhvdXNlfGVufDB8fDB8fHww",
-    "https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGhvdXNlfGVufDB8fDB8fHww",
-  ];
-
   return (
     <>
-      <div className="flex flex-col gap-5 sm:flex-row md:container md:mx-auto md:h-screen md:p-5 font-Montserrat">
+      <div className="flex flex-col sm:flex-row md:h-screen md:p-5">
         <div className="flex-1 p-4 col-span-3 w-full md:w-4/6">
           <h3 className="text-2xl font-bold py-2">ENTER APPATRMENT</h3>
           <div className="flex flex-col sm:flex-row justify-between">
@@ -63,40 +35,6 @@ const Properties = (props) => {
               <figcaption>Italy.</figcaption>
             </figure> */}
           </div>
-
-          <div className="my-5 mr-5 product-card-border rounded-md">
-            <div className="relative overflow-hidden  m-3">
-              <div
-                className="flex transition-transform gap-3 ease-out duration-300"
-                style={{
-                  transform: `translateX(-${currentIndex * (100 / 3)}%)`,
-                }}
-              >
-                {images.map((image, index) => (
-                  <img
-                    key={index}
-                    src={image}
-                    alt={`Slide ${index + 1}`}
-                    className="w-80 h-60 object-cover p-3 rounded"
-                  />
-                ))}
-              </div>
-
-              <button
-                onClick={prevSlide}
-                className="absolute top-1/2 left-0 transform -translate-y-1/2 p-1 bg-gray-800 text-white rounded-full shadow bg-white/100 text-gray-800 hover:bg-white "
-              >
-                <MdKeyboardArrowLeft className="text-5xl" />
-              </button>
-              <button
-                onClick={nextSlide}
-                className="absolute top-1/2 right-0 transform -translate-y-1/2 p-1 bg-gray-800 text-white rounded-full shadow bg-white/100 text-gray-800 hover:bg-white"
-              >
-                <MdOutlineKeyboardArrowRight className="text-5xl" />
-              </button>
-            </div>
-          </div>
-
           <div>
             <div className="flex items-center gap-3 py-1">
               <FaHome />
@@ -109,8 +47,8 @@ const Properties = (props) => {
               <span>2 baths</span>
             </div>
           </div>
-          <hr className="my-8 border border-lite_gray rounded dark:bg-gray-700 mr-6" />
-          <p className="text-slate mr-5">
+          <hr className="my-8 border border-slate-300 rounded dark:bg-gray-700 mr-6" />
+          <p className="text-slate">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -130,7 +68,7 @@ const Properties = (props) => {
           <div>
             <h3 className="text-2xl font-bold text-dodgerBlue">Contact Host</h3>
           </div>
-          <hr className="my-8 border border-lite_gray rounded dark:bg-gray-700 mr-6" />
+          <hr className="my-8 border border-slate-300 rounded dark:bg-gray-700 mr-6" />
           <div>
             <h2 className="text-2xl font-bold">Amenities</h2>
             <div>
@@ -163,8 +101,8 @@ const Properties = (props) => {
             </div>
           </div>
         </div>
-        <div className="bg-gray-800 text-white md:w-96 sm:w-80 flex items-center justify-center flex-shrink-0 z-20">
-          <div class="flex justify-center items-center rounded md:p-5">
+        <div className="bg-gray-800 text-white w-full sm:w-96 flex items-center justify-center flex-shrink-0 z-20">
+          <div class="flex justify-center items-center rounded p-5">
             {/* <div class="rounded-md shadow-xl md:p-3 md:fixed w-full md:w-fit items-center flex flex-col justify-center h-auto">
               <div className="flex items-center">
                 <span className="line-through text-1xl p-1">$1,999</span>
