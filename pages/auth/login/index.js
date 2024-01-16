@@ -71,7 +71,7 @@ export default function Login() {
                   placeholder="*********"
                   name="password"
                   value={formData.password}
-                  onClick={(e) => setPassword(e.target.value)}
+                  // onClick={(e) => setPassword(e.target.value)}
                   onChange={handleInputChange}
                 />
                 <span className="password-icon" onClick={handleTogglePassword}>

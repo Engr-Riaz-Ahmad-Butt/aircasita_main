@@ -1,4 +1,5 @@
 import React from "react";
+import Public from "../../../layout/Public";
 
 const Safety = () => {
   return (
@@ -36,3 +37,4 @@ const Safety = () => {
 };
 
 export default Safety;
+Safety.Layout = Public
