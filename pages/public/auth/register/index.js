@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 
-import Auth from "../../../layout/Auth";
+import Auth from "../../../../layout/Auth";
 import { IoIosCamera } from "react-icons/io";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";

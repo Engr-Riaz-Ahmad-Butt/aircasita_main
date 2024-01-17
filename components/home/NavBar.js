@@ -14,21 +14,22 @@ const NavBar = () => {
 
   return (
     <>
-      <div className=" flex flex-col justify-center bg-primary p-1  md:justify-center items-center h-1/5">
-        <div className="flex  navItems pt-1 pb-1 md:my-24 sm:my-3 sm:mx-6 sm:h-16 rounded w-3/4  align-middle">
-          <div className="flex mt-1 bg-lite_gray rounded-md sm:w-2/4 sm:mr-2 mb-2 sm:mb-0">
+      <div className="  bg-primary px-3 lg:px-20 md:px-20 sm:px-20 h-60 py-12">
+        <div className="grid xl:grid-cols-5 grid-cols-2 gap-3 sm:m-auto  sm:h-16 rounded  align-middle col-span-full md:col-span-2  lg:col-span-3 xl:col-span-4  m-auto">
+          {/* --------------------------------------- */}
+          <div className="flex  bg-lite_gray rounded-md sm:w-full xl:col-span-2 col-span-2 lg:w-full xl:w-full">
             <MdOutlineLocationOn className="text-3xl text-darkGray self-center ml-2" />
             <input
               type="text"
               placeholder="Search your destination"
-              className="hover:bg-transparent focus:border-white focus:outline-none bg-transparent text-xl  pt-2 pb-2 pr-2 overflow-hidden font-Montserrat"
+              className="hover:bg-transparent focus:border-white focus:outline-none bg-transparent text-lg p-2 overflow-hidden font-Montserrat w-full"
             />
           </div>
 
-          <div className="flex mt-1 bg-lite_gray rounded-md sm:mr-2 mb-2 sm:mb-0">
+          <div className="flex  bg-lite_gray rounded-md sm:w-full xl:col-span-1 col-span-1 xl:w-full">
             <DatePicker
               placeholderText="Move-in date"
-              className="hover:bg-transparent focus:border-white focus:outline-none bg-transparent p-4 font-Montserrat"
+              className="hover:bg-transparent focus:border-white focus:outline-none bg-transparent p-2 xl:py-4 font-Montserrat text-lg overflow-hidden"
               selectsStart
               selected={startDate}
               onChange={(date) => setStartDate(date)}
@@ -36,10 +37,10 @@ const NavBar = () => {
             />
           </div>
 
-          <div className="flex mt-1 bg-lite_gray rounded-md mb-2 sm:mb-0">
+          <div className="flex  bg-lite_gray rounded-md sm:w-full xl:col-span-1 col-span-1 xl:w-full ">
             <DatePicker
               placeholderText="Move-out date"
-              className="hover:bg-transparent focus:border-white focus:outline-none bg-transparent p-4 font-Montserrat"
+              className="hover:bg-transparent focus:border-white focus:outline-none bg-transparent p-2 xl:py-4 font-Montserrat text-lg sm:overflow-hidden"
               selectsEnd
               selected={endDate}
               onChange={(date) => setEndDate(date)}
@@ -49,8 +50,8 @@ const NavBar = () => {
             />
           </div>
 
-          <div className="rounded-md  mt-1 md:ml-3 ">
-            <button class="bg-secondary text-text_dark rounded text-lg w-full sm:w-52 h-14 font-Montserrat font-bold">
+          <div className="rounded xl:col-span-1 col-span-2">
+            <button className="bg-secondary text-text_dark rounded text-lg h-10 w-full xl:h-full font-Montserrat font-bold">
               Search
             </button>
           </div>
