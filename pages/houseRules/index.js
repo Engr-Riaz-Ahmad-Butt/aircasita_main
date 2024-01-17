@@ -98,7 +98,9 @@ const HouseRules = () => {
     },
   ];
 
-  const [showMore, setShowMore] = useState(new Array(houseRulesData.length).fill(false));
+  const [showMore, setShowMore] = useState(
+    new Array(houseRulesData.length).fill(false)
+  );
 
   const toggleExpanded = (index) => {
     const updatedShowMore = [...showMore];
@@ -112,7 +114,7 @@ const HouseRules = () => {
         <div className="flex-1 p-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
             {houseRulesData.map((items, index) => (
-          <div className="p-2 flex flex-col items-center justify-center sm:justify-start sm:items-start">
+              <div className="p-2 flex flex-col items-center justify-center sm:justify-start sm:items-start">
                 <div className="">
                   <img
                     src={items.img}
@@ -121,11 +123,11 @@ const HouseRules = () => {
                   />
                 </div>
                 <p className="text-gray-800">
-                {showMore[index]
-                ? items.description
-                : `${items.description.slice(0, 30)}${
-                    items.description.length > 30 ? "..." : ""
-                  }`}
+                  {showMore[index]
+                    ? items.description
+                    : `${items.description.slice(0, 30)}${
+                        items.description.length > 30 ? "..." : ""
+                      }`}
                 </p>
                 {items.description.length > 30 && (
                   <button
@@ -154,5 +156,3 @@ const HouseRules = () => {
 };
 
 export default HouseRules;
-
-

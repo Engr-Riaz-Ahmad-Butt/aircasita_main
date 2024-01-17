@@ -49,24 +49,3 @@ $theme-colors: (
 .input-border {
   border: 1px solid lightgray;
 }
-
-@media screen and (max-width: 1200px) {
-  .navItems {
-    flex-wrap: wrap !important;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .navItems {
-    // flex-wrap: wrap !important;
-    display: flex;
-    flex-direction: column;
-  }
-}
-// @media screen and (max-width: 766px) {
-//   .navItems {
-//     // flex-wrap: wrap !important;
-//     display: flex;
-//     flex-direction: column;
-//   }
-// }
