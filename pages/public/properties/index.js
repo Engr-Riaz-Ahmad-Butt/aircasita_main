@@ -3,7 +3,11 @@ import { FaHome, FaStar, FaWifi } from "react-icons/fa";
 import { LuParkingCircle } from "react-icons/lu";
 import Dropdown from "../../../components/dropDown";
 import { TbBrandCarbon, TbToolsKitchen2 } from "react-icons/tb";
-import { MdElevator, MdKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from "react-icons/md";
+import {
+  MdElevator,
+  MdKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
 import { GiSmokeBomb } from "react-icons/gi";
 import { CiCircleMinus, CiCirclePlus, CiStar } from "react-icons/ci";
 import BookingCard from "../../../components/BookingCard";
@@ -71,40 +75,38 @@ const Properties = (props) => {
           </div>
           <hr className="my-8 border border-lite_gray rounded dark:bg-gray-700 mr-6" />
 
-          
-            <div>
-              <div className="relative overflow-hidden product-card-border rounded-md mr-5">
-                <div
-                  className="flex transition-transform ease-out duration-300"
-                  style={{
-                    transform: `translateX(-${currentIndex * (100 / 3)}%)`,
-                  }}
-                >
-                  {images.map((image, index) => (
-                    <img
-                      key={index}
-                      src={image}
-                      alt={`Slide ${index + 1}`}
-                      className="w-52 h-48 object-cover p-3 rounded"
-                    />
-                  ))}
-                </div>
-
-                <button
-                  onClick={prevSlide}
-                  className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
-                >
-                  <MdKeyboardArrowLeft className="text-3xl" />
-                </button>
-                <button
-                  onClick={nextSlide}
-                  className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
-                >
-                  <MdOutlineKeyboardArrowRight className="text-3xl" />
-                </button>
+          <div>
+            <div className="relative overflow-hidden product-card-border rounded-md mr-5">
+              <div
+                className="flex transition-transform ease-out duration-300"
+                style={{
+                  transform: `translateX(-${currentIndex * (100 / 3)}%)`,
+                }}
+              >
+                {images.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`Slide ${index + 1}`}
+                    className="w-52 h-48 object-cover p-3 rounded"
+                  />
+                ))}
               </div>
+
+              <button
+                onClick={prevSlide}
+                className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
+              >
+                <MdKeyboardArrowLeft className="text-3xl" />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
+              >
+                <MdOutlineKeyboardArrowRight className="text-3xl" />
+              </button>
             </div>
-          
+          </div>
 
           <p className="text-slate mr-5">
             Lorem Ipsum is simply dummy text of the printing and typesetting
