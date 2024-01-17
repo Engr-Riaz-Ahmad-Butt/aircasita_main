@@ -7,12 +7,12 @@ import logo from "../assets/imgs/airCasita_logo-bg-remove.png";
 const Footer = () => {
   return (
     <>
-      <div className="mt-44 max-w-full">
+      <div className="mt-72 max-w-full">
         <div className="bg-primary  left-0 bottom-0 w-full text-gray font-Montserrat mt-4">
           <div className="max-w-screen-lg px-4 sm:px-6 text-gray-800 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto pt-6">
-            <div className="w-32 cursor-pointer sm:32 flex justify-center">
+            <div className=" cursor-pointer sm:32 flex justify-center">
               <a href="#">
-                <img src={logo.src} />
+                <img src={logo.src} className="w-40" />
               </a>
             </div>
             <div>
@@ -57,7 +57,7 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="bg-primary ">
+        <div className="bg-primary pb-3 ">
           <div
             className="flex pb-5 px-3 m-auto pt-5   text-sm flex-col
       max-w-screen-lg items-center"

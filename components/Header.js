@@ -19,7 +19,7 @@ export const Header = () => {
 
   return (
     <nav className="bg-primary  shadow-sm  dark:bg-gray-900">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div className="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto ">
         <a href="" className="flex items-center space-x-3 rtl:space-x-reverse">
           <span className="self-center text-2xl font-semibold whitespace-nowrap text-secondary">
             <img src={logoAircasita.src} className="w-36" />
@@ -142,7 +142,7 @@ export const Header = () => {
             isMenuOpen ? "translate-x-0" : "translate-x-full"
           } transition-transform duration-300 md:hidden w-full`}
         >
-          <div className=" text-center  h-full p-4">
+          <div className=" text-center  h-full p-2">
             <div className="flex justify-end text-end">
               <button onClick={toggleMenu}>
                 <RxCross2 />

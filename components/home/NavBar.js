@@ -14,9 +14,9 @@ const NavBar = () => {
 
   return (
     <>
-      <div className=" flex flex-col justify-center bg-primary p-4 md:justify-center items-center">
-        <div className="flex flex-col sm:flex-row pt-1 pb-1   md:my-24 sm:my-3 sm:mx-6 sm:h-16 rounded w-full sm:w-9/12 align-middle">
-          <div className="flex bg-lite_gray rounded-md sm:w-2/4 sm:mr-2 mb-2 sm:mb-0">
+      <div className=" flex flex-col justify-center bg-primary p-1  md:justify-center items-center h-1/5">
+        <div className="flex  navItems pt-1 pb-1 md:my-24 sm:my-3 sm:mx-6 sm:h-16 rounded w-3/4  align-middle">
+          <div className="flex mt-1 bg-lite_gray rounded-md sm:w-2/4 sm:mr-2 mb-2 sm:mb-0">
             <MdOutlineLocationOn className="text-3xl text-darkGray self-center ml-2" />
             <input
               type="text"
@@ -25,7 +25,7 @@ const NavBar = () => {
             />
           </div>
 
-          <div className="flex bg-lite_gray rounded-md sm:mr-2 mb-2 sm:mb-0">
+          <div className="flex mt-1 bg-lite_gray rounded-md sm:mr-2 mb-2 sm:mb-0">
             <DatePicker
               placeholderText="Move-in date"
               className="hover:bg-transparent focus:border-white focus:outline-none bg-transparent p-4 font-Montserrat"
@@ -36,7 +36,7 @@ const NavBar = () => {
             />
           </div>
 
-          <div className="flex bg-lite_gray rounded-md mb-2 sm:mb-0">
+          <div className="flex mt-1 bg-lite_gray rounded-md mb-2 sm:mb-0">
             <DatePicker
               placeholderText="Move-out date"
               className="hover:bg-transparent focus:border-white focus:outline-none bg-transparent p-4 font-Montserrat"
@@ -49,7 +49,7 @@ const NavBar = () => {
             />
           </div>
 
-          <div className="rounded-md md:ml-3 mt-2 sm:mt-0">
+          <div className="rounded-md  mt-1 md:ml-3 ">
             <button class="bg-secondary text-text_dark rounded text-lg w-full sm:w-52 h-14 font-Montserrat font-bold">
               Search
             </button>
