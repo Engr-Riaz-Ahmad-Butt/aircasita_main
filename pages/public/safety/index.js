@@ -7,7 +7,7 @@ const Safety = () => {
       <h1 className="text-3xl font-semibold p-3">
         airCASITA - Safety for Guests:
       </h1>
-      <p className="pt-3 sm:p-3">
+      <p className="pt-3 saftypage-par-padding">
         Hosts are reminded to survey their property frequently to identify and
         mitigate risk. Spotting dangers and removing them or putting up warning
         signs, these preventative actions by the host can avoid a guest fall in

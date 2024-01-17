@@ -25,7 +25,7 @@ const BookingCard = () => {
       </div>
       <div className="border rounded divide-y divide-gray-200 dark:divide-gray-700">
         <div className="flex flex-1 divide-x divide-gray-200 dark:divide-gray-700">
-          <div className="p-3 w-full">
+          <div className="md:p-3 w-full">
             <label className="block text-sm font-medium text-gray-700">
               Check-in
             </label>
@@ -40,11 +40,11 @@ const BookingCard = () => {
               />
             </div>
           </div>
-          <div className="p-3 w-full">
+          <div className="md:p-3 w-full">
             <label className="block text-sm font-medium text-gray-700">
               Check-out
             </label>
-            <div className="flex justify-center">
+            <div className="">
               <DatePicker
                 placeholderText="Check-out date"
                 className="hover:bg-transparent focus:border-white focus:outline-none bg-transparent font-customFont"

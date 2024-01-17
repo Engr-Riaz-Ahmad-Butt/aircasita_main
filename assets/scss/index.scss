@@ -62,7 +62,17 @@ $theme-colors: (
     display: flex;
     flex-direction: column;
   }
+  .saftypage-par-padding{
+    padding: 15px;
+  }
 }
+
+.upload-img-border{
+  border: 1px dashed lightgray;
+}
+
+
+
 // @media screen and (max-width: 766px) {
 //   .navItems {
 //     // flex-wrap: wrap !important;
