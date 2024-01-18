@@ -263,6 +263,7 @@ export const Header = () => {
           </ul>
         </div>
       </div>
-    </nav>
+    {/* </nav> */}
+    </div>
   );
 };

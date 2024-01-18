@@ -3,7 +3,7 @@ import NavBar from "../../components/home/NavBar";
 import { PropertyCard } from "../../components/home/PropertyCard";
 import Main from "../../layout/Main";
 import PropertyImg from "../../public/property.jpg";
-import { Card } from "../../components/card";
+import { Card } from "../../components/propertyCard";
 import { useRouter } from "next/router";
 
 export default function Home() {
@@ -203,7 +203,7 @@ export default function Home() {
   return (
     <>
       <NavBar />
-      <div className="container m-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-12 gap-5">
+      <div className="container m-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-12 gap-5 overflow-auto">
         <div className="col-span-12 md:col-span-7 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 tablet-col gap-5">
           {/* {propertyData.map((property, index) => (
             <div key={index} className="col-span-1 md:col-span-1/3">

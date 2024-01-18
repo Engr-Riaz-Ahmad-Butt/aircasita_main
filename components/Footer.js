@@ -7,24 +7,24 @@ import logo from "../assets/imgs/airCasita_logo-bg-remove.png";
 const Footer = () => {
   return (
     <>
-      <div className="mt-64  ">
-        <div className="bg-primary  left-0 bottom-0 w-full text-gray font-Montserrat mt-4">
-          <div className=" px-4 sm:px-6 text-gray-800 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto pt-6">
-            <div className=" cursor-pointer sm:32 flex justify-center">
+      <div className="mt-32 md:mt-24 bg-primary">
+        <div className="max-w-screen-lg container m-auto w-full text-gray font-Montserrat mt-4">
+          <div className="text-gray-800 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto pt-6">
+            <div className="flex justify-center md:justify-start items-center cursor-pointer sm:32">
               <a href="#">
                 <img src={logo.src} className="w-40" />
               </a>
             </div>
-            <div>
+            <div className="flex justify-center items-center flex-col">
               <div className="text-sm uppercase text-indigo-600 font-bold font-Montserrat">
                 Resources
               </div>
 
-              <a className="my-1 block font-Montserrat" href="/public/safety">
+              <a className="my-3 block font-Montserrat" href="/public/safety">
                 Safety
               </a>
             </div>
-            <div>
+            <div className="flex justify-center items-center flex-col">
               <div className="text-sm uppercase text-indigo-600 font-bold font-Montserrat">
                 Support
               </div>
@@ -36,12 +36,12 @@ const Footer = () => {
                 Hoese Rules
               </a>
             </div>
-            <div className="">
+            <div className="flex justify-center items-center flex-col">
               <div className="text-sm uppercase text-indigo-600 font-bold font-Montserrat">
                 Contact us
               </div>
 
-              <a className="my-1 block font-Montserrat" href="/#">
+              <a className="my-3 block font-Montserrat" href="/#">
                 contact@company.com
               </a>
             </div>
@@ -74,3 +74,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+

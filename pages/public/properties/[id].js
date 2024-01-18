@@ -42,8 +42,8 @@ const Properties = (props) => {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row md:container md:mx-auto md:p-5 font-customFont">
-        <div className="flex-1 p-4 col-span-3 w-full md:w-4/6">
+      <div className="grid grid-cols-8 md:grid-cols-6 lg:grid-cols-8 md:container md:mx-auto p-5 md:p-5 font-customFont">
+        <div className="col-span-8 md:col-span-4">
           <h3 className="text-2xl font-bold py-2">ENTER APPATRMENT</h3>
           <div className="flex flex-col sm:flex-row justify-between">
             <div>
@@ -76,7 +76,7 @@ const Properties = (props) => {
           <hr className="my-8 border border-lite_gray rounded dark:bg-gray-700 mr-6" />
 
           <div>
-            <div className="relative overflow-hidden product-card-border rounded-md mr-5">
+            <div className="relative overflow-hidden product-card-border rounded-md">
               <div
                 className="flex transition-transform ease-out duration-300"
                 style={{
@@ -161,8 +161,11 @@ const Properties = (props) => {
             </div>
           </div>
         </div>
-        <div className="bg-gray-800 text-white w-full md:ml-8 sm:w-96 flex justify-center flex-shrink-0 z-20">
-          <div class="flex justify-center rounded md:p-5">
+        <div className="bg-gray-800 text-white col-span-8 md:col-span-4 flex justify-center flex-shrink-0 z-20">
+          <div className="flex justify-center rounded md:p-5">
+            <div className="w-full md:w-auto items-center flex flex-col">
+              <BookingCard />
+            </div>
             {/* <div class="rounded-md shadow-xl md:p-3 md:fixed w-full md:w-fit items-center flex flex-col justify-center h-auto">
               <div className="flex items-center">
                 <span className="line-through text-1xl p-1">$1,999</span>
@@ -304,9 +307,6 @@ const Properties = (props) => {
                 </div>
               </div>
             </div> */}
-            <div className="w-full md:w-fit items-center flex flex-col">
-              <BookingCard />
-            </div>
           </div>
         </div>
       </div>
