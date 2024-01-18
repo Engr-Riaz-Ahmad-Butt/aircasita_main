@@ -203,9 +203,8 @@ export default function Home() {
   return (
     <>
       <NavBar />
-
-      <div className="px-4 md:px-8 grid grid-cols-1 md:grid-cols-12 gap-5 h-screen">
-        <div className="col-span-12 md:col-span-7 grid grid-cols-1 md:grid-cols-3 gap-5 home-container">
+      <div className="container m-auto px-4 md:px-8 grid grid-cols-1 md:grid-cols-12 gap-5">
+        <div className="col-span-12 md:col-span-7 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 tablet-col gap-5">
           {/* {propertyData.map((property, index) => (
             <div key={index} className="col-span-1 md:col-span-1/3">
               <PropertyCard {...property} />
@@ -215,23 +214,26 @@ export default function Home() {
           {cardDetails.map((card, index) => (
             <div
               key={index}
-              role="button"
+              className="col-span-1  md:col-span-1/3"
               onClick={() => {
                 router.push({
-                  pathname: `${`public/properties/${encodeURIComponent(card.id)}`}`,
+                  pathname: `${`public/properties/${encodeURIComponent(
+                    card.id
+                  )}`}`,
                 });
               }}
             >
-              <Card {...card} className="col-span-1 md:col-span-1/3" />
+              <Card {...card} />
             </div>
           ))}
         </div>
         <div className="col-span-12 md:col-span-5 mt-8">
-          <div className="sticky top-0">
-            <div className="md:h-screen h-64 font-customFont">
+          <MapComponent />
+          {/* <div className="sticky top-0">
+            <div className="md:h-48 sm:h-28 font-customFont">
               <MapComponent />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </>

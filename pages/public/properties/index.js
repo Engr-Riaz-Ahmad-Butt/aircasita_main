@@ -3,7 +3,11 @@ import { FaHome, FaStar, FaWifi } from "react-icons/fa";
 import { LuParkingCircle } from "react-icons/lu";
 import Dropdown from "../../../components/dropDown";
 import { TbBrandCarbon, TbToolsKitchen2 } from "react-icons/tb";
-import { MdElevator, MdKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from "react-icons/md";
+import {
+  MdElevator,
+  MdKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
 import { GiSmokeBomb } from "react-icons/gi";
 import { CiCircleMinus, CiCirclePlus, CiStar } from "react-icons/ci";
 import BookingCard from "../../../components/BookingCard";
@@ -62,49 +66,47 @@ const Properties = (props) => {
               <FaHome />
               <span className="text-2xl font-bold">Entire apartment</span>
             </div>
-            <div className="flex justify-evenly w-96 px-3 text-slate">
-              <span>6 guest</span>
-              <span>2 bedroom</span>
-              <span>6 beds</span>
-              <span>2 baths</span>
+            <div className="flex justify-evenly flex-col sm:flex-row md:w-96 px-3 text-slate">
+              <span className="sm:block mb-2">6 guests</span>
+              <span className="sm:block mb-2">2 bedrooms</span>
+              <span className="sm:block mb-2">6 beds</span>
+              <span className="sm:block mb-2">2 baths</span>
             </div>
           </div>
           <hr className="my-8 border border-lite_gray rounded dark:bg-gray-700 mr-6" />
 
-          
-            <div>
-              <div className="relative overflow-hidden product-card-border rounded-md mr-5">
-                <div
-                  className="flex transition-transform ease-out duration-300"
-                  style={{
-                    transform: `translateX(-${currentIndex * (100 / 3)}%)`,
-                  }}
-                >
-                  {images.map((image, index) => (
-                    <img
-                      key={index}
-                      src={image}
-                      alt={`Slide ${index + 1}`}
-                      className="w-52 h-48 object-cover p-3 rounded"
-                    />
-                  ))}
-                </div>
-
-                <button
-                  onClick={prevSlide}
-                  className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
-                >
-                  <MdKeyboardArrowLeft className="text-3xl" />
-                </button>
-                <button
-                  onClick={nextSlide}
-                  className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
-                >
-                  <MdOutlineKeyboardArrowRight className="text-3xl" />
-                </button>
+          <div>
+            <div className="relative overflow-hidden product-card-border rounded-md mr-5">
+              <div
+                className="flex transition-transform ease-out duration-300"
+                style={{
+                  transform: `translateX(-${currentIndex * (100 / 3)}%)`,
+                }}
+              >
+                {images.map((image, index) => (
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`Slide ${index + 1}`}
+                    className="w-52 h-48 object-cover p-3 rounded"
+                  />
+                ))}
               </div>
+
+              <button
+                onClick={prevSlide}
+                className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white rounded-full shadow bg-primary/70 text-gray-800 hover:bg-white"
+              >
+                <MdKeyboardArrowLeft className="text-3xl" />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white rounded-full shadow bg-primary/70 text-gray-800 hover:bg-white"
+              >
+                <MdOutlineKeyboardArrowRight className="text-3xl" />
+              </button>
             </div>
-          
+          </div>
 
           <p className="text-slate mr-5">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -159,7 +161,7 @@ const Properties = (props) => {
             </div>
           </div>
         </div>
-        <div className="bg-gray-800 text-white w-full sm:w-96 flex justify-center flex-shrink-0 z-20">
+        <div className="bg-gray-800 text-white w-full md:ml-8 sm:w-96 flex justify-center flex-shrink-0 z-20">
           <div class="flex justify-center rounded md:p-5">
             {/* <div class="rounded-md shadow-xl md:p-3 md:fixed w-full md:w-fit items-center flex flex-col justify-center h-auto">
               <div className="flex items-center">
@@ -302,7 +304,7 @@ const Properties = (props) => {
                 </div>
               </div>
             </div> */}
-            <div className="w-full md:w-fit items-center flex flex-col justify-center">
+            <div className="w-full md:w-fit items-center flex flex-col">
               <BookingCard />
             </div>
           </div>

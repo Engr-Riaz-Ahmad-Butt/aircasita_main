@@ -5,7 +5,7 @@ import React from "react";
 const MapComponent = () => {
   const mapStyles = {
     width: "100%",
-    height: "60vh",
+    height: "32rem",
   };
 
   const mapCenter = { lat: 0, lng: 0 };
@@ -15,7 +15,7 @@ const MapComponent = () => {
   };
 
   return (
-    <div className="App" style={{ height: 300 }}>
+    <div className="App h-40 md:h-64">
       <LoadScript googleMapsApiKey="AIzaSyCzY9tZOG_WWaevgILldDIPhwEeMfMY0zk">
         <GoogleMap
           mapContainerStyle={mapStyles}

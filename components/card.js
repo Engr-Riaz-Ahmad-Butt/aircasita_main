@@ -30,8 +30,8 @@ export const Card = ({ title, description, slider, viewed,date, price }) => {
   };
 
   return (
-    <div className="mt-6 justify-center align-middle max-w-md mx-auto cursor-pointer overflow-hidden sm:max-w-lg product-card-border rounded-xl dark:bg-gray-800 dark:border-gray-700">
-      <div className="relative h-56 overflow-hidden">
+    <div className="mt-6 justify-center max-w-md mx-auto cursor-pointer overflow-hidden sm:max-w-lg product-card-border rounded-xl dark:bg-gray-800 dark:border-gray-700">
+      <div className="relative  h-56 overflow-hidden">
         <div
           className="flex transition-transform ease-out duration-500"
           style={{ transform: `translateX(-${curr * 100}%)` }}
