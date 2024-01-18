@@ -34,10 +34,10 @@ const Profile = () => {
   };
 
   return (
-    <div className="container m-auto flex justify-center items-center w-full mt-3">
+    <div className="container m-auto flex justify-center items-center w-full mt-3 sm:px-3 md:px-4">
       <div className="w-full m-0">
-          <h1 className="text-3xl font-bold py-5">Profile</h1>
-        <form className="bg-white shadow-md rounded md:px-20 pt-6 pb-8 mb-4">
+        <h1 className="text-3xl font-bold py-5">Profile</h1>
+        <form className="bg-white shadow-md rounded px-8 md:px-20 pt-6 pb-8 mb-4">
           <div>
             <div className="flex justify-center">
               <div className="flex justify-center relative ">
@@ -70,11 +70,11 @@ const Profile = () => {
                 </div>
               </div>
             </div>
-            <div className="flex justify-center align-middle">
+            <div className="flex justify-center align-middle font-Montserrat">
               <h1 className="text-1xl font-bold">Edit Image</h1>
             </div>
           </div>
-          <div className="mb-4 mt-5 flex flex-wrap justify-between">
+          <div className="mb-4 mt-5 flex flex-wrap justify-between font-Montserrat">
             <div className="w-full md:w-1/2 pr-2 mb-4 md:mb-0">
               <label
                 className="block text-gray-700 text-sm font-bold mb-2"
@@ -95,7 +95,7 @@ const Profile = () => {
                 className="block text-gray-700 text-sm font-bold mb-2"
                 htmlFor="useremail"
               >
-                Email
+                PayPal Email
               </label>
               <input
                 className="shadow appearance-none input-border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
@@ -106,45 +106,45 @@ const Profile = () => {
               />
             </div>
           </div>
-          <div className="mb-4 mt-5 flex flex-wrap justify-between">
-          <div className="w-full md:w-1/2 pr-2 mb-4 md:mb-0">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
-              htmlFor="usernumber"
-            >
-              Phone Number
-            </label>
-            <input
-              className="shadow appearance-none input-border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="usernumber"
-              type="number"
-              placeholder="0123456789"
-            />
-          </div>
-
-          <div className="w-full md:w-1/2 pr-2 mb-4 md:mb-0">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
-              for="password"
-            >
-              Password
-            </label>
-            <div className="flex flex-row justify-center items-center input-border border-red-500 rounded w-full py-2 px-3  mb-3 leading-tight focus:outline-none focus:shadow-outline">
+          <div className="mb-4 mt-5 flex flex-wrap justify-between font-Montserrat">
+            <div className="w-full md:w-1/2 pr-2 mb-4 md:mb-0">
+              <label
+                className="block text-gray-700 text-sm font-bold mb-2"
+                htmlFor="usernumber"
+              >
+                Phone Number
+              </label>
               <input
-                className=" appearance-none  focus:outline-none w-full h-full"
-                type={showPassword ? "text" : "password"}
-                placeholder="*********"
-                name="password"
-                // value="password"
-                onClick={(e) => setShowPassword(e.target.value)}
+                className="shadow appearance-none input-border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                id="usernumber"
+                type="number"
+                placeholder="0123456789"
               />
-              <span className="password-icon" onClick={handleTogglePassword}>
-                {showPassword ? <FaEye /> : <FaEyeSlash />}
-              </span>
+            </div>
+
+            <div className="w-full md:w-1/2 pr-2 mb-4 md:mb-0">
+              <label
+                className="block text-gray-700 text-sm font-bold mb-2"
+                for="password"
+              >
+                Password
+              </label>
+              <div className="flex flex-row justify-center items-center input-border border-red-500 rounded w-full py-2 px-3  mb-3 leading-tight focus:outline-none focus:shadow-outline">
+                <input
+                  className=" appearance-none  focus:outline-none w-full h-full"
+                  type={showPassword ? "text" : "password"}
+                  placeholder="*********"
+                  name="password"
+                  // value="password"
+                  onClick={(e) => setShowPassword(e.target.value)}
+                />
+                <span className="password-icon" onClick={handleTogglePassword}>
+                  {showPassword ? <FaEye /> : <FaEyeSlash />}
+                </span>
+              </div>
             </div>
           </div>
-          </div>
-          <div className="mb-2">
+          <div className="mb-2 font-Montserrat">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
               for="password"

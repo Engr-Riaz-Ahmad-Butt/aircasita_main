@@ -1,11 +1,7 @@
 import Auth from "../../../layout/Auth";
 import logo from "../../../assets/imgs/airCasita_logo.png";
 import { useState } from "react";
-import { FaEye } from "react-icons/fa";
-import { FaEyeSlash } from "react-icons/fa";
-import { useRouter } from 'next/router';
-
-
+import { useRouter } from "next/router";
 
 export default function Login() {
   const router = useRouter();
@@ -28,7 +24,7 @@ export default function Login() {
     console.log(formData, "formdata");
   };
   // state for password
- const navigate = (url) => {
+  const navigate = (url) => {
     router.push(url);
   };
   const handleTogglePassword = () => {
@@ -48,57 +44,33 @@ export default function Login() {
               </div>
             </div>
             <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2">
-                Email
+              <label
+                className="block text-gray-700 text-sm font-bold mb-2 font-Montserrat"
+                for="username"
+              >
+                Phone Number
               </label>
               <input
-                className="shadow appearance-none input-border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                name="email"
-                value={formData.email}
-                type="email"
-                placeholder="user email"
-                onChange={handleInputChange}
+                className="shadow appearance-none input-border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline font-Montserrat"
+                id="usernumber"
+                type="number"
+                placeholder="0123456789"
               />
             </div>
-            <div className="mb-6">
-              <label className="block text-gray-700 text-sm font-bold mb-2">
-                Password
-              </label>
-              <div className="flex flex-row justify-center items-center input-border border-red-500 rounded w-full py-2 px-3  mb-3 leading-tight focus:outline-none focus:shadow-outline">
-                <input
-                  className=" appearance-none  focus:outline-none w-full h-full"
-                  type={showPassword ? "text" : "password"}
-                  placeholder="*********"
-                  name="password"
-                  value={formData.password}
-                  // onClick={(e) => setPassword(e.target.value)}
-                  onChange={handleInputChange}
-                />
-                <span className="password-icon" onClick={handleTogglePassword}>
-                  {showPassword ? <FaEye /> : <FaEyeSlash />}
-                </span>
-              </div>
 
-              <div classNameName="mt-2 mb-2">
-                <a
-                  className="inline-block underline align-baseline font-bold text-sm text-primary hover:text-red-600"
-                  href="#"
-                >
-                  Forgot Password?
-                </a>
-              </div>
-            </div>
             <div>
               <button
-                className="bg-primary text-white w-full  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+                className="bg-primary text-text_light w-full  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline font-Montserrat "
                 type="button"
-                onClick={()=>{navigate("/")}}
+                onClick={() => {
+                  navigate("/");
+                }}
               >
                 Log In
               </button>
             </div>
 
-            <div className="flex justify-center mt-4">
+            <div className="flex justify-center mt-4 font-Montserrat">
               <p className="pr-2 text-sm">
                 Don't have an acount ?
                 <a href="/auth/register" className="text-primary pl-1">
