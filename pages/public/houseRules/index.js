@@ -1,5 +1,5 @@
 import React from "react";
-import HouseRules from "../../houseRules";
+import HouseRules from "../../houserules";
 const index = () => {
   return (
     <div>

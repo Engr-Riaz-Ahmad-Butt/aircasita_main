@@ -74,76 +74,56 @@ const SignUp = () => {
               </div>
             </div>
           </div>
-          <div className="mb-4">
+          <div className="mb-4 font-Montserrat">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-700 text-sm font-bold mb-2 "
               for="username"
             >
               Name
             </label>
             <input
-              className="shadow appearance-none input-border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none input-border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline "
               id="username"
               type="name"
               placeholder="Enter your name"
             />
           </div>
-          <div className="mb-4">
+          <div className="mb-4 font-Montserrat">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-700 text-sm font-bold mb-2 "
               for="username"
             >
               Phone Number
             </label>
             <input
-              className="shadow appearance-none input-border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none input-border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline "
               id="usernumber"
               type="number"
               placeholder="0123456789"
             />
           </div>
-          <div className="mb-4">
+          <div className="mb-4 font-Montserrat">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-700 text-sm font-bold mb-2 "
               for="username"
             >
-              Email
+              PayPal Email
             </label>
             <input
-              className="shadow appearance-none input-border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none input-border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline "
               id="username"
               type="email"
               placeholder="abc@gmail.com"
             />
           </div>
-          <div className="mb-6">
+
+          <div className="mb-2 font-Montserrat">
             <label
-              className="block text-gray-700 text-sm font-bold mb-2"
-              for="password"
-            >
-              Password
-            </label>
-            <div className="flex flex-row justify-center items-center input-border border-red-500 rounded w-full py-2 px-3  mb-3 leading-tight focus:outline-none focus:shadow-outline">
-              <input
-                className=" appearance-none  focus:outline-none w-full h-full"
-                type={showPassword ? "text" : "password"}
-                placeholder="*********"
-                name="password"
-                // value="password"
-                onClick={(e) => setShowPassword(e.target.value)}
-              />
-              <span className="password-icon" onClick={handleTogglePassword}>
-                {showPassword ? <FaEye /> : <FaEyeSlash />}
-              </span>
-            </div>
-          </div>
-          <div className="mb-2">
-            <label
-              className="block text-gray-700 text-sm font-bold mb-2"
+              className="block text-gray-700 text-sm font-bold mb-2 "
               for="password"
             >
               Your Identification:
-              <span className="text-darkGray text-xs">
+              <span className="text-darkGray text-xs fon">
                 Upload photo of a government ID card 'driver's license-both
                 sides;or passport data photo'
               </span>
@@ -153,9 +133,9 @@ const SignUp = () => {
               type="file"
             />
           </div>
-          <div>
+          <div c>
             <button
-              className="bg-primary  w-full  hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline "
+              className="bg-primary text-text_light w-full  hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline font-Montserrat "
               type="button"
               onClick={() => {
                 navigate("/auth/login");
@@ -164,7 +144,7 @@ const SignUp = () => {
               Sign Up
             </button>
           </div>
-          <div className="flex ">
+          <div className="flex font-Montserrat">
             <p className="pr-2 text-sm mt-3 mb-1">
               Already have an acount :
               <a href="/auth/login" className="text-primary pl-1">
@@ -172,7 +152,7 @@ const SignUp = () => {
               </a>
             </p>
           </div>
-          <div className="flex flex-wrap">
+          <div className="flex flex-wrap font-Montserrat">
             <p className="pr-2 text-sm">
               Your{" "}
               <a href="airCASITA.com" className="text-primary">
@@ -180,8 +160,8 @@ const SignUp = () => {
               </a>{" "}
               acount:
             </p>
-            <p className="text-sm">
-              <a href="/auth/register">LogIn</a> by your name & phone number
+            <p className="text-sm font-Montserrat">
+              <a href="/auth/register">LogIn</a> by your PayPal & phone number
             </p>
           </div>
         </form>

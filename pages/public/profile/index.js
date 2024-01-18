@@ -1,9 +1,9 @@
 import React from "react";
-import SignUp from "../../../auth/register";
+import Profile from "../../profile";
 const index = () => {
   return (
     <div>
-      <SignUp />
+      <Profile />
     </div>
   );
 };

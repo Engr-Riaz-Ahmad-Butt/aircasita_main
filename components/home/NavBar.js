@@ -27,29 +27,29 @@ const NavBar = () => {
               />
             </div>
 
-            <div className="flex  bg-lite_gray rounded-md sm:w-full xl:col-span-1 col-span-1 xl:w-full">
-              <DatePicker
-                placeholderText="Move-in date"
-                className="hover:bg-transparent focus:border-white focus:outline-none bg-transparent p-2 xl:py-4 font-Montserrat text-lg overflow-hidden"
-                selectsStart
-                selected={startDate}
-                onChange={(date) => setStartDate(date)}
-                startDate={startDate}
-              />
-            </div>
+          <div className="flex  bg-lite_gray rounded-md sm:w-full xl:col-span-1 col-span-1 xl:w-full">
+            <DatePicker
+              placeholderText="Move-in date"
+              className="hover:bg-transparent focus:border-white focus:outline-none bg-transparent p-2 px-4 xl:py-4 font-Montserrat text-lg overflow-hidden"
+              selectsStart
+              selected={startDate}
+              onChange={(date) => setStartDate(date)}
+              startDate={startDate}
+            />
+          </div>
 
-            <div className="flex  bg-lite_gray rounded-md sm:w-full xl:col-span-1 col-span-1 xl:w-full ">
-              <DatePicker
-                placeholderText="Move-out date"
-                className="hover:bg-transparent focus:border-white focus:outline-none bg-transparent p-2 xl:py-4 font-Montserrat text-lg sm:overflow-hidden"
-                selectsEnd
-                selected={endDate}
-                onChange={(date) => setEndDate(date)}
-                endDate={endDate}
-                startDate={startDate}
-                minDate={startDate}
-              />
-            </div>
+          <div className="flex  bg-lite_gray rounded-md sm:w-full xl:col-span-1 col-span-1 xl:w-full ">
+            <DatePicker
+              placeholderText="Move-out date"
+              className="hover:bg-transparent focus:border-white focus:outline-none bg-transparent p-2 px-4 xl:py-4 font-Montserrat text-lg sm:overflow-hidden"
+              selectsEnd
+              selected={endDate}
+              onChange={(date) => setEndDate(date)}
+              endDate={endDate}
+              startDate={startDate}
+              minDate={startDate}
+            />
+          </div>
 
             <div className="rounded xl:col-span-1 col-span-2">
               <button className="bg-secondary text-text_dark rounded text-lg h-10 w-full xl:h-full font-Montserrat font-bold">

@@ -1,11 +1,12 @@
 import React from "react";
-
+import { Header } from "../components/Header";
+import Footer from "../components/Footer";
 const Auth = ({ children }) => {
   return (
     <>
-      {/* <header>Auth Header</header> */}
+      <Header />
       {children}
-      {/* <footer>Auth Footer</footer> */}
+      <Footer />
     </>
   );
 };

@@ -29,14 +29,11 @@ const Footer = () => {
                 Support
               </div>
 
-              <a className="my-3 block font-Montserrat" href="/public/safety">
-                Privacy Policy{" "}
-              </a>
               <a
                 className="my-3 block font-Montserrat"
-                href="/public/houseRules"
+                href="/public/houserules"
               >
-                Conditions
+                Hoese Rules
               </a>
             </div>
             <div className="flex justify-center items-center flex-col">
