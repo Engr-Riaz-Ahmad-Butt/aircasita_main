@@ -1,7 +1,7 @@
 import { DashboardCard } from "../../components/DashboardCard";
 import TabbedTable from "../../components/DashboardTable";
 
-const index = (props) => {
+const index = () => {
   return (
     <div className="container m-auto my-5">
       <h1 className="text-4xl font-bold">Dashboard</h1>
