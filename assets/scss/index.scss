@@ -49,6 +49,8 @@ $theme-colors: (
 .input-border {
   border: 1px solid lightgray;
 }
+<<<<<<<<< Temporary merge branch 1
+=========
 
 @media screen and (max-width: 1200px) {
   .navItems {
@@ -72,13 +74,6 @@ $theme-colors: (
 }
 
 
-@media screen and (max-width: 1024px) {
-  .lgs {
-    flex-direction: row;
-  }
-}
-
-
 
 // @media screen and (max-width: 766px) {
 //   .navItems {
@@ -87,3 +82,4 @@ $theme-colors: (
 //     flex-direction: column;
 //   }
 // }
+>>>>>>>>> Temporary merge branch 2
