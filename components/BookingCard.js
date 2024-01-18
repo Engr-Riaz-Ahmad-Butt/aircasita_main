@@ -220,6 +220,7 @@
 import React, { useState } from "react";
 import { CiCircleMinus, CiCirclePlus, CiStar } from "react-icons/ci";
 import DatePicker from "react-datepicker";
+import PaypalLogo from '../assets/imgs/PaypalLogo.png'
 
 const BookingCard = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -255,7 +256,7 @@ const BookingCard = () => {
           <div className="payPal mt-10">
             <a href="/dashboard" className="responsivePayPal">
               <img
-                src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png"
+                src={PaypalLogo.src}
                 alt="Check out with PayPal"
               />
             </a>

@@ -1,19 +1,32 @@
+// import React from "react";
+// import HouseRules from "../../houserules";
+// const index = () => {
+//   return (
+//     <div>
+//       <HouseRules />
+//     </div>
+//   );
+// };
+
+// export default index;
+
+
 import React, { useState } from "react";
-import Picture1 from "../../assets/imgs/Picture1.png";
-import Picture2 from "../../assets/imgs/Picture2.png";
-import Picture3 from "../../assets/imgs/Picture3.png";
-import Picture4 from "../../assets/imgs/Picture4.jpg";
-import Picture5 from "../../assets/imgs/Picture5.png";
-import Picture6 from "../../assets/imgs/Picture6.png";
-import Picture7 from "../../assets/imgs/Picture7.png";
-import Picture8 from "../../assets/imgs/Picture8.jpg";
-import Picture9 from "../../assets/imgs/Picture9.jpg";
-import Picture10 from "../../assets/imgs/Picture10.jpg";
-import Picture11 from "../../assets/imgs/Picture11.jpg";
-import Picture12 from "../../assets/imgs/Picture12.png";
-import Picture13 from "../../assets/imgs/Picture13.jpg";
-import Picture14 from "../../assets/imgs/Picture14.jpg";
-import Picture15 from "../../assets/imgs/Picture15.png";
+import Picture1 from "../../../assets/imgs/Picture1.png";
+import Picture2 from "../../../assets/imgs/Picture2.png";
+import Picture3 from "../../../assets/imgs/Picture3.png";
+import Picture4 from "../../../assets/imgs/Picture4.jpg";
+import Picture5 from "../../../assets/imgs/Picture5.png";
+import Picture6 from "../../../assets/imgs/Picture6.png";
+import Picture7 from "../../../assets/imgs/Picture7.png";
+import Picture8 from "../../../assets/imgs/Picture8.jpg";
+import Picture9 from "../../../assets/imgs/Picture9.jpg";
+import Picture10 from "../../../assets/imgs/Picture10.jpg";
+import Picture11 from "../../../assets/imgs/Picture11.jpg";
+import Picture12 from "../../../assets/imgs/Picture12.png";
+import Picture13 from "../../../assets/imgs/Picture13.jpg";
+import Picture14 from "../../../assets/imgs/Picture14.jpg";
+import Picture15 from "../../../assets/imgs/Picture15.png";
 
 const HouseRules = () => {
   const houseRulesData = [
