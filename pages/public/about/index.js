@@ -1,11 +1,10 @@
 import React from "react";
-import Public from "../../../layout/Public";
 
-const Safety = () => {
+const About = () => {
   return (
     <div class="md:container md:mx-auto mt-5">
       <h1 className="text-3xl font-semibold p-3">
-        airCASITA - Safety for Guests:
+        About
       </h1>
       <p className="pt-3 saftypage-par-padding">
         Hosts are reminded to survey their property frequently to identify and
@@ -36,5 +35,4 @@ const Safety = () => {
   );
 };
 
-export default Safety;
-Safety.Layout = Public
+export default About;

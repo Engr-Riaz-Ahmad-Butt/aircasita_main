@@ -72,6 +72,13 @@ $theme-colors: (
 }
 
 
+@media screen and (max-width: 1024px) {
+  .lgs {
+    flex-direction: row;
+  }
+}
+
+
 
 // @media screen and (max-width: 766px) {
 //   .navItems {
