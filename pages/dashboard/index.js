@@ -1,4 +1,5 @@
 import { DashboardCard } from "../../components/DashboardCard";
+import TabbedTable from "../../components/DashboardTable";
 
 const index = (props) => {
   return (
@@ -7,16 +8,17 @@ const index = (props) => {
       <div className="container mx-auto p-4">
         <div className="flex flex-wrap -mx-4">
           <div className="w-full sm:w-1/3 px-4">
-            <DashboardCard totalOrder="Total Orders"  numberOfOrders="25"/>
+            <DashboardCard totalOrder="Total Orders" numberOfOrders="25" />
           </div>
           <div className="w-full sm:w-1/3 px-4">
-            <DashboardCard totalOrder="Orders to Review"  numberOfOrders="05" />
+            <DashboardCard totalOrder="Orders to Review" numberOfOrders="05" />
           </div>
           <div className="w-full sm:w-1/3 px-4">
-            <DashboardCard totalOrder="Amount spent"  numberOfOrders="$5000" />
+            <DashboardCard totalOrder="Amount spent" numberOfOrders="$5000" />
           </div>
         </div>
       </div>
+      <TabbedTable />
     </div>
   );
 };
