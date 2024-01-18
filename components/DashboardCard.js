@@ -4,7 +4,7 @@ export const DashboardCard = ({totalOrder, numberOfOrders}) => {
   return (
     <div className="container flex flex-col sm:flex-row justify-between bg-white p-4 rounded-md product-card-border mb-4">
       <div className="flex items-center mb-2 sm:mb-0">
-        <div className="mr-4">
+        <div>
           <p className="text-lg font-semibold text-gray-800">{totalOrder}</p>
           <p className="text-sm text-gray-500">{numberOfOrders}</p>
         </div>

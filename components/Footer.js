@@ -31,7 +31,7 @@ const Footer = () => {
 
               <a
                 className="my-3 block font-Montserrat"
-                href="/public/houserules"
+                href="/public/house-rules"
               >
                 House Rules
               </a>
