@@ -66,10 +66,16 @@ $theme-colors: (
   .saftypage-par-padding{
     padding: 15px;
   }
+  
 }
 
 .upload-img-border{
   border: 1px dashed lightgray;
+}
+.container{
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  max-width: 1280px !important;
 }
 
 
@@ -81,4 +87,6 @@ $theme-colors: (
 //     flex-direction: column;
 //   }
 // }
+
+
 

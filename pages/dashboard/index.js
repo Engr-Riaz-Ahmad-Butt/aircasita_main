@@ -1,22 +1,27 @@
 import { DashboardCard } from "../../components/DashboardCard";
+import TabbedTable from "../../components/DashboardTable";
 
-const index = (props) => {
+const index = () => {
   return (
     <div className="container m-auto my-5">
       <h1 className="text-4xl font-bold">Dashboard</h1>
-      <div className="container mx-auto p-4">
+      <div className="mt-5">
         <div className="flex flex-wrap -mx-4">
-          <div className="w-full sm:w-1/3 px-4">
-            <DashboardCard totalOrder="Total Orders"  numberOfOrders="25"/>
+          <div className="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 px-4">
+            <DashboardCard totalOrder="Completed" numberOfOrders="0" />
           </div>
-          <div className="w-full sm:w-1/3 px-4">
-            <DashboardCard totalOrder="Orders to Review"  numberOfOrders="05" />
+          <div className="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 px-4">
+            <DashboardCard totalOrder="Inprogres" numberOfOrders="05" />
           </div>
-          <div className="w-full sm:w-1/3 px-4">
-            <DashboardCard totalOrder="Amount spent"  numberOfOrders="$5000" />
+          <div className="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 px-4">
+            <DashboardCard totalOrder="Amount spent" numberOfOrders="$5000" />
+          </div>
+          <div className="w-full sm:w-1/2 lg:w-1/3 xl:w-1/4 px-4">
+            <DashboardCard totalOrder="Amount spent" numberOfOrders="$5000" />
           </div>
         </div>
       </div>
+      <TabbedTable />
     </div>
   );
 };

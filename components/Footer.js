@@ -31,9 +31,9 @@ const Footer = () => {
 
               <a
                 className="my-3 block font-Montserrat"
-                href="/public/houserules"
+                href="/public/house-rules"
               >
-                Hoese Rules
+                House Rules
               </a>
             </div>
             <div className="flex justify-center items-center flex-col">
@@ -74,5 +74,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-

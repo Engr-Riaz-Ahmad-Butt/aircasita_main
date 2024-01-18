@@ -15,9 +15,8 @@ const NavBar = () => {
   return (
     <>
       <div className=" bg-primary">
-        <div className="container m-auto h-60 py-12">
-          <div className="grid xl:grid-cols-5 grid-cols-2 gap-3 sm:m-auto  sm:h-16 rounded  align-middle col-span-full md:col-span-2  lg:col-span-3 xl:col-span-4  m-auto">
-            {/* --------------------------------------- */}
+        <div className="container max-w-screen-lg m-auto flex h-60 py-12 p-5 md:p-3">
+          <div className="grid  xl:grid-cols-5 grid-cols-2 gap-3 sm:m-auto rounded  align-middle col-span-full md:col-span-2  lg:col-span-3 xl:col-span-4  m-auto">
             <div className="flex  bg-lite_gray rounded-md sm:w-full xl:col-span-2 col-span-2 lg:w-full xl:w-full">
               <MdOutlineLocationOn className="text-3xl text-darkGray self-center ml-2" />
               <input
