@@ -48,7 +48,7 @@ const Footer = () => {
           </div>
           <div className="bg-primary pb-3 ">
             <div
-              className="flex pb-5 px-3 m-auto pt-5   text-sm flex-col
+              className="flex pb-5 px-3 m-auto pt-5 text-sm flex-col
             max-w-screen-lg items-center"
             >
               <div className="md:flex-auto md:flex-row-reverse  flex-row flex ">
