@@ -2,7 +2,7 @@ import Auth from "../../../layout/Auth";
 import logo from "../../../assets/imgs/airCasita_logo.png";
 import { useState } from "react";
 import { useRouter } from "next/router";
-import Link from 'next/link'
+import Link from "next/link";
 export default function Login() {
   const router = useRouter();
 
@@ -60,7 +60,8 @@ export default function Login() {
 
             <div>
               <button
-                className="bg-primary text-text_light w-full  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline font-Montserrat "
+                className="bg-primary
+                 text-text_light w-full  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline font-Montserrat "
                 type="button"
                 onClick={() => {
                   navigate("/");
