@@ -32,7 +32,7 @@ export default function Login() {
   };
   return (
     <>
-      <div className="container flex justify-center items-center w-full h-screen">
+      <div className="container mx-auto flex justify-center items-center w-full h-screen">
         <div className="w-full max-w-xl m-0">
           <form
             className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
@@ -87,3 +87,4 @@ export default function Login() {
 }
 
 Login.Layout = Auth;
+

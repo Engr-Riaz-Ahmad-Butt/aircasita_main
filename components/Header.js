@@ -192,7 +192,7 @@ export const Header = () => {
                   aria-current="page"
                 >
                   Contant
-                </Link>
+                </a>
               </li>
               <li>
                 <Link
@@ -256,7 +256,7 @@ export const Header = () => {
             </li>
 
             <li>
-              <Link
+              <a
                 href="/contact"
                 className="block py-2 px-3 rounded  text-text_light  hover:text-secondary  md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-Montserrat"
               >

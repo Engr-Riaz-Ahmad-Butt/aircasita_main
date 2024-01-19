@@ -12,7 +12,7 @@ const Dropdown = ({ title }) => {
       <button
         id="dropdownDefaultButton"
         onClick={toggleDropdown}
-        className="text-dodgerBlue text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-blue-300 rounded-lg text-2xl py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+        className="text-dodgerBlue text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-blue-300 rounded-lg text-sm md:text-2xl py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
         type="button"
       >
         {title}
@@ -47,17 +47,15 @@ const Dropdown = ({ title }) => {
           </div>
           <div>
             {/* <h1 className="text-2xl font-bold py-2">General description</h1> */}
+          <div >
+            <h1 className="text-2xl font-bold py-2">Usable space</h1>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
               type and scrambled it to make a type specimen book. It has
               survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum
+              electronic typesetting, remaining essentially unchanged. 
             </p>
           </div>
           <div className="my-3">
