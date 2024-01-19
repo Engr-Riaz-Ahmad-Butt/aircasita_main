@@ -1,25 +1,24 @@
-
 import React, { useState } from "react";
 import { CiCircleMinus, CiCirclePlus, CiStar } from "react-icons/ci";
 import DatePicker from "react-datepicker";
-import PaypalLogo from '../assets/imgs/PaypalLogo.png'
-import Link from 'next/link'
+import PaypalLogo from "../assets/imgs/PaypalLogo.png";
+import Link from "next/link";
 const BookingCard = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [bookingSuccess, setBookingSuccess] = useState(false);
+	const [isOpen, setIsOpen] = useState(false);
+	const [bookingSuccess, setBookingSuccess] = useState(false);
 
-  const [startDate, setStartDate] = useState();
-  const [endDate, setEndDate] = useState();
+	const [startDate, setStartDate] = useState();
+	const [endDate, setEndDate] = useState();
 
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
+	const toggleDropdown = () => {
+		setIsOpen(!isOpen);
+	};
 
-  const handleBookClick = () => {
-    setBookingSuccess(true);
-    setStartDate(null);
-    setEndDate(null);
-  };
+	const handleBookClick = () => {
+		setBookingSuccess(true);
+		setStartDate(null);
+		setEndDate(null);
+	};
 
   return (
     <div className="max-w-md bg-white border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
@@ -37,10 +36,7 @@ const BookingCard = () => {
           </div>
           <div className="payPal mt-10">
             <Link href="/dashboard" className="responsivePayPal">
-              <img
-                src={PaypalLogo.src}
-                alt="Check out with PayPal"
-              />
+              <img src={PaypalLogo.src} alt="Check out with PayPal" />
             </Link>
           </div>
         </div>
