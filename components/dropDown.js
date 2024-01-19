@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import Link from "next/link";
 const Dropdown = ({ title }) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -34,7 +34,7 @@ const Dropdown = ({ title }) => {
       </button>
       {isOpen && (
         <div className="z-10 absolute bg-text_light p-3 rounded-lg shadow w-full dark:bg-gray-700">
-          <div >
+          <div>
             <h1 className="text-2xl font-bold py-2">Descriptive sentence</h1>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -45,7 +45,7 @@ const Dropdown = ({ title }) => {
               electronic typesetting, remaining essentially unchanged.
             </p>
           </div>
-          <div >
+          <div>
             {/* <h1 className="text-2xl font-bold py-2">General description</h1> */}
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -91,36 +91,36 @@ const Dropdown = ({ title }) => {
 
           {/* <ul className="py-2 text-sm text-gray-700 dark:text-gray-200 bg-gray">
             <li>
-              <a
+              <Link
                 href="#"
                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
               >
                 Dashboard
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="#"
                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
               >
                 Settings
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="#"
                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
               >
                 Earnings
-              </a>
+              </Link>
             </li>
             <li>
-              <a
+              <Link
                 href="#"
                 className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
               >
                 Sign out
-              </a>
+              </Link>
             </li>
           </ul> */}
         </div>
