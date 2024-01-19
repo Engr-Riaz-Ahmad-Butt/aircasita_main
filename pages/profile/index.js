@@ -34,10 +34,12 @@ const Profile = () => {
   };
 
   return (
-    <div className="container m-auto flex justify-center items-center w-full mt-3 sm:px-3 md:px-4">
-      <div className="w-full m-0">
-        <h1 className="text-3xl font-bold py-5">Profile</h1>
-        <form className="bg-white shadow-md rounded px-8 md:px-20 pt-6 pb-8 mb-4">
+    <div className="container m-auto flex justify-center flex-col items-center w-full mt-3 sm:px-3 md:px-4">
+      <div className="flex justify-start w-full">
+        <h1 className="text-4xl font-bold py-5">Profile</h1>
+      </div>
+      <div className="w-full max-w-xl m-0">
+        <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
           <div>
             <div className="flex justify-center">
               <div className="flex justify-center relative ">
@@ -70,59 +72,59 @@ const Profile = () => {
                 </div>
               </div>
             </div>
-            <div className="flex justify-center align-middle font-Montserrat">
+            {/* <div className="flex justify-center align-middle font-Montserrat">
               <h1 className="text-1xl font-bold">Edit Image</h1>
-            </div>
+            </div> */}
           </div>
-          <div className="mb-4 mt-5 flex flex-wrap justify-between font-Montserrat">
-            <div className="w-full md:w-1/2 pr-2 mb-4 md:mb-0">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="username"
-              >
-                Name
-              </label>
-              <input
-                className="shadow appearance-none input-border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="username"
-                type="text"
-                placeholder="Enter your name"
-                readOnly
-              />
-            </div>
-            <div className="w-full md:w-1/2 pr-2 mb-4 md:mb-0">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="useremail"
-              >
-                PayPal Email
-              </label>
-              <input
-                className="shadow appearance-none input-border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="useremail"
-                type="email"
-                placeholder="abc@gmail.com"
-                readOnly
-              />
-            </div>
+          {/* <div className="mb-4 mt-5 flex flex-wrap justify-between font-Montserrat"> */}
+          <div className=" mb-4 md:mb-0">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="username"
+            >
+              Name
+            </label>
+            <input
+              className="shadow appearance-none input-border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="username"
+              type="text"
+              placeholder="Enter your name"
+              readOnly
+            />
           </div>
-          <div className="mb-4 mt-5 flex flex-wrap justify-between font-Montserrat">
-            <div className="w-full md:w-1/2 pr-2 mb-4 md:mb-0">
-              <label
-                className="block text-gray-700 text-sm font-bold mb-2"
-                htmlFor="usernumber"
-              >
-                Phone Number
-              </label>
-              <input
-                className="shadow appearance-none input-border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                id="usernumber"
-                type="number"
-                placeholder="0123456789"
-              />
-            </div>
+          <div className=" my-2">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="useremail"
+            >
+              PayPal Email
+            </label>
+            <input
+              className="shadow appearance-none input-border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="useremail"
+              type="email"
+              placeholder="abc@gmail.com"
+              readOnly
+            />
+          </div>
+          {/* </div> */}
+          {/* <div className="mb-4 mt-5 flex flex-wrap justify-between font-Montserrat"> */}
+          <div className="my-2">
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="usernumber"
+            >
+              Phone Number
+            </label>
+            <input
+              className="shadow appearance-none input-border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="usernumber"
+              type="number"
+              placeholder="0123456789"
+            />
+          </div>
 
-            <div className="w-full md:w-1/2 pr-2 mb-4 md:mb-0">
+          {/* <div className="w-full md:w-1/2 pr-2 mb-4 md:mb-0">
               <label
                 className="block text-gray-700 text-sm font-bold mb-2"
                 for="password"
@@ -142,8 +144,8 @@ const Profile = () => {
                   {showPassword ? <FaEye /> : <FaEyeSlash />}
                 </span>
               </div>
-            </div>
-          </div>
+            </div> */}
+          {/* </div> */}
           <div className="mb-2 font-Montserrat">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
