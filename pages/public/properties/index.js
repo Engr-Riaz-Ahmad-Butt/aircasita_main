@@ -107,7 +107,7 @@ const Properties = (props) => {
               </button>
             </div>
           </div>
-
+          <h1 className="text-2xl py-3">General Description</h1>
           <p className="text-slate mr-5">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text

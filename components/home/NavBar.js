@@ -29,7 +29,7 @@ const NavBar = () => {
           <div className="flex  bg-lite_gray rounded-md sm:w-full xl:col-span-1 col-span-1 xl:w-full">
             <DatePicker
               placeholderText="Move-in date"
-              className="hover:bg-transparent focus:border-white focus:outline-none bg-transparent p-2 px-4 xl:py-4 font-Montserrat text-lg overflow-hidden"
+              className="hover:bg-transparent focus:border-white w-36 md:w-full focus:outline-none bg-transparent p-2 px-4 xl:py-4 font-Montserrat text-sm md:text-lg sm:overflow-hidden"
               selectsStart
               selected={startDate}
               onChange={(date) => setStartDate(date)}
@@ -37,10 +37,10 @@ const NavBar = () => {
             />
           </div>
 
-          <div className="flex  bg-lite_gray rounded-md sm:w-full xl:col-span-1 col-span-1 xl:w-full ">
+          <div className="flex  bg-lite_gray rounded-md xl:col-span-1 col-span-1 xl:w-full ">
             <DatePicker
               placeholderText="Move-out date"
-              className="hover:bg-transparent focus:border-white focus:outline-none bg-transparent p-2 px-4 xl:py-4 font-Montserrat text-lg sm:overflow-hidden"
+              className="hover:bg-transparent focus:border-white w-36 md:w-full focus:outline-none bg-transparent p-2 px-4 xl:py-4 font-Montserrat text-sm md:text-lg sm:overflow-hidden"
               selectsEnd
               selected={endDate}
               onChange={(date) => setEndDate(date)}
