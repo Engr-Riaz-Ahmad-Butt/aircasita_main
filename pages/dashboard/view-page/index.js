@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaHome, FaStar, FaWifi } from "react-icons/fa";
 import { LuParkingCircle } from "react-icons/lu";
-import Dropdown from "../../../components/dropDown";
+// import Dropdown from "../../../components/dropDown";
 import { TbBrandCarbon, TbToolsKitchen2 } from "react-icons/tb";
 import {
   MdElevator,
@@ -118,7 +118,7 @@ const Properties = (props) => {
             Ipsum.
           </p>
           <div className="py-5">
-            <Dropdown title="Read more about the space" />
+            {/* <Dropdown title="Read more about the space" /> */}
           </div>
           <div>
             <h3 className="text-2xl font-bold text-dodgerBlue">Contact Host</h3>
@@ -181,8 +181,8 @@ const Properties = (props) => {
                 ) : (
                   <>
                     <div className="flex items-center justify-between mb-4">
-                      <span className="line-through text-1xl p-1">$1,999</span>
-                      <span className="text-1xl font-bold p-1">$1,499</span>
+                      {/* <span className="line-through text-1xl p-1">$1,999</span>
+                      <span className="text-1xl font-bold p-1">$1,499</span> */}
                       {/* <span className="text-1xl p-1">/night</span> */}
                       {/* <span className="text-1xl p-1">
                         <CiStar />
@@ -224,7 +224,7 @@ const Properties = (props) => {
                           </div>
                         </div>
                       </div>
-                      <div className="relative text-left border-t-2 flex p-3">
+                      {/* <div className="relative text-left border-t-2 flex p-3">
                         <button
                           id="dropdownDefaultButton"
                           onClick={toggleDropdown}
@@ -232,7 +232,7 @@ const Properties = (props) => {
                           type="button"
                         >
                           Numbers of Guests
-                          {/* <svg
+                          <svg
                             className="w-2.5 h-2.5 ms-3"
                             aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg"
@@ -246,73 +246,27 @@ const Properties = (props) => {
                               strokeWidth="2"
                               d="m1 1 4 4 4-4"
                             />
-                          </svg> */}
+                          </svg>
                         </button>
-                        {/* {isOpen && (
-                          <div className="z-10 mt-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-full dark:bg-gray-700">
-                            <ul className="py-2 text-sm text-gray-700 dark:text-gray-200 bg-gray">
-                              <li>
-                                <div className="grid grid-cols-2 p-3">
-                                  <div className="mt-1 text-sm text-gray-500 flex flex-col">
-                                    <span className="text-xl">Adults</span>
-                                    <span>Age 13+</span>
-                                  </div>
-                                  <div className="mt-1 text-sm text-gray-500 flex justify-evenly items-center">
-                                    <CiCirclePlus className="text-lg" />
-                                    <span>1</span>
-                                    <CiCircleMinus className="text-lg" />
-                                  </div>
-                                </div>
-                              </li>
-                              <li>
-                                <div className="grid grid-cols-2 p-3">
-                                  <div className="mt-1 text-sm text-gray-500 flex flex-col">
-                                    <span className="text-xl">Children</span>
-                                    <span>Age 2-12</span>
-                                  </div>
-                                  <div className="mt-1 text-sm text-gray-500 flex justify-evenly items-center">
-                                    <CiCirclePlus className="text-lg" />
-                                    <span>0</span>
-                                    <CiCircleMinus className="text-lg" />
-                                  </div>
-                                </div>
-                              </li>
-                              <li>
-                                <div className="grid grid-cols-2 p-3">
-                                  <div className="mt-1 text-sm text-gray-500 flex flex-col">
-                                    <span className="text-xl">Infants</span>
-                                    <span>Under 2</span>
-                                  </div>
-                                  <div className="mt-1 text-sm text-gray-500 flex justify-evenly items-center">
-                                    <CiCirclePlus className="text-lg" />
-                                    <span>0</span>
-                                    <CiCircleMinus className="text-lg" />
-                                  </div>
-                                </div>
-                              </li>
-                              <li>
-                                <div className="grid grid-cols-2 p-3">
-                                  <div className="mt-1 text-sm text-gray-500 flex flex-col">
-                                    <span className="text-xl">Pets</span>
-                                    <span>Bringing a service animal?</span>
-                                  </div>
-                                  <div className="mt-1 text-sm text-gray-500 flex justify-evenly items-center">
-                                    <CiCirclePlus className="text-lg" />
-                                    <span>0</span>
-                                    <CiCircleMinus className="text-lg" />
-                                  </div>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
-                        )} */}
-                      </div>
+                      </div> */}
                     </div>
                     <div className="flow-root">
                       <ul
                         role="list"
                         className="divide-y divide-gray-200 dark:divide-gray-700"
                       >
+                        <li className="py-3 sm:py-4">
+                          <div className="flex items-center">
+                            <div className="flex-1 min-w-0 ms-4">
+                              <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+                                Numbers of Guests
+                              </p>
+                            </div>
+                            <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+                              4
+                            </div>
+                          </div>
+                        </li>
                         <li className="py-3 sm:py-4">
                           <div className="flex items-center">
                             <div className="flex-1 min-w-0 ms-4">

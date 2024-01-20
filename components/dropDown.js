@@ -72,22 +72,22 @@ const Dropdown = ({ title }) => {
               industry.
             </p>
           </div>
-          {/* <div >
+          <div >
             <h1 className="text-2xl font-bold py-2">Communications/transportation</h1>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
             </p>
-          </div> */}
-          {/* <div >
+          </div> 
+          <div >
             <h1 className="text-2xl font-bold py-2">Other noteworthy items</h1>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
             </p>
-          </div> */}
+          </div> 
 
-          {/* <ul className="py-2 text-sm text-gray-700 dark:text-gray-200 bg-gray">
+          <ul className="py-2 text-sm text-gray-700 dark:text-gray-200 bg-gray">
             <li>
               <Link
                 href="#"
@@ -120,11 +120,12 @@ const Dropdown = ({ title }) => {
                 Sign out
               </Link>
             </li>
-          </ul> */}
-        </div>
-      )}
+          </ul> 
+          </div>
     </div>
-  );
-};
+  )
+}
 
-export default Dropdown;
+
+export default Dropdown
+

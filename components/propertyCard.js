@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { MdKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from "react-icons/md";
+import {
+  MdKeyboardArrowLeft,
+  MdOutlineKeyboardArrowRight,
+} from "react-icons/md";
 import { FaRegCircle } from "react-icons/fa";
 
-export const Card = ({ title, description, slider, viewed,date, price }) => {
+export const Card = ({ title, description, slider, viewed, date, price }) => {
   const [curr, setCurr] = useState(0);
   const [activeDot, setActiveDot] = useState(0);
 
@@ -18,11 +21,11 @@ export const Card = ({ title, description, slider, viewed,date, price }) => {
     setActiveDot(nextIndex);
   };
 
-//   useEffect(() => {
-//     const autoSlideInterval = 5000;
-//     const slideInterval = setInterval(next, autoSlideInterval);
-//     return () => clearInterval(slideInterval);
-//   }, [curr]);
+  //   useEffect(() => {
+  //     const autoSlideInterval = 5000;
+  //     const slideInterval = setInterval(next, autoSlideInterval);
+  //     return () => clearInterval(slideInterval);
+  //   }, [curr]);
 
   const handleDotClick = (index) => {
     setCurr(index);
