@@ -187,11 +187,11 @@ export const Header = () => {
               </li>
               <li>
                 <Link
-                  href="#"
+                  href="/public/contact"
                   className="block  px-3 text-primary hover:text-secondary bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 font-Montserrat font-bold"
                   aria-current="page"
                 >
-                  Contant
+                  Contact
                 </Link>
               </li>
               <li>
@@ -257,7 +257,7 @@ export const Header = () => {
 
             <li>
               <Link
-                href="/contact"
+                 href="/public/contact"
                 className="block py-2 px-3 rounded  text-text_light  hover:text-secondary  md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-Montserrat"
               >
                 Contact

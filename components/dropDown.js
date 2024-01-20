@@ -45,8 +45,6 @@ const Dropdown = ({ title }) => {
               electronic typesetting, remaining essentially unchanged.
             </p>
           </div>
-          <div>
-            {/* <h1 className="text-2xl font-bold py-2">General description</h1> */}
           <div >
             <h1 className="text-2xl font-bold py-2">Usable space</h1>
             <p>
