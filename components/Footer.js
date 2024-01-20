@@ -8,7 +8,7 @@ import logo from "../assets/imgs/airCasita_logo-bg-remove.png";
 const Footer = () => {
   return (
     <>
-      <div className="mt-32 md:mt-24 bg-primary bottom-0">
+      <div className="mt-10 md:mt-32 bg-primary bottom-0">
         <div className="max-w-screen-lg container m-auto w-full text-gray font-Montserrat mt-4">
           <div className="text-gray-800 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto pt-6">
             <div className="flex justify-center md:justify-start items-center cursor-pointer sm:32">

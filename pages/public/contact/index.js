@@ -12,7 +12,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="container flex flex-col justify-center items-center w-full my-5">
+    <div className="container m-auto flex flex-col justify-center items-center w-full my-5">
       <div className="flex justify-start w-full">
         <h1 className="text-4xl font-bold">Contact Us</h1>
       </div>
