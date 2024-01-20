@@ -43,7 +43,7 @@ const Properties = (props) => {
   return (
     <>
       <div className="grid grid-cols-8 md:grid-cols-6 lg:grid-cols-8 md:container md:mx-auto p-5 md:p-5 font-customFont">
-        <div className="col-span-8 md:col-span-4">
+      <div className="col-span-8 md:col-span-6 lg:col-span-4">
           <h3 className="text-2xl font-bold py-2">ENTER APPATRMENT</h3>
           <div className="flex flex-col sm:flex-row justify-between">
             <div>
@@ -74,7 +74,6 @@ const Properties = (props) => {
             </div>
           </div>
           <hr className="my-8 border border-lite_gray rounded dark:bg-gray-700 mr-6" />
-
           <div>
             <div className="relative overflow-hidden product-card-border rounded-md">
               <div
@@ -127,6 +126,7 @@ const Properties = (props) => {
           </div>
           <div>
             <h3 className="text-2xl font-bold text-dodgerBlue">Contact Host</h3>
+            <p className="text-1xl my-2">+9123456789</p>
           </div>
           <hr className="my-8 border border-lite_gray rounded dark:bg-gray-700 mr-6" />
           <div>
@@ -166,147 +166,6 @@ const Properties = (props) => {
             <div className="w-full md:w-auto items-center flex flex-col">
               <BookingCard />
             </div>
-            {/* <div class="rounded-md shadow-xl md:p-3 md:fixed w-full md:w-fit items-center flex flex-col justify-center h-auto">
-              <div className="flex items-center">
-                <span className="line-through text-1xl p-1">$1,999</span>
-                <span className="text-1xl font-bold p-1">$1,499</span>
-                <span className="text-1xl p-1">/month</span>
-                <span className="text-1xl p-1">
-                  <CiStar />
-                </span>
-                <span>4.89(9.Reviews)</span>
-              </div>
-              <div className="border border-indigo-600 border-slate rounded">
-                <div className="grid grid-cols-2">
-                  <div className="border-r-2 p-3">
-                    <label className="block text-sm font-medium text-gray-700">
-                      Check-in
-                    </label>
-                    <p className="mt-1 text-sm text-gray-500">3/1/2024</p>
-                  </div>
-
-                  <div className="p-3">
-                    <label className="block text-sm font-medium text-gray-700">
-                      Check-out
-                    </label>
-                    <p className="mt-1 text-sm text-gray-500">3/1/2024</p>
-                  </div>
-                </div>
-                <div className=" border-t-2 border-b-2 p-2">
-                  <div className="relative text-left flex">
-                    <button
-                      id="dropdownDefaultButton"
-                      onClick={toggleDropdown}
-                      className="text-white bg-blue-700 hover:bg-blue-300 w-full justify-between focus:outline-none focus:ring-blue-300 rounded-lg text-2xl text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                      type="button"
-                    >
-                      Guests
-                      <svg
-                        className="w-2.5 h-2.5 ms-3"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 10 6"
-                      >
-                        <path
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="m1 1 4 4 4-4"
-                        />
-                      </svg>
-                    </button>
-                    {isOpen && (
-                      <div className="z-10 mt-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-full dark:bg-gray-700">
-                        <ul className="py-2 text-sm text-gray-700 dark:text-gray-200 bg-gray">
-                          <li>
-                            <div className="grid grid-cols-2 p-3">
-                              <div className="mt-1 text-sm text-gray-500 flex flex-col">
-                                <span className="text-xl">Adults</span>
-                                <span>Age 13+</span>
-                              </div>
-                              <div className="mt-1 text-sm text-gray-500 flex justify-evenly items-center">
-                                <CiCirclePlus className="text-lg" />
-                                <span>1</span>
-                                <CiCircleMinus className="text-lg" />
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div className="grid grid-cols-2 p-3">
-                              <div className="mt-1 text-sm text-gray-500 flex flex-col">
-                                <span className="text-xl">Children</span>
-                                <span>Age 2-12</span>
-                              </div>
-                              <div className="mt-1 text-sm text-gray-500 flex justify-evenly items-center">
-                                <CiCirclePlus className="text-lg" />
-                                <span>0</span>
-                                <CiCircleMinus className="text-lg" />
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div className="grid grid-cols-2 p-3">
-                              <div className="mt-1 text-sm text-gray-500 flex flex-col">
-                                <span className="text-xl">Infants</span>
-                                <span>Under 2</span>
-                              </div>
-                              <div className="mt-1 text-sm text-gray-500 flex justify-evenly items-center">
-                                <CiCirclePlus className="text-lg" />
-                                <span>0</span>
-                                <CiCircleMinus className="text-lg" />
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div className="grid grid-cols-2 p-3">
-                              <div className="mt-1 text-sm text-gray-500 flex flex-col">
-                                <span className="text-xl">Pets</span>
-                                <span>Bringing a service animal?</span>
-                              </div>
-                              <div className="mt-1 text-sm text-gray-500 flex justify-evenly items-center">
-                                <CiCirclePlus className="text-lg" />
-                                <span>0</span>
-                                <CiCircleMinus className="text-lg" />
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    )}
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-2 p-3 border-b-2">
-                  <p className="mt-1 text-sm text-gray-500">$1234 x 2 nights</p>
-                  <p className="mt-1 text-sm text-gray-500 text-right">$2468</p>
-                </div>
-                <div className="grid grid-cols-2 p-3 border-b-2">
-                  <p className="mt-1 text-sm text-gray-500">
-                    Cleaning fee
-                  </p>
-                  <p className="mt-1 text-sm text-gray-500 text-right">$800</p>
-                </div>
-                <div className="grid grid-cols-2 p-3 border-b-2">
-                  <p className="mt-1 text-sm text-gray-500">Service fee</p>
-                  <p className="mt-1 text-sm text-gray-500 text-right">$2345</p>
-                </div>
-                <div className="grid grid-cols-2 p-3 border-b-2">
-                  <p className="mt-1 text-sm text-gray-500">Travel credit</p>
-                  <p className="mt-1 text-sm text-gray-500 text-right">$234</p>
-                </div>
-                <div className="grid grid-cols-2 p-3 border-b-2">
-                  <p className="mt-1 text-sm text-gray-500">Total</p>
-                  <p className="mt-1 text-sm text-gray-500 text-right">$7653</p>
-                </div>
-                <div className="grid p-3">
-                  <button className="w-full bg-primary text-gray hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    Book
-                  </button>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>

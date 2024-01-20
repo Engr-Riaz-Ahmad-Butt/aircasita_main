@@ -21,7 +21,7 @@ const BookingCard = () => {
 	};
 
 	return (
-		<div className="max-w-md bg-white border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+		<div className="max-w-md bg-white border-gray-200 rounded-lg shadow p-4 md:p-7 dark:bg-gray-800 dark:border-gray-700">
 			{bookingSuccess ? (
 				<div className="p-4 w-auto h-auto md:h-96 md:w-96 flex justify-center items-center flex-col">
 					<div className="flex items-center border-b-2 pb-1">
