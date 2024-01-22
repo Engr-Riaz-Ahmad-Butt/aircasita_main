@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export const PropertyCard = ({
@@ -34,9 +35,9 @@ export const PropertyCard = ({
           </div>
 
           <div className="text-right">
-            <a href="#" className="text-blue-500 hover:underline">
+            <Link href="#" className="text-blue-500 hover:underline">
               View details
-            </a>
+            </Link>
           </div>
         </div>
       </div>

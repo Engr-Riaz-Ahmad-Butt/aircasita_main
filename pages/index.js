@@ -1,5 +1,6 @@
 import React from "react";
 import logo from "../assets/imgs/airCasita_logo-bg-remove.png";
+import Link from "next/link";
 
 const Main = () => {
   return (
@@ -17,16 +18,16 @@ const Main = () => {
           className="mx-auto w-full md:w-2/3 lg:w-1/2 object-cover"
         />
         <div className="flex flex-col justify-center md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
-          <a href="https://aircasita-host.web.app/admin/create-listing ">
+          <Link href="https://aircasita-host.web.app/admin/create-listing ">
             <button className="bg-primary text-gray hover:bg-blue-700 text-white py-2 px-4 rounded font-Montserrat font-semibold">
               Register Rental Property
             </button>
-          </a>
-          <a href="/home">
+          </Link>
+          <Link href="/home">
             <button className="bg-primary text-gray hover:bg-blue-700 text-white py-2 px-4 rounded font-Montserrat font-semibold">
               Traveler Books A Rental
             </button>
-          </a>
+          </Link>
         </div>
         <div className="py-5">
           <p className="text-2xl font-bold font-Montserrat">

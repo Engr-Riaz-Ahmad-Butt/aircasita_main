@@ -11,6 +11,7 @@ import {
 import { GiSmokeBomb } from "react-icons/gi";
 import { CiCircleMinus, CiCirclePlus, CiStar } from "react-icons/ci";
 import BookingCard from "../../../components/BookingCard";
+import TestimonialsCarousel from "../../../components/TestimonialsCarousel";
 
 const Properties = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,14 +53,6 @@ const Properties = (props) => {
               </h1>
               <p className="text-2xl font-bold py-2 text-slate">Georgetown</p>
             </div>
-            {/* <figure className="flex flex-col items-center justify-center">
-              <img
-                src="https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2022/11/05183143/Avatar-1600x900.jpg"
-                alt="Trulli"
-                className="rounded-full w-20 h-20"
-              />
-              <figcaption>Italy.</figcaption>
-            </figure> */}
           </div>
           <div>
             <div className="flex items-center gap-3 py-1">
@@ -161,6 +154,8 @@ const Properties = (props) => {
               </div>
             </div>
           </div>
+
+          <TestimonialsCarousel />
         </div>
         <div className="bg-gray-800 text-white col-span-8 md:col-span-4 flex justify-center flex-shrink-0 z-20">
           <div className="flex justify-center rounded md:p-5">

@@ -73,9 +73,9 @@ export default function Login() {
             <div className="flex justify-center mt-4 font-Montserrat">
               <p className="pr-2 text-sm">
                 Don't have an acount ?
-                <a href="/auth/register" className="text-primary pl-1">
+                <Link href="/auth/register" className="text-primary pl-1">
                   Sign Up
-                </a>
+                </Link>
               </p>
             </div>
           </form>

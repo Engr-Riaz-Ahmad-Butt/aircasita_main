@@ -6,6 +6,7 @@ import { IoIosCamera } from "react-icons/io";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const SignUp = () => {
   const router = useRouter();
@@ -147,21 +148,21 @@ const SignUp = () => {
           <div className="flex font-Montserrat">
             <p className="pr-2 text-sm mt-3 mb-1">
               Already have an acount :
-              <a href="/auth/login" className="text-primary pl-1">
+              <Link href="/auth/login" className="text-primary pl-1">
                 LogIn
-              </a>
+              </Link>
             </p>
           </div>
           <div className="flex flex-wrap font-Montserrat">
             <p className="pr-2 text-sm">
               Your{" "}
-              <a href="airCASITA.com" className="text-primary">
+              <Link href="airCASITA.com" className="text-primary">
                 airCASITA.com
-              </a>{" "}
+              </Link>{" "}
               acount:
             </p>
             <p className="text-sm font-Montserrat">
-              <a href="/auth/register">LogIn</a> by your PayPal & phone number
+              <Link href="/auth/register">LogIn</Link> by your PayPal & phone number
             </p>
           </div>
         </form>
