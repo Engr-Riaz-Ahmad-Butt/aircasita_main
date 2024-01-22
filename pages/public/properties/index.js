@@ -11,6 +11,8 @@ import {
 import { GiSmokeBomb } from "react-icons/gi";
 import { CiCircleMinus, CiCirclePlus, CiStar } from "react-icons/ci";
 import BookingCard from "../../../components/BookingCard";
+import Services from "../../../components/Services";
+import Imageslider from "../../../components/Imageslider";
 
 const Properties = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -52,60 +54,9 @@ const Properties = (props) => {
               </h1>
               <p className="text-2xl font-bold py-2 text-slate">Georgetown</p>
             </div>
-            {/* <figure className="flex flex-col items-center justify-center">
-              <img
-                src="https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2022/11/05183143/Avatar-1600x900.jpg"
-                alt="Trulli"
-                className="rounded-full w-20 h-20"
-              />
-              <figcaption>Italy.</figcaption>
-            </figure> */}
           </div>
           <div>
-            <div className="flex items-center gap-3 py-1">
-              <FaHome />
-              <span className="text-2xl font-bold">Entire apartment</span>
-            </div>
-            <div className="flex justify-evenly flex-col sm:flex-row md:w-96 px-3 text-slate">
-              <span className="sm:block mb-2">6 guests</span>
-              <span className="sm:block mb-2">2 bedrooms</span>
-              <span className="sm:block mb-2">6 beds</span>
-              <span className="sm:block mb-2">2 baths</span>
-            </div>
-          </div>
-          <hr className="my-8 border border-lite_gray rounded dark:bg-gray-700 mr-6" />
-
-          <div>
-            <div className="relative overflow-hidden product-card-border rounded-md">
-              <div
-                className="flex transition-transform ease-out duration-300"
-                style={{
-                  transform: `translateX(-${currentIndex * (100 / 3)}%)`,
-                }}
-              >
-                {images.map((image, index) => (
-                  <img
-                    key={index}
-                    src={image}
-                    alt={`Slide ${index + 1}`}
-                    className="w-52 h-48 object-cover p-3 rounded"
-                  />
-                ))}
-              </div>
-
-              <button
-                onClick={prevSlide}
-                className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white rounded-full shadow bg-primary/70 text-gray-800 hover:bg-white"
-              >
-                <MdKeyboardArrowLeft className="text-3xl" />
-              </button>
-              <button
-                onClick={nextSlide}
-                className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white rounded-full shadow bg-primary/70 text-gray-800 hover:bg-white"
-              >
-                <MdOutlineKeyboardArrowRight className="text-3xl" />
-              </button>
-            </div>
+            <Imageslider />
           </div>
           <h1 className="text-2xl py-3">General Description</h1>
           <p className="text-slate mr-5">
@@ -122,6 +73,7 @@ const Properties = (props) => {
             publishing software like Aldus PageMaker including versions of Lorem
             Ipsum.
           </p>
+
           <div className="py-5">
             <Dropdown title="Read more about the space" />
           </div>
@@ -130,34 +82,8 @@ const Properties = (props) => {
           </div>
           <hr className="my-8 border border-lite_gray rounded dark:bg-gray-700 mr-6" />
           <div>
-            <h2 className="text-2xl font-bold">Amenities</h2>
-            <div>
-              <div class="grid grid-cols-2 text-slate">
-                <div class="bg-gray-200 p-4 flex items-center gap-2">
-                  <TbToolsKitchen2 />
-                  <span>Kitchen</span>
-                </div>
-                <div class="bg-gray-200 p-4 flex items-center gap-2">
-                  <MdElevator />
-                  <span>Elevator</span>
-                </div>
-                <div class="bg-gray-200 p-4 flex items-center gap-2">
-                  <FaWifi />
-                  <span>Wifi</span>
-                </div>
-                <div class="bg-gray-200 p-4 flex items-center gap-2">
-                  <LuParkingCircle />
-                  <span>Free parking on premises</span>
-                </div>
-                <div class="bg-gray-200 p-4 flex items-center gap-2">
-                  <GiSmokeBomb />
-                  <span>Smoke Detector</span>
-                </div>
-                <div class="bg-gray-200 p-4 flex items-center gap-2">
-                  <TbBrandCarbon />
-                  <span>Carbon monoxide Detector</span>
-                </div>
-              </div>
+            <div class="grid grid-cols-1 text-slate">
+              <Services />
             </div>
           </div>
         </div>

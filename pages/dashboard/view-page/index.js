@@ -11,9 +11,16 @@ import {
 import { MdLocalAirport } from "react-icons/md";
 import { MdSecurity } from "react-icons/md";
 import { GiSmokeBomb } from "react-icons/gi";
-import { CiCircleMinus, CiCirclePlus, CiStar } from "react-icons/ci";
+// import { CiCircleMinus, CiCirclePlus, CiStar } from "react-icons/ci";
 import DatePicker from "react-datepicker";
-
+import { IoFastFoodSharp } from "react-icons/io5";
+import { IoMdFitness } from "react-icons/io";
+import { MdCarRental } from "react-icons/md";
+import { MdOutlineSmokeFree } from "react-icons/md";
+import { MdDryCleaning } from "react-icons/md";
+import Services from "../../../components/Services";
+import Imageslider from "../../../components/Imageslider";
+// import { FaHome } from "react-icons/fa";
 const Properties = (props) => {
   const [bookingSuccess, setBookingSuccess] = useState(false);
   const [startDate, setStartDate] = useState();
@@ -22,28 +29,8 @@ const Properties = (props) => {
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
-  const [currentIndex, setCurrentIndex] = useState(1);
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
-  };
-
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
-  };
-
-  const images = [
-    "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aG91c2V8ZW58MHx8MHx8fDA%3D",
-    "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGhvdXNlfGVufDB8fDB8fHww",
-    "https://plus.unsplash.com/premium_photo-1661915661139-5b6a4e4a6fcc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGhvdXNlfGVufDB8fDB8fHww",
-    "https://images.unsplash.com/photo-1568605114967-8130f3a36994?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aG91c2V8ZW58MHx8MHx8fDA%3D",
-    "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGhvdXNlfGVufDB8fDB8fHww",
-    "https://plus.unsplash.com/premium_photo-1661915661139-5b6a4e4a6fcc?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fGhvdXNlfGVufDB8fDB8fHww",
-  ];
+  const isDisabled = (date) => date.getDate() % 2 !== 0;
 
   return (
     <>
@@ -61,7 +48,7 @@ const Properties = (props) => {
           <div>
             <div className="flex items-center gap-3 py-1">
               <FaHome />
-              <span className="text-xl font-bold">Entire apartment</span>
+              <span className="text-2xl font-bold">Entire apartment</span>
             </div>
             <div className="flex justify-evenly flex-col sm:flex-row md:w-96 px-3 text-slate">
               <span className="sm:block mb-2">6 guests</span>
@@ -71,38 +58,8 @@ const Properties = (props) => {
             </div>
           </div>
           <hr className="my-8 border border-lite_gray rounded dark:bg-gray-700 mr-6" />
-
           <div>
-            <div className="relative overflow-hidden product-card-border rounded-md">
-              <div
-                className="flex transition-transform ease-out duration-300"
-                style={{
-                  transform: `translateX(-${currentIndex * (100 / 3)}%)`,
-                }}
-              >
-                {images.map((image, index) => (
-                  <img
-                    key={index}
-                    src={image}
-                    alt={`Slide ${index + 1}`}
-                    className="w-52 h-48 object-cover p-3 rounded"
-                  />
-                ))}
-              </div>
-
-              <button
-                onClick={prevSlide}
-                className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white rounded-full shadow bg-primary/70 text-gray-800 hover:bg-white"
-              >
-                <MdKeyboardArrowLeft className="text-3xl" />
-              </button>
-              <button
-                onClick={nextSlide}
-                className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white rounded-full shadow bg-primary/70 text-gray-800 hover:bg-white"
-              >
-                <MdOutlineKeyboardArrowRight className="text-3xl" />
-              </button>
-            </div>
+            <Imageslider />
           </div>
           <h1 className="text-2xl py-3">General Description</h1>
           <p className="text-slate mr-5">
@@ -126,33 +83,9 @@ const Properties = (props) => {
             <h3>+44238404...</h3>
           </div>
           <div>
-            <h2 className="text-2xl font-bold">What this place offers</h2>
             <div>
-              <div class="grid grid-cols-2 text-slate">
-                <div class="bg-gray-200 p-4 flex items-center gap-2">
-                  <TbToolsKitchen2 />
-                  <span>Kitchen</span>
-                </div>
-                <div class="bg-gray-200 p-4 flex items-center gap-2">
-                  <MdElevator />
-                  <span>Elevator</span>
-                </div>
-                <div class="bg-gray-200 p-4 flex items-center gap-2">
-                  <FaWifi />
-                  <span>Wifi</span>
-                </div>
-                <div class="bg-gray-200 p-4 flex items-center gap-2">
-                  <LuParkingCircle />
-                  <span>Free parking on premises</span>
-                </div>
-                <div class="bg-gray-200 p-4 flex items-center gap-2">
-                  <GiSmokeBomb />
-                  <span>Smoke Detector</span>
-                </div>
-                <div class="bg-gray-200 p-4 flex items-center gap-2">
-                  <TbBrandCarbon />
-                  <span>Carbon monoxide Detector</span>
-                </div>
+              <div class="grid grid-cols-1 text-slate">
+                <Services />
               </div>
             </div>
           </div>
@@ -161,10 +94,6 @@ const Properties = (props) => {
           <div className="flex justify-center rounded md:p-5">
             <div className="w-full md:w-auto items-center flex flex-col">
               <div className="max-w-md bg-white border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-                {/* <div className="flex items-center justify-between mb-4">
-                  <span className="line-through text-1xl p-1">$1,999</span>
-                  <span className="text-1xl font-bold p-1">$1,499</span>
-                </div> */}
                 <div className="border rounded divide-y divide-gray-200 dark:divide-gray-700">
                   <div className="flex flex-1 divide-x divide-gray-200 dark:divide-gray-700">
                     <div className="md:p-3 w-full">
@@ -179,6 +108,7 @@ const Properties = (props) => {
                           selected={startDate}
                           onChange={(date) => setStartDate(date)}
                           startDate={startDate}
+                          minDate={new Date()}
                         />
                       </div>
                     </div>
@@ -195,7 +125,8 @@ const Properties = (props) => {
                           onChange={(date) => setEndDate(date)}
                           endDate={endDate}
                           startDate={startDate}
-                          minDate={startDate}
+                          // maxDate={new Date()}
+                          isDisabled={isDisabled}
                         />
                       </div>
                     </div>

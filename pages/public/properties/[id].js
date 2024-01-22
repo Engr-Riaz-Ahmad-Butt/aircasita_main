@@ -11,7 +11,13 @@ import {
 import { GiSmokeBomb } from "react-icons/gi";
 import { CiCircleMinus, CiCirclePlus, CiStar } from "react-icons/ci";
 import BookingCard from "../../../components/BookingCard";
-
+import { IoFastFoodSharp } from "react-icons/io5";
+import { IoMdFitness } from "react-icons/io";
+import { MdCarRental } from "react-icons/md";
+import { MdOutlineSmokeFree } from "react-icons/md";
+import { MdDryCleaning } from "react-icons/md";
+import Services from "../../../components/Services";
+import Imageslider from "../../../components/Imageslider";
 const Properties = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleDropdown = () => {
@@ -52,14 +58,6 @@ const Properties = (props) => {
               </h1>
               <p className="text-2xl font-bold py-2 text-slate">Georgetown</p>
             </div>
-            {/* <figure className="flex flex-col items-center justify-center">
-              <img
-                src="https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2022/11/05183143/Avatar-1600x900.jpg"
-                alt="Trulli"
-                className="rounded-full w-20 h-20"
-              />
-              <figcaption>Italy.</figcaption>
-            </figure> */}
           </div>
           <div>
             <div className="flex items-center gap-3 py-1">
@@ -76,36 +74,7 @@ const Properties = (props) => {
           <hr className="my-8 border border-lite_gray rounded dark:bg-gray-700 mr-6" />
 
           <div>
-            <div className="relative overflow-hidden product-card-border rounded-md">
-              <div
-                className="flex transition-transform ease-out duration-300"
-                style={{
-                  transform: `translateX(-${currentIndex * (100 / 3)}%)`,
-                }}
-              >
-                {images.map((image, index) => (
-                  <img
-                    key={index}
-                    src={image}
-                    alt={`Slide ${index + 1}`}
-                    className="w-52 h-48 object-cover p-3 rounded"
-                  />
-                ))}
-              </div>
-
-              <button
-                onClick={prevSlide}
-                className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white rounded-full shadow bg-primary/70 text-gray-800 hover:bg-white"
-              >
-                <MdKeyboardArrowLeft className="text-3xl" />
-              </button>
-              <button
-                onClick={nextSlide}
-                className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white rounded-full shadow bg-primary/70 text-gray-800 hover:bg-white"
-              >
-                <MdOutlineKeyboardArrowRight className="text-3xl" />
-              </button>
-            </div>
+            <Imageslider />
           </div>
 
           <p className="text-slate mr-5">
@@ -125,38 +94,16 @@ const Properties = (props) => {
           <div className="py-5">
             <Dropdown title="Read more about the space" />
           </div>
+          <hr className="my-8 border border-lite_gray rounded dark:bg-gray-700 mr-6" />
+
           <div>
             <h3 className="text-2xl font-bold text-dodgerBlue">Contact Host</h3>
+            <h3 className="text-lg font-bold text-dodgerBlue">+44-326754...</h3>
           </div>
-          <hr className="my-8 border border-lite_gray rounded dark:bg-gray-700 mr-6" />
           <div>
-            <h2 className="text-2xl font-bold">Amenities</h2>
             <div>
-              <div class="grid grid-cols-2 text-slate">
-                <div class="bg-gray-200 p-4 flex items-center gap-2">
-                  <TbToolsKitchen2 />
-                  <span>Kitchen</span>
-                </div>
-                <div class="bg-gray-200 p-4 flex items-center gap-2">
-                  <MdElevator />
-                  <span>Elevator</span>
-                </div>
-                <div class="bg-gray-200 p-4 flex items-center gap-2">
-                  <FaWifi />
-                  <span>Wifi</span>
-                </div>
-                <div class="bg-gray-200 p-4 flex items-center gap-2">
-                  <LuParkingCircle />
-                  <span>Free parking on premises</span>
-                </div>
-                <div class="bg-gray-200 p-4 flex items-center gap-2">
-                  <GiSmokeBomb />
-                  <span>Smoke Detector</span>
-                </div>
-                <div class="bg-gray-200 p-4 flex items-center gap-2">
-                  <TbBrandCarbon />
-                  <span>Carbon monoxide Detector</span>
-                </div>
+              <div class="grid grid-cols-1 text-slate">
+                <Services />
               </div>
             </div>
           </div>
@@ -166,147 +113,6 @@ const Properties = (props) => {
             <div className="w-full md:w-auto items-center flex flex-col">
               <BookingCard />
             </div>
-            {/* <div class="rounded-md shadow-xl md:p-3 md:fixed w-full md:w-fit items-center flex flex-col justify-center h-auto">
-              <div className="flex items-center">
-                <span className="line-through text-1xl p-1">$1,999</span>
-                <span className="text-1xl font-bold p-1">$1,499</span>
-                <span className="text-1xl p-1">/month</span>
-                <span className="text-1xl p-1">
-                  <CiStar />
-                </span>
-                <span>4.89(9.Reviews)</span>
-              </div>
-              <div className="border border-indigo-600 border-slate rounded">
-                <div className="grid grid-cols-2">
-                  <div className="border-r-2 p-3">
-                    <label className="block text-sm font-medium text-gray-700">
-                      Check-in
-                    </label>
-                    <p className="mt-1 text-sm text-gray-500">3/1/2024</p>
-                  </div>
-
-                  <div className="p-3">
-                    <label className="block text-sm font-medium text-gray-700">
-                      Check-out
-                    </label>
-                    <p className="mt-1 text-sm text-gray-500">3/1/2024</p>
-                  </div>
-                </div>
-                <div className=" border-t-2 border-b-2 p-2">
-                  <div className="relative text-left flex">
-                    <button
-                      id="dropdownDefaultButton"
-                      onClick={toggleDropdown}
-                      className="text-white bg-blue-700 hover:bg-blue-300 w-full justify-between focus:outline-none focus:ring-blue-300 rounded-lg text-2xl text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-                      type="button"
-                    >
-                      Guests
-                      <svg
-                        className="w-2.5 h-2.5 ms-3"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 10 6"
-                      >
-                        <path
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="m1 1 4 4 4-4"
-                        />
-                      </svg>
-                    </button>
-                    {isOpen && (
-                      <div className="z-10 mt-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-full dark:bg-gray-700">
-                        <ul className="py-2 text-sm text-gray-700 dark:text-gray-200 bg-gray">
-                          <li>
-                            <div className="grid grid-cols-2 p-3">
-                              <div className="mt-1 text-sm text-gray-500 flex flex-col">
-                                <span className="text-xl">Adults</span>
-                                <span>Age 13+</span>
-                              </div>
-                              <div className="mt-1 text-sm text-gray-500 flex justify-evenly items-center">
-                                <CiCirclePlus className="text-lg" />
-                                <span>1</span>
-                                <CiCircleMinus className="text-lg" />
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div className="grid grid-cols-2 p-3">
-                              <div className="mt-1 text-sm text-gray-500 flex flex-col">
-                                <span className="text-xl">Children</span>
-                                <span>Age 2-12</span>
-                              </div>
-                              <div className="mt-1 text-sm text-gray-500 flex justify-evenly items-center">
-                                <CiCirclePlus className="text-lg" />
-                                <span>0</span>
-                                <CiCircleMinus className="text-lg" />
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div className="grid grid-cols-2 p-3">
-                              <div className="mt-1 text-sm text-gray-500 flex flex-col">
-                                <span className="text-xl">Infants</span>
-                                <span>Under 2</span>
-                              </div>
-                              <div className="mt-1 text-sm text-gray-500 flex justify-evenly items-center">
-                                <CiCirclePlus className="text-lg" />
-                                <span>0</span>
-                                <CiCircleMinus className="text-lg" />
-                              </div>
-                            </div>
-                          </li>
-                          <li>
-                            <div className="grid grid-cols-2 p-3">
-                              <div className="mt-1 text-sm text-gray-500 flex flex-col">
-                                <span className="text-xl">Pets</span>
-                                <span>Bringing a service animal?</span>
-                              </div>
-                              <div className="mt-1 text-sm text-gray-500 flex justify-evenly items-center">
-                                <CiCirclePlus className="text-lg" />
-                                <span>0</span>
-                                <CiCircleMinus className="text-lg" />
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    )}
-                  </div>
-                </div>
-
-                <div className="grid grid-cols-2 p-3 border-b-2">
-                  <p className="mt-1 text-sm text-gray-500">$1234 x 2 nights</p>
-                  <p className="mt-1 text-sm text-gray-500 text-right">$2468</p>
-                </div>
-                <div className="grid grid-cols-2 p-3 border-b-2">
-                  <p className="mt-1 text-sm text-gray-500">
-                    Cleaning fee
-                  </p>
-                  <p className="mt-1 text-sm text-gray-500 text-right">$800</p>
-                </div>
-                <div className="grid grid-cols-2 p-3 border-b-2">
-                  <p className="mt-1 text-sm text-gray-500">Service fee</p>
-                  <p className="mt-1 text-sm text-gray-500 text-right">$2345</p>
-                </div>
-                <div className="grid grid-cols-2 p-3 border-b-2">
-                  <p className="mt-1 text-sm text-gray-500">Travel credit</p>
-                  <p className="mt-1 text-sm text-gray-500 text-right">$234</p>
-                </div>
-                <div className="grid grid-cols-2 p-3 border-b-2">
-                  <p className="mt-1 text-sm text-gray-500">Total</p>
-                  <p className="mt-1 text-sm text-gray-500 text-right">$7653</p>
-                </div>
-                <div className="grid p-3">
-                  <button className="w-full bg-primary text-gray hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    Book
-                  </button>
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>
