@@ -30,6 +30,9 @@ module.exports = {
       lite_gray: "#eeeeee",
       // linkColor : '#000FFF',
       transparent: "transparent",
+      green: "#22c55e",
+      red: "#ef4444",
+      yellow: "#facc15",
     },
     font: {
       font_mono:

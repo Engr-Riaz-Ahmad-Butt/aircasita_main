@@ -3,7 +3,6 @@ import { RiInstagramFill } from "react-icons/ri";
 import { FaYoutube } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
-import Link from "next/link";
 import logo from "../assets/imgs/airCasita_logo-bg-remove.png";
 import Link from "next/link";
 const Footer = () => {

@@ -18,6 +18,7 @@ import { MdOutlineSmokeFree } from "react-icons/md";
 import { MdDryCleaning } from "react-icons/md";
 import Services from "../../../components/Services";
 import Imageslider from "../../../components/Imageslider";
+import TestimonialsCarousel from "../../../components/TestimonialsCarousel";
 const Properties = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleDropdown = () => {

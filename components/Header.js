@@ -4,21 +4,23 @@ import logo from "../public/logo.svg";
 import Image from "next/image";
 import { RxCross2 } from "react-icons/rx";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 import logoAircasita from "../assets/imgs/airCasita_logo-bg-remove.png";
 import Link from "next/link";
+import { IoNotifications } from "react-icons/io5";
+// import Notification from "./Notification";
+import JobSelectionModal from "./Notification";
 export const Header = () => {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
-
+  
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleDropDown = () => setIsDropDownOpen(!isDropDownOpen);
 
   const dropdownRef = useRef(null);
 
   const closeDropDown = () => {
-    setIsDropDownOpen(false);
+    setIsDropDownOpen(isDropDownOpen);
   };
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -82,14 +84,7 @@ export const Header = () => {
             }`}
             ref={dropdownRef}
           >
-            <div className="px-4 w-36">
-              {/* <span className="block text-sm text-gray-900 dark:text-white">
-                Bonnie Green
-              </span>
-              <span className="block text-sm text-gray-500 truncate dark:text-gray-400">
-                name@flowbite.com
-              </span> */}
-            </div>
+            <div className="px-4 w-36"></div>
             <ul className="py-2" aria-labelledby="user-menu-button ">
               <li>
                 <Link
@@ -281,6 +276,9 @@ export const Header = () => {
               >
                 Log In
               </Link>
+            </li>
+            <li>
+              <JobSelectionModal />
             </li>
           </ul>
         </div>

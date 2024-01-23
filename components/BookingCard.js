@@ -229,32 +229,7 @@ const BookingCard = () => {
                 </div>
               </li>
 
-              <div className="flex items-center "></div>
-
               <li className="pt-3 pb-0  sm:pt-4">
-                {spacialOffer ? (
-                  <button
-                    onClick={handleSpacialOffer}
-                    className="w-full bg-primary text-gray my-5 text-white font-bold py-2 px-4 rounded"
-                  >
-                    Special Offer
-                  </button>
-                ) : (
-                  <div>
-                    <div className="p-4">
-                      <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                        Special Offer
-                      </h2>
-                      <p className="text-sm text-gray-700 dark:text-gray-200">
-                        Enjoy exclusive discounts for a limited time!
-                      </p>
-                      <p>
-                        <del>price 367$</del>
-                        <span className="px-2 text-primary">price 200$</span>
-                      </p>
-                    </div>
-                  </div>
-                )}
                 <div className="flex items-center ">
                   <button
                     onClick={handleBookClick}
