@@ -271,7 +271,7 @@ const TabbedTable = () => {
                     <td className="text-center sm:text-sm ">{row.amount}</td>
                     <td className="text-center sm:text-sm ">
                       <button class="bg-primary  text-text_light font-bold py-1 px-4 rounded">
-                        <Link href="/dashboard/view-page">view</Link>
+                        <Link href={`/dashboard/view-page/${encodeURIComponent(row.id)}`}>view</Link>
                       </button>
                     </td>
                   </>

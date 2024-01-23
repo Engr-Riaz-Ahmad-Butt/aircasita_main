@@ -18,6 +18,7 @@ import { MdOutlineSmokeFree } from "react-icons/md";
 import { MdDryCleaning } from "react-icons/md";
 import Services from "../../../components/Services";
 import Imageslider from "../../../components/Imageslider";
+import TestimonialsCarousel from '../../../components/TestimonialsCarousel';
 const Properties = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleDropdown = () => {
@@ -50,7 +51,7 @@ const Properties = (props) => {
     <>
       <div className="grid grid-cols-8 md:grid-cols-6 lg:grid-cols-8 md:container md:mx-auto p-5 md:p-5 font-customFont">
       <div className="col-span-8 md:col-span-6 lg:col-span-4">
-          <h3 className="text-2xl font-bold py-2">ENTER APPATRMENT</h3>
+          <h3 className="text-2xl font-bold py-2">ENTIRE APPATRMENT</h3>
           <div className="flex flex-col sm:flex-row justify-between">
             <div>
               <h1 className="text-4xl font-black">

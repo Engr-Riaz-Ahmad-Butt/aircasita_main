@@ -6,7 +6,6 @@ import { RxCross2 } from "react-icons/rx";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import logoAircasita from "../assets/imgs/airCasita_logo-bg-remove.png";
-import Link from "next/link";
 export const Header = () => {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -179,7 +178,7 @@ export const Header = () => {
               </li>
               <li>
                 <Link
-                  href="/home"
+                  href="/properties"
                   className="block py-2 px-3 text-primary  hover:text-secondary bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 font-Montserrat font-bold"
                   aria-current="page"
                 >
@@ -232,7 +231,7 @@ export const Header = () => {
             </li>
             <li>
               <Link
-                href="/home"
+                href="/properties"
                 className="block py-2 px-3 text-text_light  hover:text-secondary bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 font-Montserrat"
                 aria-current="page"
               >

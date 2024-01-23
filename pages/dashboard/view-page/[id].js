@@ -20,6 +20,8 @@ import { MdOutlineSmokeFree } from "react-icons/md";
 import { MdDryCleaning } from "react-icons/md";
 import Services from "../../../components/Services";
 import Imageslider from "../../../components/Imageslider";
+import Calander from "../../../components/Calander";
+
 // import { FaHome } from "react-icons/fa";
 const Properties = (props) => {
   const [bookingSuccess, setBookingSuccess] = useState(false);
@@ -36,7 +38,7 @@ const Properties = (props) => {
     <>
       <div className="grid grid-cols-8 md:grid-cols-6 lg:grid-cols-8 md:container md:mx-auto p-5 md:p-5 font-customFont">
         <div className="col-span-8 md:col-span-6 lg:col-span-4">
-          <h3 className="text-2xl font-bold py-2">ENTER APPATRMENT</h3>
+          <h3 className="text-2xl font-bold py-2">ENTIRE APPATRMENT</h3>
           <div className="flex flex-col sm:flex-row justify-between">
             <div>
               <h1 className="text-xl font-black">
@@ -94,7 +96,7 @@ const Properties = (props) => {
           <div className="flex justify-center rounded md:p-5">
             <div className="w-full md:w-auto items-center flex flex-col">
               <div className="max-w-md bg-white border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-                <div className="border rounded divide-y divide-gray-200 dark:divide-gray-700">
+                {/* <div className="border rounded divide-y divide-gray-200 dark:divide-gray-700">
                   <div className="flex flex-1 divide-x divide-gray-200 dark:divide-gray-700">
                     <div className="md:p-3 w-full">
                       <label className="block text-sm font-medium text-gray-700">
@@ -131,7 +133,9 @@ const Properties = (props) => {
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> */}
+
+                <Calander />
                 <div className="flow-root">
                   <ul
                     role="list"
