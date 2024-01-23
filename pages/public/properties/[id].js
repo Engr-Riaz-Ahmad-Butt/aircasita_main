@@ -11,8 +11,13 @@ import {
 import { GiSmokeBomb } from "react-icons/gi";
 import { CiCircleMinus, CiCirclePlus, CiStar } from "react-icons/ci";
 import BookingCard from "../../../components/BookingCard";
-import TestimonialsCarousel from "../../../components/TestimonialsCarousel";
-
+import { IoFastFoodSharp } from "react-icons/io5";
+import { IoMdFitness } from "react-icons/io";
+import { MdCarRental } from "react-icons/md";
+import { MdOutlineSmokeFree } from "react-icons/md";
+import { MdDryCleaning } from "react-icons/md";
+import Services from "../../../components/Services";
+import Imageslider from "../../../components/Imageslider";
 const Properties = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const toggleDropdown = () => {
@@ -68,36 +73,7 @@ const Properties = (props) => {
           </div>
           <hr className="my-8 border border-lite_gray rounded dark:bg-gray-700 mr-6" />
           <div>
-            <div className="relative overflow-hidden product-card-border rounded-md">
-              <div
-                className="flex transition-transform ease-out duration-300"
-                style={{
-                  transform: `translateX(-${currentIndex * (100 / 3)}%)`,
-                }}
-              >
-                {images.map((image, index) => (
-                  <img
-                    key={index}
-                    src={image}
-                    alt={`Slide ${index + 1}`}
-                    className="w-52 h-48 object-cover p-3 rounded"
-                  />
-                ))}
-              </div>
-
-              <button
-                onClick={prevSlide}
-                className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white rounded-full shadow bg-primary/70 text-gray-800 hover:bg-white"
-              >
-                <MdKeyboardArrowLeft className="text-3xl" />
-              </button>
-              <button
-                onClick={nextSlide}
-                className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-gray-800 text-white rounded-full shadow bg-primary/70 text-gray-800 hover:bg-white"
-              >
-                <MdOutlineKeyboardArrowRight className="text-3xl" />
-              </button>
-            </div>
+            <Imageslider />
           </div>
 
           <p className="text-slate mr-5">
@@ -117,39 +93,16 @@ const Properties = (props) => {
           <div className="py-5">
             <Dropdown title="Read more about the space" />
           </div>
+          <hr className="my-8 border border-lite_gray rounded dark:bg-gray-700 mr-6" />
+
           <div>
             <h3 className="text-2xl font-bold text-dodgerBlue">Contact Host</h3>
-            <p className="text-1xl my-2">+9123456789</p>
+            <h3 className="text-lg font-bold text-dodgerBlue">+44-326754...</h3>
           </div>
-          <hr className="my-8 border border-lite_gray rounded dark:bg-gray-700 mr-6" />
           <div>
-            <h2 className="text-2xl font-bold">Amenities</h2>
             <div>
-              <div class="grid grid-cols-2 text-slate">
-                <div class="bg-gray-200 p-4 flex items-center gap-2">
-                  <TbToolsKitchen2 />
-                  <span>Kitchen</span>
-                </div>
-                <div class="bg-gray-200 p-4 flex items-center gap-2">
-                  <MdElevator />
-                  <span>Elevator</span>
-                </div>
-                <div class="bg-gray-200 p-4 flex items-center gap-2">
-                  <FaWifi />
-                  <span>Wifi</span>
-                </div>
-                <div class="bg-gray-200 p-4 flex items-center gap-2">
-                  <LuParkingCircle />
-                  <span>Free parking on premises</span>
-                </div>
-                <div class="bg-gray-200 p-4 flex items-center gap-2">
-                  <GiSmokeBomb />
-                  <span>Smoke Detector</span>
-                </div>
-                <div class="bg-gray-200 p-4 flex items-center gap-2">
-                  <TbBrandCarbon />
-                  <span>Carbon monoxide Detector</span>
-                </div>
+              <div class="grid grid-cols-1 text-slate">
+                <Services />
               </div>
             </div>
             <TestimonialsCarousel />

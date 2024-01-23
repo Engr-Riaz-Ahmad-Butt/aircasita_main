@@ -4,6 +4,7 @@ import logo from "../public/logo.svg";
 import Image from "next/image";
 import { RxCross2 } from "react-icons/rx";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import logoAircasita from "../assets/imgs/airCasita_logo-bg-remove.png";
 import Link from "next/link";
 export const Header = () => {
@@ -46,7 +47,10 @@ export const Header = () => {
   return (
     <nav className="bg-primary  shadow-sm  dark:bg-gray-900 px-3 lg:p-0">
       <div className="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto ">
-        <Link href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+        <Link
+          href="/"
+          className="flex items-center space-x-3 rtl:space-x-reverse"
+        >
           <span className="self-center text-2xl font-semibold whitespace-nowrap text-secondary">
             <img src={logoAircasita.src} className="w-36" />
           </span>
@@ -175,7 +179,7 @@ export const Header = () => {
               </li>
               <li>
                 <Link
-                  href="/properties"
+                  href="/home"
                   className="block py-2 px-3 text-primary  hover:text-secondary bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 font-Montserrat font-bold"
                   aria-current="page"
                 >
@@ -228,7 +232,7 @@ export const Header = () => {
             </li>
             <li>
               <Link
-                href="/properties"
+                href="/home"
                 className="block py-2 px-3 text-text_light  hover:text-secondary bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 font-Montserrat"
                 aria-current="page"
               >

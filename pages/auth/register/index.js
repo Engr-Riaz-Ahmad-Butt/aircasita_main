@@ -7,7 +7,6 @@ import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import { useRouter } from "next/router";
 import Link from "next/link";
-
 const SignUp = () => {
   const router = useRouter();
   const fileInputRef = useRef(null);
@@ -162,7 +161,8 @@ const SignUp = () => {
               acount:
             </p>
             <p className="text-sm font-Montserrat">
-              <Link href="/auth/register">LogIn</Link> by your PayPal & phone number
+              <Link href="/auth/register">LogIn</Link> by your PayPal & phone
+              number
             </p>
           </div>
         </form>

@@ -11,12 +11,12 @@ const Contact = () => {
   };
 
   return (
-    <div className="container m-auto flex flex-col justify-center items-center w-full my-5">
-      <div className="w-full max-w-4xl m-0 flex flex-col gap-5 md:flex-row">
-        <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 md:mr-4 md:flex-1">
-          <div className="flex justify-center py-3">
-            <h1 className="text-2xl font-bold">Contact Us</h1>
-          </div>
+    <div className="container flex flex-col justify-center items-center w-full my-5">
+      <div className="flex justify-start w-full">
+        <h1 className="text-4xl font-bold">Contact Us</h1>
+      </div>
+      <div className="w-full max-w-xl m-0">
+        <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
           <div className="mb-4 font-Montserrat">
             <label
               className="block text-gray-700 text-sm font-bold mb-2 "

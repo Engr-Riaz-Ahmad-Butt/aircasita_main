@@ -3,6 +3,7 @@ import { RiInstagramFill } from "react-icons/ri";
 import { FaYoutube } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
+import Link from "next/link";
 import logo from "../assets/imgs/airCasita_logo-bg-remove.png";
 import Link from "next/link";
 const Footer = () => {
@@ -14,14 +15,17 @@ const Footer = () => {
             <div className="flex justify-center md:justify-start items-center cursor-pointer sm:32">
               <Link href="#">
                 <img src={logo.src} className="w-40" />
-                </Link>
+              </Link>
             </div>
             <div className="flex justify-center items-center flex-col">
               <div className="text-sm uppercase text-indigo-600 font-bold font-Montserrat">
                 Resources
               </div>
 
-              <Link className="my-3 block font-Montserrat" href="/public/safety">
+              <Link
+                className="my-3 block font-Montserrat"
+                href="/public/safety"
+              >
                 Safety
               </Link>
             </div>

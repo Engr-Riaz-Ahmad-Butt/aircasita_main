@@ -2,7 +2,7 @@ import Auth from "../../../layout/Auth";
 import logo from "../../../assets/imgs/airCasita_logo.png";
 import { useState } from "react";
 import { useRouter } from "next/router";
-
+import Link from "next/link";
 export default function Login() {
   const router = useRouter();
 
@@ -32,7 +32,7 @@ export default function Login() {
   };
   return (
     <>
-      <div className="container mx-auto mt-10 flex justify-center items-center w-full">
+      <div className="container mx-auto flex justify-center items-center w-full h-screen">
         <div className="w-full max-w-xl m-0">
           <form
             className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
@@ -60,7 +60,8 @@ export default function Login() {
 
             <div>
               <button
-                className="bg-primary text-text_light w-full  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline font-Montserrat "
+                className="bg-primary
+                 text-text_light w-full  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline font-Montserrat "
                 type="button"
                 onClick={() => {
                   navigate("/");

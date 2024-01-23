@@ -1,7 +1,6 @@
 import React from "react";
 import logo from "../assets/imgs/airCasita_logo-bg-remove.png";
-import Link from "next/link";
-
+import Link from 'next/link'
 const Main = () => {
   return (
     <div className="container mx-auto font-Montserrat flex flex-col items-center justify-center p-8 bg-gray-800 text-white">
