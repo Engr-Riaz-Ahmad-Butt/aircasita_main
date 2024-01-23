@@ -13,6 +13,7 @@ import { CiCircleMinus, CiCirclePlus, CiStar } from "react-icons/ci";
 import BookingCard from "../../../components/BookingCard";
 import Services from "../../../components/Services";
 import Imageslider from "../../../components/Imageslider";
+import TestimonialsCarousel from "../../../components/TestimonialsCarousel";
 
 const Properties = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,7 +46,7 @@ const Properties = (props) => {
   return (
     <>
       <div className="grid grid-cols-8 md:grid-cols-6 lg:grid-cols-8 md:container md:mx-auto p-5 md:p-5 font-customFont">
-        <div className="col-span-8 md:col-span-4">
+        <div className="col-span-8 md:col-span-6 lg:col-span-4">
           <h3 className="text-2xl font-bold py-2">ENTER APPATRMENT</h3>
           <div className="flex flex-col sm:flex-row justify-between">
             <div>
@@ -79,6 +80,7 @@ const Properties = (props) => {
           </div>
           <div>
             <h3 className="text-2xl font-bold text-dodgerBlue">Contact Host</h3>
+            <p className="text-1xl my-2">+9123456789</p>
           </div>
           <hr className="my-8 border border-lite_gray rounded dark:bg-gray-700 mr-6" />
           <div>
@@ -86,6 +88,8 @@ const Properties = (props) => {
               <Services />
             </div>
           </div>
+
+          <TestimonialsCarousel />
         </div>
         <div className="bg-gray-800 text-white col-span-8 md:col-span-4 flex justify-center flex-shrink-0 z-20">
           <div className="flex justify-center rounded md:p-5">

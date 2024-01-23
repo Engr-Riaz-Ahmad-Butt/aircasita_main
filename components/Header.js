@@ -6,6 +6,7 @@ import { RxCross2 } from "react-icons/rx";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import logoAircasita from "../assets/imgs/airCasita_logo-bg-remove.png";
+import Link from "next/link";
 export const Header = () => {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -44,7 +45,7 @@ export const Header = () => {
   };
 
   return (
-    <nav className="bg-primary  shadow-sm  dark:bg-gray-900">
+    <nav className="bg-primary  shadow-sm  dark:bg-gray-900 px-3 lg:p-0">
       <div className="max-w-screen-lg flex flex-wrap items-center justify-between mx-auto ">
         <Link
           href="/"
@@ -161,7 +162,7 @@ export const Header = () => {
               <li>
                 <Link
                   href="/public/about"
-                  className="block  px-3 text-primary hover:text-secondary bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 font-Montserrat font-bold"
+                  className="block px-3 text-primary hover:text-secondary bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 font-Montserrat font-bold"
                   aria-current="page"
                 >
                   About
@@ -178,7 +179,7 @@ export const Header = () => {
               </li>
               <li>
                 <Link
-                  href="/home"
+                  href="/properties"
                   className="block py-2 px-3 text-primary  hover:text-secondary bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 font-Montserrat font-bold"
                   aria-current="page"
                 >
@@ -231,7 +232,7 @@ export const Header = () => {
             </li>
             <li>
               <Link
-                href="/home"
+                href="/properties"
                 className="block py-2 px-3 text-text_light  hover:text-secondary bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 font-Montserrat"
                 aria-current="page"
               >
@@ -257,7 +258,7 @@ export const Header = () => {
 
             <li>
               <Link
-                 href="/public/contact"
+                href="/public/contact"
                 className="block py-2 px-3 rounded  text-text_light  hover:text-secondary  md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700 font-Montserrat"
               >
                 Contact
