@@ -100,7 +100,7 @@ const Contact = () => {
         </form>
 
         {/* Second Form  */}
-        <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 md:flex-1">
+        {/* <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 md:flex-1">
           <div className="flex justify-center py-3">
             <h1 className="text-2xl font-bold">Contact The Host</h1>
           </div>
@@ -184,7 +184,7 @@ const Contact = () => {
               Submit
             </button>
           </div>
-        </form>
+        </form> */}
       </div>
     </div>
   );

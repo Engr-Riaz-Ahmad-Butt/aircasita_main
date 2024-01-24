@@ -4,6 +4,9 @@ import { HiBadgeCheck } from "react-icons/hi";
 const TabbedTable = () => {
   // State to keep track of the active tab
   const [activeTab, setActiveTab] = useState("Completed");
+  const [completedData, setCompletedData] = useState([]);
+  const [inProgressData, setInProgressData] = useState([]);
+  const [completed, setCompleted] = useState([]);
   // Data for different tables
   const tablesData = {
     Completed: [
@@ -164,7 +167,7 @@ const TabbedTable = () => {
         checkin: 25,
         checkout: 24,
         amount: "200$",
-        status: "pending",
+        status: "completed",
         // action: "true",
       },
       {
@@ -200,6 +203,27 @@ const TabbedTable = () => {
   const changeTab = (tab) => {
     setActiveTab(tab);
   };
+
+  const handleCheckIn = (row) => {
+    setCompletedData((prevData) =>
+      prevData.filter((item) => item.id !== row.id)
+    );
+    setInProgressData((prevData) => [...prevData, { ...row, status: "In Progress" }]);
+    setActiveTab("InProgress");
+  };
+
+
+  const handleCheckOut = (row) => {
+    setInProgressData((prevData) =>
+      prevData.filter((item) => item.id !== row.id)
+    );
+    setCompletedData((prevData) => [...prevData, { ...row, status: "Completed" }]);
+    setActiveTab("Completed");
+  };
+
+
+
+
   return (
     <div className="container font-Montserrat font-bold border-2 product-card-border md:py-5 rounded-md">
       {/* Tab buttons */}
@@ -330,7 +354,13 @@ const TabbedTable = () => {
                     <td className="text-center sm:text-sm ">
                       {row.action}
                       <button class="bg-primary  text-text_light font-bold py-1 px-4 rounded">
-                        <Link href={`/dashboard/view-page/${encodeURIComponent(row.id)}`}>view</Link>
+                        <Link
+                          href={`/dashboard/view-page/${encodeURIComponent(
+                            row.id
+                          )}`}
+                        >
+                          view
+                        </Link>
                       </button>
                     </td>
                   </>
@@ -344,7 +374,7 @@ const TabbedTable = () => {
                     <td className="text-center sm:text-sm items-center text-yellow ">
                       {row.status == "Inprogress" ? (
                         <>
-                          <div className="flex justify-center">
+                          <div className="flex justify-center items-center gap-2">
                             <span className="py-1 pr-3">
                               <HiBadgeCheck className="text-yellow" />
                             </span>
@@ -357,8 +387,11 @@ const TabbedTable = () => {
                     </td>
                     {/* <td className="text-center sm:text-sm ">{row.status}</td> */}
                     {/* <td className="text-center sm:text-sm ">{row.action}</td> */}
-                    <td className="text-center sm:text-sm ">
+                    <td className="my-5 sm:text-sm flex gap-2 justify-center items-center">
                       {row.action}
+                      <button class="bg-green hover:bg-blue-700 text-text_light font-bold py-1 px-3 rounded" onClick={() => handleCheckOut(row)}>
+                        Check out
+                      </button>
                       <button class="bg-primary  text-text_light font-bold py-1 px-4 rounded">
                         <Link href="/dashboard/view-page">view</Link>
                       </button>
@@ -410,8 +443,9 @@ const TabbedTable = () => {
                     <td className="text-center sm:text-sm ">{row.checkin}</td>
                     <td className="text-center sm:text-sm ">{row.checkout}</td>
                     <td className="text-center sm:text-sm ">{row.amount}</td>
+
                     <td className="text-center sm:text-sm items-center ">
-                      {row.status == "rejected" ? (
+                      {/* {row.status == "rejected" ? (
                         <>
                           <div className="flex justify-center">
                             <span className="py-1 pr-3">
@@ -427,15 +461,62 @@ const TabbedTable = () => {
                           </span>
                           {row.status}
                         </div>
+                      )} */}
+
+                      {row.status === "rejected" ? (
+                        <>
+                          <div className="flex justify-center">
+                            <span className="py-1 pr-3">
+                              <HiBadgeCheck className="text-red" />
+                            </span>
+                            {row.status}
+                          </div>
+                        </>
+                      ) : row.status === "completed" ? (
+                        <>
+                          <div className="flex justify-center items-center gap-2">
+                            <span className="py-1 pr-3">
+                              {/* You can choose the appropriate icon for "completed" status */}
+                              <HiBadgeCheck className="text-green" />
+                            </span>
+                            {row.status}
+                          </div>
+                        </>
+                      ) : (
+                        <div className="flex justify-center">
+                          <span className="py-1 pr-3">
+                            <HiBadgeCheck className="text-yellow" />
+                          </span>
+                          {row.status}
+                        </div>
                       )}
                     </td>
                     {/* <td className="text-center sm:text-sm ">{row.status}</td> */}
                     {/* <td className="text-center sm:text-sm ">{row.action}</td> */}
-                    <td className="text-center sm:text-sm ">
-                      {row.action}
-                      <button className="bg-primary text-text_light font-bold py-1 px-4 rounded">
-                        view
-                      </button>
+                    <td className="text-center sm:text-sm">
+                      {row.status === "completed" ? (
+                        <>
+                        <div className="flex">
+                          {row.action}
+                          <button
+                            className="bg-green hover:bg-blue-700 text-text_light py-1 px-3 ml-4 mr-4 rounded"
+                            onClick={() => handleCheckIn(row)}
+                          >
+                            Check In
+                          </button>
+                          <button className="bg-primary text-text_light font-bold py-1 px-4 rounded">
+                            View
+                          </button>
+                          </div>
+                        </>
+                      ) : (
+                        <>
+                          {row.action}
+                          <button className="bg-primary text-text_light font-bold py-1 px-4 rounded">
+                            View
+                          </button>
+                        </>
+                      )}
                     </td>
                   </>
                 ) : (

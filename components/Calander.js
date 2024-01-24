@@ -428,6 +428,255 @@
 // export default Calendar;
 
 
+// import React, { useState } from "react";
+
+// const Calendar = () => {
+//   const months = [
+//     "January", "February", "March", "April", "May", "June",
+//     "July", "August", "September", "October", "November", "December"
+//   ];
+
+//   const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
+//   const [currentMonth, setCurrentMonth] = useState(0);
+
+//   const handleNextMonth = () => {
+//     setCurrentMonth((prevMonth) => (prevMonth + 1) % months.length);
+//   };
+
+//   const handlePrevMonth = () => {
+//     setCurrentMonth((prevMonth) => (prevMonth - 1 + months.length) % months.length);
+//   };
+
+//   const daysInMonth = new Date(2022, currentMonth + 1, 0).getDate();
+//   const daysArray = Array.from({ length: daysInMonth }, (_, dayIndex) => dayIndex + 1);
+
+//   // Array of dates to be highlighted with gray background
+//   const highlightedDates = [9, 10, 11, 12];
+
+//   // Mapping of day indices to free text
+//   const freeTextDays = { 13: "Free" };
+
+//   const chunkArray = (arr, chunkSize) => {
+//     const result = [];
+//     for (let i = 0; i < arr.length; i += chunkSize) {
+//       result.push(arr.slice(i, i + chunkSize));
+//     }
+//     return result;
+//   };
+
+//   const chunkedDays = chunkArray(daysArray, 7);
+
+//   return (
+//     <div className="flex items-center justify-center my-5 from-red-100 via-red-300 to-red-500 bg-gradient-to-br">
+//       <div className="w-full max-w-lg p-6 mx-auto bg-white rounded-2xl product-card-border">
+//         <div className="flex justify-between pb-4">
+//           <div className="-rotate-90 cursor-pointer" onClick={handlePrevMonth}>
+//             <svg
+//               width="12"
+//               height="7"
+//               viewBox="0 0 12 7"
+//               fill="none"
+//               xmlns="http://www.w3.org/2000/svg"
+//             >
+//               <path
+//                 d="M11.001 6L6.00098 1L1.00098 6"
+//                 stroke="black"
+//                 strokeOpacity="0.4"
+//                 strokeWidth="2"
+//                 strokeLinecap="round"
+//                 strokeLinejoin="round"
+//               />
+//             </svg>
+//           </div>
+//           <span className="uppercase text-sm font-semibold text-gray-600">
+//             {months[currentMonth]} - 2024
+//           </span>
+//           <div className="rotate-90 cursor-pointer" onClick={handleNextMonth}>
+//             <svg
+//               width="12"
+//               height="7"
+//               viewBox="0 0 12 7"
+//               fill="none"
+//               xmlns="http://www.w3.org/2000/svg"
+//             >
+//               <path
+//                 d="M11.001 6L6.00098 1L1.00098 6"
+//                 stroke="black"
+//                 strokeOpacity="0.4"
+//                 strokeWidth="2"
+//                 strokeLinecap="round"
+//                 strokeLinejoin="round"
+//               />
+//             </svg>
+//           </div>
+//         </div>
+
+//         <table className="w-full">
+//           <thead>
+//             <tr>
+//               {daysOfWeek.map((day, index) => (
+//                 <th key={index} className="px-2 py-1 text-center border">{day}</th>
+//               ))}
+//             </tr>
+//           </thead>
+//           <tbody>
+//             {chunkedDays.map((row, rowIndex) => (
+//               <tr key={rowIndex}>
+//                 {row.map((day, index) => (
+//                   <td
+//                     key={index}
+//                     className={`px-2 py-1 text-center border hover:border-green-500 hover:text-green-500 cursor-pointer ${
+//                       highlightedDates.includes(day) ? 'bg-primary' : ''
+//                     }`}
+//                   >
+//                     {freeTextDays[day] || day}
+//                   </td>
+//                 ))}
+//               </tr>
+//             ))}
+//           </tbody>
+//         </table>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Calendar;
+
+
+
+// import React, { useState } from "react";
+
+
+// import React, { useState } from "react";
+
+// const Calendar = () => {
+//   const months = [
+//     "January", "February", "March", "April", "May", "June",
+//     "July", "August", "September", "October", "November", "December"
+//   ];
+
+//   const daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+
+//   const [currentMonth, setCurrentMonth] = useState(0);
+
+//   const handleNextMonth = () => {
+//     setCurrentMonth((prevMonth) => (prevMonth + 1) % months.length);
+//   };
+
+//   const handlePrevMonth = () => {
+//     setCurrentMonth((prevMonth) => (prevMonth - 1 + months.length) % months.length);
+//   };
+
+//   const daysInMonth = new Date(2024, currentMonth + 1, 0).getDate();
+//   const daysArray = Array.from({ length: daysInMonth }, (_, dayIndex) => dayIndex + 1);
+
+//   const highlightedMonth = 0; 
+//   const highlightedDates = [9, 10, 11, 30, 31];
+//   const highlightedBackgroundColor = 'site-primary';
+  
+//   const freeTextDays = (currentMonth === highlightedMonth) ? { 12: "Free" } : {};
+
+//   // Adding Free text for February 2
+//   if (currentMonth === 1) {
+//     freeTextDays[1] = "Free";
+//   }
+
+//   const chunkArray = (arr, chunkSize) => {
+//     const result = [];
+//     for (let i = 0; i < arr.length; i += chunkSize) {
+//       result.push(arr.slice(i, i + chunkSize));
+//     }
+//     return result;
+//   };
+
+//   const chunkedDays = chunkArray(daysArray, 7);
+
+//   return (
+//     <div className="flex items-center justify-center my-5 from-red-100 via-red-300 to-red-500 bg-gradient-to-br">
+//       <div className="w-full max-w-lg p-6 mx-auto bg-white rounded-2xl product-card-border">
+//         <div className="flex justify-between pb-4">
+//           <div className="-rotate-90 cursor-pointer" onClick={handlePrevMonth}>
+//             <svg
+//               width="12"
+//               height="7"
+//               viewBox="0 0 12 7"
+//               fill="none"
+//               xmlns="http://www.w3.org/2000/svg"
+//             >
+//               <path
+//                 d="M11.001 6L6.00098 1L1.00098 6"
+//                 stroke="black"
+//                 strokeOpacity="0.4"
+//                 strokeWidth="2"
+//                 strokeLinecap="round"
+//                 strokeLinejoin="round"
+//               />
+//             </svg>
+//           </div>
+//           <span className="uppercase text-sm font-semibold text-gray-600">
+//             {months[currentMonth]} - 2024
+//           </span>
+//           <div className="rotate-90 cursor-pointer" onClick={handleNextMonth}>
+//             <svg
+//               width="12"
+//               height="7"
+//               viewBox="0 0 12 7"
+//               fill="none"
+//               xmlns="http://www.w3.org/2000/svg"
+//             >
+//               <path
+//                 d="M11.001 6L6.00098 1L1.00098 6"
+//                 stroke="black"
+//                 strokeOpacity="0.4"
+//                 strokeWidth="2"
+//                 strokeLinecap="round"
+//                 strokeLinejoin="round"
+//               />
+//             </svg>
+//           </div>
+//         </div>
+
+//         <table className="w-full">
+//           <thead>
+//             <tr>
+//               {daysOfWeek.map((day, index) => (
+//                 <th key={index} className="px-2 py-1 text-center border">{day}</th>
+//               ))}
+//             </tr>
+//           </thead>
+//           <tbody>
+//             {chunkedDays.map((row, rowIndex) => (
+//               <tr key={rowIndex}>
+//                 {row.map((day, index) => (
+//                   <td
+//                     key={index}
+//                     className={`px-2 py-1 text-center border hover:border-green-500 hover:text-green-500 cursor-pointer ${
+//                       (currentMonth === highlightedMonth && highlightedDates.includes(day)) ? `bg-primary` : (currentMonth === 1 && day === 1) ? `bg-primary` : ''
+//                     }`}
+//                     style={{
+//                       backgroundColor: (currentMonth === highlightedMonth && highlightedDates.includes(day)) ? highlightedBackgroundColor : '',
+//                     }}
+//                   >
+//                     {freeTextDays[day] || day}
+//                   </td>
+//                 ))}
+//               </tr>
+//             ))}
+//           </tbody>
+//         </table>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Calendar;
+
+
+
+
+
 import React, { useState } from "react";
 
 const Calendar = () => {
@@ -436,7 +685,7 @@ const Calendar = () => {
     "July", "August", "September", "October", "November", "December"
   ];
 
-  const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const daysOfWeek = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
   const [currentMonth, setCurrentMonth] = useState(0);
 
@@ -448,14 +697,15 @@ const Calendar = () => {
     setCurrentMonth((prevMonth) => (prevMonth - 1 + months.length) % months.length);
   };
 
-  const daysInMonth = new Date(2022, currentMonth + 1, 0).getDate();
+  const daysInMonth = new Date(2024, currentMonth + 1, 0).getDate();
   const daysArray = Array.from({ length: daysInMonth }, (_, dayIndex) => dayIndex + 1);
 
-  // Array of dates to be highlighted with gray background
-  const highlightedDates = [9, 10, 11, 12];
-
-  // Mapping of day indices to free text
-  const freeTextDays = { 13: "Free" };
+  const highlightedMonth = 0; 
+  const highlightedDates = [9, 10, 11, 30, 31];
+  const highlightedBackgroundColor = 'site-primary';
+    
+  const freeTextDays = (currentMonth === highlightedMonth) ? { 12: "Free" } : (currentMonth === 1) ? { 2: "Free" } : {};
+  
 
   const chunkArray = (arr, chunkSize) => {
     const result = [];
@@ -527,8 +777,11 @@ const Calendar = () => {
                   <td
                     key={index}
                     className={`px-2 py-1 text-center border hover:border-green-500 hover:text-green-500 cursor-pointer ${
-                      highlightedDates.includes(day) ? 'bg-primary' : ''
+                      (currentMonth === highlightedMonth && highlightedDates.includes(day)) ? `bg-primary` : (currentMonth === 1 && day === 1) ? `bg-primary` : ''
                     }`}
+                    style={{
+                      backgroundColor: (currentMonth === highlightedMonth && highlightedDates.includes(day)) ? highlightedBackgroundColor : '',
+                    }}
                   >
                     {freeTextDays[day] || day}
                   </td>
@@ -543,3 +796,7 @@ const Calendar = () => {
 };
 
 export default Calendar;
+
+
+
+

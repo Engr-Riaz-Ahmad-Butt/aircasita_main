@@ -4,6 +4,7 @@ import { FaYoutube } from "react-icons/fa";
 import { FaFacebook } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa";
 import logo from "../assets/imgs/airCasita_logo-bg-remove.png";
+import Link from "next/link";
 const Footer = () => {
   return (
     <>
