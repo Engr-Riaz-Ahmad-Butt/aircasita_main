@@ -13,7 +13,7 @@ export const Header = () => {
   const router = useRouter();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
-  
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const toggleDropDown = () => setIsDropDownOpen(!isDropDownOpen);
 

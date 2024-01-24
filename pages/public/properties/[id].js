@@ -51,7 +51,7 @@ const Properties = (props) => {
     <>
       <div className="grid grid-cols-8 md:grid-cols-6 lg:grid-cols-8 md:container md:mx-auto p-5 md:p-5 font-customFont">
         <div className="col-span-8 md:col-span-6 lg:col-span-4">
-          <h3 className="text-2xl font-bold py-2">ENTER APPATRMENT</h3>
+          <h3 className="text-2xl font-bold py-2">ENTIRE APPATRMENT</h3>
           <div className="flex flex-col sm:flex-row justify-between">
             <div>
               <h1 className="text-4xl font-black">
@@ -99,11 +99,16 @@ const Properties = (props) => {
           <div>
             <h3 className="text-2xl font-bold text-dodgerBlue">Contact Host</h3>
             <h3 className="text-lg font-bold text-dodgerBlue">+44-326754...</h3>
-            <div></div>
           </div>
-          <TestimonialsCarousel />
+          <div>
+            <div>
+              <div class="grid grid-cols-1 text-slate">
+                <Services />
+              </div>
+            </div>
+            <TestimonialsCarousel />
+          </div>
         </div>
-
         <div className="bg-gray-800 text-white col-span-8 md:col-span-4 flex justify-center flex-shrink-0 z-20">
           <div className="flex justify-center rounded md:p-5">
             <div className="w-full md:w-auto items-center flex flex-col">

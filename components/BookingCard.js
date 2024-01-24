@@ -6,23 +6,24 @@ import Link from "next/link";
 const BookingCard = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [bookingSuccess, setBookingSuccess] = useState(false);
-  const [spacialOffer, setSpacialOffer] = useState(true);
+  const [childrenCount, setChildrenCount] = useState(0);
+  const [age, setAge] = useState(0);
+  const [infantsCount, setInfantsCount] = useState(0);
+  const [petsCount, setPetsCount] = useState(0);
+
   const [startDate, setStartDate] = useState();
   const [endDate, setEndDate] = useState();
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
-  const isDisabled = (date) => date.getDate() % 2 !== 0;
 
   const handleBookClick = () => {
     setBookingSuccess(true);
     setStartDate(null);
     setEndDate(null);
   };
-  const handleSpacialOffer = () => {
-    setSpacialOffer(false);
-  };
+
   return (
     <div className="max-w-md bg-white border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
       {bookingSuccess ? (
@@ -68,7 +69,6 @@ const BookingCard = () => {
                     selected={startDate}
                     onChange={(date) => setStartDate(date)}
                     startDate={startDate}
-                    minDate={new Date()}
                   />
                 </div>
               </div>
@@ -85,8 +85,7 @@ const BookingCard = () => {
                     onChange={(date) => setEndDate(date)}
                     endDate={endDate}
                     startDate={startDate}
-                    // minDate={startDate}
-                    isDisabled={isDisabled}
+                    minDate={startDate}
                   />
                 </div>
               </div>
@@ -124,10 +123,16 @@ const BookingCard = () => {
                           <span className="text-xl">Adults</span>
                           <span>Age 13+</span>
                         </div>
-                        <div className="mt-1 text-sm text-gray-500 flex justify-evenly items-center">
-                          <CiCirclePlus className="text-lg" />
-                          <span>1</span>
-                          <CiCircleMinus className="text-lg" />
+                        <div className="mt-1 cursor-pointer text-sm text-gray-500 flex justify-evenly items-center">
+                          <CiCirclePlus
+                            className="text-lg"
+                            onClick={() => setAge(age + 1)}
+                          />
+                          <span>{age}</span>
+                          <CiCircleMinus
+                            className="text-lg"
+                            onClick={() => setAge(age - 1)}
+                          />
                         </div>
                       </div>
                     </li>
@@ -137,10 +142,16 @@ const BookingCard = () => {
                           <span className="text-xl">Children</span>
                           <span>Age 2-12</span>
                         </div>
-                        <div className="mt-1 text-sm text-gray-500 flex justify-evenly items-center">
-                          <CiCirclePlus className="text-lg" />
-                          <span>0</span>
-                          <CiCircleMinus className="text-lg" />
+                        <div className="mt-1 cursor-pointer text-sm text-gray-500 flex justify-evenly items-center">
+                          <CiCirclePlus
+                            className="text-lg"
+                            onClick={() => setChildrenCount(childrenCount + 1)}
+                          />
+                          <span>{childrenCount}</span>
+                          <CiCircleMinus
+                            className="text-lg"
+                            onClick={() => setChildrenCount(childrenCount - 1)}
+                          />
                         </div>
                       </div>
                     </li>
@@ -150,10 +161,16 @@ const BookingCard = () => {
                           <span className="text-xl">Infants</span>
                           <span>Under 2</span>
                         </div>
-                        <div className="mt-1 text-sm text-gray-500 flex justify-evenly items-center">
-                          <CiCirclePlus className="text-lg" />
-                          <span>0</span>
-                          <CiCircleMinus className="text-lg" />
+                        <div className="mt-1 cursor-pointer text-sm text-gray-500 flex justify-evenly items-center">
+                          <CiCirclePlus
+                            className="text-lg"
+                            onClick={() => setInfantsCount(infantsCount + 1)}
+                          />
+                          <span>{infantsCount}</span>
+                          <CiCircleMinus
+                            className="text-lg"
+                            onClick={() => setInfantsCount(infantsCount - 1)}
+                          />
                         </div>
                       </div>
                     </li>
@@ -163,10 +180,16 @@ const BookingCard = () => {
                           <span className="text-xl">Pets</span>
                           <span>Bringing a service animal?</span>
                         </div>
-                        <div className="mt-1 text-sm text-gray-500 flex justify-evenly items-center">
-                          <CiCirclePlus className="text-lg" />
-                          <span>0</span>
-                          <CiCircleMinus className="text-lg" />
+                        <div className="mt-1 cursor-pointer text-sm text-gray-500 flex justify-evenly items-center">
+                          <CiCirclePlus
+                            className="text-lg"
+                            onClick={() => setPetsCount(petsCount + 1)}
+                          />
+                          <span>{petsCount}</span>
+                          <CiCircleMinus
+                            className="text-lg"
+                            onClick={() => setPetsCount(petsCount - 1)}
+                          />
                         </div>
                       </div>
                     </li>
@@ -228,12 +251,11 @@ const BookingCard = () => {
                   </div>
                 </div>
               </li>
-
-              <li className="pt-3 pb-0  sm:pt-4">
+              <li className="pt-3 pb-0 sm:pt-4">
                 <div className="flex items-center ">
                   <button
                     onClick={handleBookClick}
-                    className="w-full bg-primary text-gray  text-white font-bold py-2 px-4 rounded"
+                    className="w-full bg-primary text-gray hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                   >
                     Book
                   </button>
