@@ -13,8 +13,10 @@ const TabbedTable = () => {
       {
         id: 1,
         properties: "NORTH POLE",
-        checkin: 2,
-        checkout: 24,
+        checkedin: "02:00 2024-01-14",
+        checkedout: "03:00 2024-01-17",
+        checkin: "2024-01-14",
+        checkout: "2024-01-17",
         amount: "200$",
         status: "Completed",
         // action: "true",
@@ -22,8 +24,10 @@ const TabbedTable = () => {
       {
         id: 2,
         properties: "NORTH POLE",
-        checkin: 25,
-        checkout: 24,
+        checkedin: "02:00 2024-01-14",
+        checkedout: "03:00 2024-01-17",
+        checkin: "2024-01-14",
+        checkout: "2024-01-17",
         amount: "200$",
         status: "Completed",
         // action: "true",
@@ -31,8 +35,10 @@ const TabbedTable = () => {
       {
         id: 3,
         properties: "NORTH POLE",
-        checkin: 25,
-        checkout: 24,
+        checkedin: "02:00 2024-01-14",
+        checkedout: "03:00 2024-01-17",
+        checkin: "2024-01-14",
+        checkout: "2024-01-17",
         amount: "200$",
         status: "Completed",
         // action: "true",
@@ -40,8 +46,10 @@ const TabbedTable = () => {
       {
         id: 4,
         properties: "NORTH POLE",
-        checkin: 25,
-        checkout: 24,
+        checkedin: "02:00 2024-01-14",
+        checkedout: "03:00 2024-01-17",
+        checkin: "2024-01-14",
+        checkout: "2024-01-17",
         amount: "200$",
         status: "Completed",
         // action: "true",
@@ -49,8 +57,10 @@ const TabbedTable = () => {
       {
         id: 5,
         properties: "NORTH POLE",
-        checkin: 25,
-        checkout: 24,
+        checkedin: "02:00 2024-01-14",
+        checkedout: "03:00 2024-01-17",
+        checkin: "2024-01-14",
+        checkout: "2024-01-17",
         amount: "200$",
         status: "Completed",
         // action: "true",
@@ -60,47 +70,51 @@ const TabbedTable = () => {
       {
         id: 1,
         properties: "NORTH POLE",
-        checkin: 25,
-        checkout: 24,
+        checkin: "24-01-14",
+        checkout: "2024-01-17",
+        checkedIn: "03:00 2024-01-17",
         amount: "200$",
-        status: "Inprogress",
+        status: "Check In",
         // action: "true",
       },
-
       {
         id: 2,
         properties: "NORTH POLE",
-        checkin: 25,
-        checkout: 24,
+        checkin: "24-01-14",
+        checkout: "2024-01-17",
+        checkedIn: "03:00 2024-01-17",
         amount: "200$",
-        status: "Inprogress",
+        status: "Check In",
         // action: "true",
       },
       {
         id: 3,
         properties: "NORTH POLE",
-        checkin: 25,
-        checkout: 24,
+        checkin: "024-01-14",
+        checkout: "2024-01-17",
+        checkedIn: "03:00 2024-01-17",
         amount: "200$",
-        status: "Inprogress",
+        status: "Check In",
         // action: "true",
       },
       {
         id: 4,
         properties: "NORTH POLE",
-        checkin: 25,
-        checkout: 24,
+        checkin: "24-01-14",
+        checkout: "2024-01-17",
+        checkedIn: "03:00 2024-01-17",
         amount: "200$",
-        status: "Inprogress",
+        status: "Check In",
         // action: "true",
       },
       {
         id: 5,
         properties: "NORTH POLE",
-        checkin: 25,
-        checkout: 24,
+        checkin: "24-01-14",
+        checkout: "2024-01-17",
+        checkedIn: "03:00 2024-01-17",
         amount: "200$",
-        status: "Inprogress",
+        status: "Check In",
         // action: "true",
       },
     ],
@@ -108,46 +122,46 @@ const TabbedTable = () => {
       {
         id: 1,
         properties: "NORTH POLE",
-        checkin: 25,
-        checkout: 24,
+        checkin: "2024-01-14",
+        checkout: "2024-01-17",
         amount: "200$",
-        status: "resolve",
+        status: "Resolve",
         // action: "true",
       },
       {
         id: 2,
         properties: "NORTH POLE",
-        checkin: 25,
-        checkout: 24,
+        checkin: "2024-01-14",
+        checkout: "2024-01-17",
         amount: "200$",
-        status: "resolve",
+        status: "Resolve",
         // action: "true",
       },
       {
         id: 3,
         properties: "NORTH POLE",
-        checkin: 25,
-        checkout: 24,
+        checkin: "2024-01-14",
+        checkout: "2024-01-17",
         amount: "200$",
-        status: "rejected",
+        status: "Pending",
         // action: "true",
       },
       {
         id: 4,
         properties: "NORTH POLE",
-        checkin: 25,
-        checkout: 24,
+        checkin: "2024-01-14",
+        checkout: "2024-01-17",
         amount: "200$",
-        status: "resolve",
+        status: "Resolve",
         // action: "true",
       },
       {
         id: 5,
         properties: "NORTH POLE",
-        checkin: 25,
-        checkout: 24,
+        checkin: "2024-01-14",
+        checkout: "2024-01-17",
         amount: "200$",
-        status: "rejected",
+        status: "Pending",
         // action: "true",
       },
     ],
@@ -155,46 +169,46 @@ const TabbedTable = () => {
       {
         id: 1,
         properties: "NORTH POLE",
-        checkin: 253,
-        checkout: 24,
+        checkin: "2024-01-14",
+        checkout: "2024-01-17",
         amount: "200$",
-        status: "rejected",
+        status: "Rejected",
         // action: "true",
       },
       {
         id: 2,
         properties: "NORTH POLE",
-        checkin: 25,
-        checkout: 24,
+        checkin: "2024-01-14",
+        checkout: "2024-01-17",
         amount: "200$",
-        status: "completed",
+        status: "Accepted",
         // action: "true",
       },
       {
         id: 3,
         properties: "NORTH POLE",
-        checkin: 25,
-        checkout: 24,
+        checkin: "2024-01-14",
+        checkout: "2024-01-17",
         amount: "200$",
-        status: "pending",
+        status: "Rejected",
         // action: "true",
       },
       {
         id: 4,
         properties: "NORTH POLE",
-        checkin: 25,
-        checkout: 24,
+        checkin: "2024-01-14",
+        checkout: "2024-01-17",
         amount: "200$",
-        status: "rejected",
+        status: "Accepted",
         // action: "true",
       },
       {
         id: 5,
         properties: "NORTH POLE",
-        checkin: 25,
-        checkout: 24,
+        checkin: "2024-01-14",
+        checkout: "2024-01-17",
         amount: "200$",
-        status: "rejected",
+        status: "Rejected",
         // action: "true",
       },
     ],
@@ -208,22 +222,23 @@ const TabbedTable = () => {
     setCompletedData((prevData) =>
       prevData.filter((item) => item.id !== row.id)
     );
-    setInProgressData((prevData) => [...prevData, { ...row, status: "In Progress" }]);
+    setInProgressData((prevData) => [
+      ...prevData,
+      { ...row, status: "In Progress" },
+    ]);
     setActiveTab("InProgress");
   };
-
 
   const handleCheckOut = (row) => {
     setInProgressData((prevData) =>
       prevData.filter((item) => item.id !== row.id)
     );
-    setCompletedData((prevData) => [...prevData, { ...row, status: "Completed" }]);
+    setCompletedData((prevData) => [
+      ...prevData,
+      { ...row, status: "Completed" },
+    ]);
     setActiveTab("Completed");
   };
-
-
-
-
   return (
     <div className="container font-Montserrat font-bold border-2 product-card-border md:py-5 rounded-md">
       {/* Tab buttons */}
@@ -282,10 +297,12 @@ const TabbedTable = () => {
                     Booking Id
                   </th>
                   <th className="text-primary sm:text-sm sm:px-2">
-                    Properties
+                    Property
                   </th>
                   <th className="text-primary sm:text-sm px-3">Check In</th>
                   <th className="text-primary sm:text-sm px-3">Check Out</th>
+                  <th className="text-primary sm:text-sm px-3">Checked In</th>
+                  <th className="text-primary sm:text-sm px-3">Checked Out</th>
                   <th className="text-primary sm:text-sm px-2">Amount</th>
                   <th className="text-primary sm:text-sm px-3">Status</th>
                   <th className="text-primary sm:text-sm sm:px-2">Action</th>
@@ -297,10 +314,11 @@ const TabbedTable = () => {
                     Booking Id
                   </th>
                   <th className="text-primary sm:text-sm sm:px-2">
-                    Properties
+                    Property
                   </th>
                   <th className="text-primary sm:text-sm px-3">Check In</th>
                   <th className="text-primary sm:text-sm px-3">Check Out</th>
+                  <th className="text-primary sm:text-sm px-3">checked In</th>
                   <th className="text-primary sm:text-sm sm:px-2">Amount</th>
                   <th className="text-primary sm:text-sm px-3">Status</th>
                   <th className="text-primary sm:text-sm sm:px-2">Action</th>
@@ -312,7 +330,7 @@ const TabbedTable = () => {
                     Booking Id
                   </th>
                   <th className="text-primary sm:text-sm sm:px-2">
-                    Properties
+                    Property
                   </th>
                   <th className="text-primary sm:text-sm px-3">Check In</th>
                   <th className="text-primary sm:text-sm px-3">Check Out</th>
@@ -335,6 +353,10 @@ const TabbedTable = () => {
                     </td>
                     <td className="text-center sm:text-sm ">{row.checkin}</td>
                     <td className="text-center sm:text-sm ">{row.checkout}</td>
+                    <td className="text-center sm:text-sm ">{row.checkedin}</td>
+                    <td className="text-center sm:text-sm ">
+                      {row.checkedout}
+                    </td>
                     <td className="text-center sm:text-sm ">{row.amount}</td>
                     <td className="text-center sm:text-sm items-center text-green ">
                       {row.status == "Completed" ? (
@@ -370,9 +392,10 @@ const TabbedTable = () => {
                     <td className="text-center sm:text-sm">{row.properties}</td>
                     <td className="text-center sm:text-sm">{row.checkin}</td>
                     <td className="text-center sm:text-sm">{row.checkout}</td>
+                    <td className="text-center sm:text-sm">{row.checkedIn}</td>
                     <td className="text-center sm:text-sm">{row.amount}</td>
                     <td className="text-center sm:text-sm items-center text-yellow ">
-                      {row.status == "Inprogress" ? (
+                      {row.status == "Check In" ? (
                         <>
                           <div className="flex justify-center items-center gap-2">
                             <span className="py-1 pr-3">
@@ -389,7 +412,10 @@ const TabbedTable = () => {
                     {/* <td className="text-center sm:text-sm ">{row.action}</td> */}
                     <td className="my-5 sm:text-sm flex gap-2 justify-center items-center">
                       {row.action}
-                      <button class="bg-green hover:bg-blue-700 text-text_light font-bold py-1 px-3 rounded" onClick={() => handleCheckOut(row)}>
+                      <button
+                        class="bg-green hover:bg-blue-700 text-text_light font-bold py-1 px-3 rounded"
+                        onClick={() => handleCheckOut(row)}
+                      >
                         Check out
                       </button>
                       <button class="bg-primary  text-text_light font-bold py-1 px-4 rounded">
@@ -407,7 +433,7 @@ const TabbedTable = () => {
                     <td className="text-center sm:text-sm ">{row.checkout}</td>
                     <td className="text-center sm:text-sm ">{row.amount}</td>
                     <td className="text-center sm:text-sm items-center ">
-                      {row.status == "rejected" ? (
+                      {row.status == "Pending" ? (
                         <>
                           <div className="flex justify-center">
                             <span className="py-1 pr-3">
@@ -463,7 +489,7 @@ const TabbedTable = () => {
                         </div>
                       )} */}
 
-                      {row.status === "rejected" ? (
+                      {row.status === "Rejected" ? (
                         <>
                           <div className="flex justify-center">
                             <span className="py-1 pr-3">
@@ -472,7 +498,7 @@ const TabbedTable = () => {
                             {row.status}
                           </div>
                         </>
-                      ) : row.status === "completed" ? (
+                      ) : row.status === "Accepted" ? (
                         <>
                           <div className="flex justify-center items-center gap-2">
                             <span className="py-1 pr-3">
@@ -494,19 +520,19 @@ const TabbedTable = () => {
                     {/* <td className="text-center sm:text-sm ">{row.status}</td> */}
                     {/* <td className="text-center sm:text-sm ">{row.action}</td> */}
                     <td className="text-center sm:text-sm">
-                      {row.status === "completed" ? (
+                      {row.status === "Accepted" ? (
                         <>
-                        <div className="flex">
-                          {row.action}
-                          <button
-                            className="bg-green hover:bg-blue-700 text-text_light py-1 px-3 ml-4 mr-4 rounded"
-                            onClick={() => handleCheckIn(row)}
-                          >
-                            Check In
-                          </button>
-                          <button className="bg-primary text-text_light font-bold py-1 px-4 rounded">
-                            View
-                          </button>
+                          <div className="flex">
+                            {row.action}
+                            <button
+                              className="bg-green hover:bg-blue-700 text-text_light py-1 px-3 ml-4 mr-4 rounded"
+                              onClick={() => handleCheckIn(row)}
+                            >
+                              Check In
+                            </button>
+                            <button className="bg-primary text-text_light font-bold py-1 px-4 rounded">
+                              View
+                            </button>
                           </div>
                         </>
                       ) : (
