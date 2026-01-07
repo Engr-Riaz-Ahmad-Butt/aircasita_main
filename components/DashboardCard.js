@@ -2,18 +2,18 @@ import React from "react";
 
 export const DashboardCard = ({status, numberOfOrders}) => {
   return (
-    <div className="container flex flex-col sm:flex-row justify-between bg-white p-4 rounded-md product-card-border mb-4">
-      <div className="flex items-center mb-2 sm:mb-0">
-        <div className="flex flex-row md:flex-col items-center md:items-start gap-3">
-          <p className="text-lg font-semibold text-gray-800">{status}</p>
-          <p className="text-sm text-gray-500">{numberOfOrders}</p>
+    <div className="flex flex-row sm:flex-row justify-between bg-white p-4 rounded-md product-card-border h-full">
+      <div className="flex items-center flex-1">
+        <div className="flex flex-col items-start gap-2 w-full">
+          <p className="text-base sm:text-lg font-semibold text-gray-800 truncate">{status}</p>
+          <p className="text-sm sm:text-base text-gray-500">{numberOfOrders}</p>
         </div>
       </div>
 
-      <div className="flex items-center">
-        <div className="bg-gray-300 p-4 rounded-full">
+      <div className="flex items-center ml-4">
+        <div className="bg-gray-300 p-3 sm:p-4 rounded-full flex-shrink-0">
           <svg
-            className="w-6 h-6 text-gray-600"
+            className="w-5 h-5 sm:w-6 sm:h-6 text-gray-600"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"

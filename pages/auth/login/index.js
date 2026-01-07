@@ -32,21 +32,21 @@ export default function Login() {
   };
   return (
     <>
-      <div className="container mx-auto flex justify-center items-center w-full h-screen">
-        <div className="w-full max-w-xl m-0">
+      <div className="container mx-auto flex justify-center items-center w-full min-h-screen px-4 py-8">
+        <div className="w-full max-w-md sm:max-w-lg md:max-w-xl">
           <form
-            className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
+            className="bg-white shadow-md rounded px-6 sm:px-8 pt-6 pb-8 mb-4"
             onSubmit={handleSubmit}
           >
-            <div className="flex justify-center">
+            <div className="flex justify-center mb-6">
               <div className="flex justify-center">
-                <img src={logo.src} className="w-2/4" />
+                <img src={logo.src} className="w-32 sm:w-40 md:w-48" alt="Logo" />
               </div>
             </div>
             <div className="mb-4">
               <label
                 className="block text-gray-700 text-sm font-bold mb-2 font-Montserrat"
-                for="username"
+                htmlFor="usernumber"
               >
                 Phone Number
               </label>
@@ -60,8 +60,7 @@ export default function Login() {
 
             <div>
               <button
-                className="bg-primary
-                 text-text_light w-full  text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline font-Montserrat "
+                className="bg-primary text-text_light w-full text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline font-Montserrat hover:bg-light_primary transition-colors"
                 type="button"
                 onClick={() => {
                   navigate("/");
@@ -72,9 +71,9 @@ export default function Login() {
             </div>
 
             <div className="flex justify-center mt-4 font-Montserrat">
-              <p className="pr-2 text-sm">
-                Don't have an acount ?
-                <Link href="/auth/register" className="text-primary pl-1">
+              <p className="text-sm text-center">
+                Don't have an acount?
+                <Link href="/auth/register" className="text-primary pl-1 hover:underline">
                   Sign Up
                 </Link>
               </p>

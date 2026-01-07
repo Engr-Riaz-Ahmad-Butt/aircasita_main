@@ -25,46 +25,48 @@ const BookingCard = () => {
   };
 
   return (
-    <div className="max-w-md bg-white border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+    <div className="w-full max-w-md mx-auto bg-white border-gray-200 rounded-lg shadow p-4 sm:p-6 md:p-8 dark:bg-gray-800 dark:border-gray-700">
       {bookingSuccess ? (
-        <div className="p-4 w-auto h-auto md:h-96 md:w-96 flex justify-center items-center flex-col">
-          <div className="flex items-center border-b-2 pb-1">
-            <div className="flex-1 min-w-0 ms-4 w-40">
-              <p className="text-sm font-medium text-gray-900 truncate dark:text-white">
+        <div className="p-2 sm:p-4 w-full min-h-[300px] md:min-h-[384px] flex justify-center items-center flex-col">
+          <div className="flex items-center border-b-2 pb-1 w-full">
+            <div className="flex-1 min-w-0 ms-4">
+              <p className="text-sm sm:text-base font-medium text-gray-900 truncate dark:text-white">
                 Total
               </p>
             </div>
-            <div className="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
+            <div className="inline-flex items-center text-base sm:text-lg font-semibold text-gray-900 dark:text-white">
               $367
             </div>
           </div>
-          <div className="payPal mt-10">
-            <a href="/dashboard" className="responsivePayPal">
-              <img src={PaypalLogo.src} alt="Check out with PayPal" />
+          <div className="payPal mt-6 sm:mt-10 w-full">
+            <a href="/dashboard" className="responsivePayPal block">
+              <img src={PaypalLogo.src} alt="Check out with PayPal" className="mx-auto max-w-full" />
             </a>
           </div>
         </div>
       ) : (
         <>
-          <div className="flex items-center justify-between mb-4">
-            <span className="line-through text-1xl p-1">$1,999</span>
-            <span className="text-1xl font-bold p-1">$1,499</span>
-            <span className="text-1xl p-1">/night</span>
-            <span className="text-1xl p-1">
-              <CiStar />
-            </span>
-            <span>4.89(9.Reviews)</span>
+          <div className="flex flex-wrap items-center justify-between mb-4 gap-2">
+            <span className="line-through text-sm sm:text-base p-1">$1,999</span>
+            <span className="text-lg sm:text-xl font-bold p-1">$1,499</span>
+            <span className="text-sm sm:text-base p-1">/night</span>
+            <div className="flex items-center gap-1">
+              <span className="text-base sm:text-lg p-1">
+                <CiStar />
+              </span>
+              <span className="text-sm sm:text-base">4.89(9.Reviews)</span>
+            </div>
           </div>
           <div className="border rounded divide-y divide-gray-200 dark:divide-gray-700">
-            <div className="flex flex-1 divide-x divide-gray-200 dark:divide-gray-700">
-              <div className="md:p-3 w-full">
-                <label className="block text-sm font-medium text-gray-700">
+            <div className="flex flex-col sm:flex-row sm:divide-x divide-gray-200 dark:divide-gray-700">
+              <div className="p-3 w-full">
+                <label className="block text-sm font-medium text-gray-700 mb-1">
                   Check-in
                 </label>
                 <div className="flex justify-center">
                   <DatePicker
                     placeholderText="Check-in date"
-                    className="hover:bg-transparent text-xs md:text-base focus:border-white focus:outline-none bg-transparent font-customFont"
+                    className="hover:bg-transparent text-sm md:text-base w-full text-center focus:border-white focus:outline-none bg-transparent font-customFont"
                     selectsStart
                     selected={startDate}
                     onChange={(date) => setStartDate(date)}
@@ -72,14 +74,14 @@ const BookingCard = () => {
                   />
                 </div>
               </div>
-              <div className="md:p-3 w-full">
-                <label className="block text-sm font-medium text-gray-700">
+              <div className="p-3 w-full border-t sm:border-t-0">
+                <label className="block text-sm font-medium text-gray-700 mb-1">
                   Check-out
                 </label>
-                <div className="">
+                <div className="flex justify-center">
                   <DatePicker
                     placeholderText="Check-out date"
-                    className="hover:bg-transparent text-xs md:text-base focus:border-white focus:outline-none bg-transparent font-customFont"
+                    className="hover:bg-transparent text-sm md:text-base w-full text-center focus:border-white focus:outline-none bg-transparent font-customFont"
                     selectsEnd
                     selected={endDate}
                     onChange={(date) => setEndDate(date)}

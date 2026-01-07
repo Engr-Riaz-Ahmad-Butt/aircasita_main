@@ -33,8 +33,8 @@ export const Card = ({ title, description, slider, viewed, date, price }) => {
   };
 
   return (
-    <div className="mt-6 justify-center max-w-md mx-auto cursor-pointer overflow-hidden sm:max-w-lg product-card-border rounded-xl dark:bg-gray-800 dark:border-gray-700">
-      <div className="relative  h-56 overflow-hidden">
+    <div className="mt-6 justify-center w-full max-w-sm sm:max-w-md mx-auto cursor-pointer overflow-hidden product-card-border rounded-xl dark:bg-gray-800 dark:border-gray-700">
+      <div className="relative h-48 sm:h-56 overflow-hidden">
         <div
           className="flex transition-transform ease-out duration-500"
           style={{ transform: `translateX(-${curr * 100}%)` }}
@@ -44,22 +44,22 @@ export const Card = ({ title, description, slider, viewed, date, price }) => {
               key={index}
               src={item}
               alt={`Slide ${index + 1}`}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover flex-shrink-0"
             />
           ))}
         </div>
-        <div className="absolute inset-0 flex items-center justify-between p-4">
+        <div className="absolute inset-0 flex items-center justify-between p-2 sm:p-4">
           <button
             onClick={prev}
-            className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
+            className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white transition-colors"
           >
-            <MdKeyboardArrowLeft className="text-2xl" />
+            <MdKeyboardArrowLeft className="text-xl sm:text-2xl" />
           </button>
           <button
             onClick={next}
-            className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white"
+            className="p-1 rounded-full shadow bg-white/80 text-gray-800 hover:bg-white transition-colors"
           >
-            <MdOutlineKeyboardArrowRight className="text-2xl" />
+            <MdOutlineKeyboardArrowRight className="text-xl sm:text-2xl" />
           </button>
         </div>
 
@@ -82,11 +82,11 @@ export const Card = ({ title, description, slider, viewed, date, price }) => {
           ))}
         </div> */}
       </div>
-      <div className="px-6 py-4">
-        <div className="font-bold text-xl mb-2 font-customFont">{title}</div>
-        <p className="text-gray-700 text-base font-customFont">{viewed}</p>
-        <p className="text-gray-700 text-base font-customFont">{date}</p>
-        <p className="font-bold">{price}</p>
+      <div className="px-4 sm:px-6 py-4">
+        <div className="font-bold text-lg sm:text-xl mb-2 font-customFont truncate">{title}</div>
+        <p className="text-gray-700 text-sm sm:text-base font-customFont">{viewed}</p>
+        <p className="text-gray-700 text-sm sm:text-base font-customFont">{date}</p>
+        <p className="font-bold text-base sm:text-lg">{price}</p>
       </div>
       {/* <div className="px-6 pb-4">
         <button className="bg-primary text-light hover:bg-blue-700 text-white py-2 px-4 rounded">

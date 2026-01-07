@@ -54,7 +54,7 @@ export const Header = () => {
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <span className="self-center text-2xl font-semibold whitespace-nowrap text-secondary">
-            <img src={logoAircasita.src} className="w-36" />
+            <img src={logoAircasita.src} className="w-24 sm:w-32 md:w-36" />
           </span>
         </Link>
         <div className="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse relative">
@@ -79,13 +79,13 @@ export const Header = () => {
           {/* <!-- Dropdown menu --> */}
 
           <div
-            className={`z-50 absolute top-5 right-0 my-4  bg-light text-base list-none dark:divide-y dark:divide-gray-200 rounded-lg shadow ${
+            className={`z-50 absolute top-10 right-0 bg-light text-base list-none dark:divide-y dark:divide-gray-200 rounded-lg shadow-lg ${
               isDropDownOpen ? "block" : "hidden"
             }`}
             ref={dropdownRef}
           >
-            <div className="px-4 w-36"></div>
-            <ul className="py-2" aria-labelledby="user-menu-button ">
+            <div className="px-4 py-2"></div>
+            <ul className="py-2 min-w-[150px]" aria-labelledby="user-menu-button ">
               <li>
                 <Link
                   href="/public/profile"
@@ -133,22 +133,22 @@ export const Header = () => {
         </div>
 
         <div
-          className={`fixed inset-y-0 right-0 z-50 bg-light dark:bg-gray-900 overflow-hidden transform ${
+          className={`fixed inset-y-0 right-0 z-50 bg-light dark:bg-gray-900 overflow-y-auto transform ${
             isMenuOpen ? "translate-x-0" : "translate-x-full"
           } transition-transform duration-300 md:hidden w-full`}
         >
-          <div className=" text-center  h-full p-2">
-            <div className="flex justify-end text-end">
-              <button onClick={toggleMenu}>
+          <div className="text-center h-full p-4">
+            <div className="flex justify-end text-end mb-4">
+              <button onClick={toggleMenu} className="text-2xl text-primary">
                 <RxCross2 />
               </button>
             </div>
 
-            <ul className="flex flex-col space-y-4">
+            <ul className="flex flex-col space-y-6 mt-8">
               <li>
                 <Link
                   href="/"
-                  className="block  px-3 text-primary  hover:text-secondary bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 font-Montserrat font-bold"
+                  className="block py-3 px-4 text-primary text-lg hover:text-secondary hover:bg-gray-100 rounded font-Montserrat font-bold"
                   aria-current="page"
                 >
                   Home
@@ -157,7 +157,7 @@ export const Header = () => {
               <li>
                 <Link
                   href="/public/about"
-                  className="block px-3 text-primary hover:text-secondary bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 font-Montserrat font-bold"
+                  className="block py-3 px-4 text-primary text-lg hover:text-secondary hover:bg-gray-100 rounded font-Montserrat font-bold"
                   aria-current="page"
                 >
                   About
@@ -166,7 +166,7 @@ export const Header = () => {
               <li>
                 <Link
                   href="/dashboard"
-                  className="block  px-3 text-primary hover:text-secondary bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 font-Montserrat font-bold"
+                  className="block py-3 px-4 text-primary text-lg hover:text-secondary hover:bg-gray-100 rounded font-Montserrat font-bold"
                   aria-current="page"
                 >
                   Dashboard
@@ -175,7 +175,7 @@ export const Header = () => {
               <li>
                 <Link
                   href="/properties"
-                  className="block py-2 px-3 text-primary  hover:text-secondary bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 font-Montserrat font-bold"
+                  className="block py-3 px-4 text-primary text-lg hover:text-secondary hover:bg-gray-100 rounded font-Montserrat font-bold"
                   aria-current="page"
                 >
                   Properties
@@ -184,7 +184,7 @@ export const Header = () => {
               <li>
                 <Link
                   href="/public/contact"
-                  className="block  px-3 text-primary hover:text-secondary bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 font-Montserrat font-bold"
+                  className="block py-3 px-4 text-primary text-lg hover:text-secondary hover:bg-gray-100 rounded font-Montserrat font-bold"
                   aria-current="page"
                 >
                   Contact
@@ -193,7 +193,7 @@ export const Header = () => {
               <li>
                 <Link
                   href="/public/auth/register"
-                  className="block  px-3 text-primary hover:text-secondary bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 font-Montserrat font-bold"
+                  className="block py-3 px-4 text-primary text-lg hover:text-secondary hover:bg-gray-100 rounded font-Montserrat font-bold"
                   aria-current="page"
                 >
                   Sign Up
@@ -202,7 +202,7 @@ export const Header = () => {
               <li>
                 <Link
                   href="/auth/login"
-                  className="block  px-3  text-primary  hover:text-secondary   rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 font-Montserrat font-bold"
+                  className="block py-3 px-4 text-primary text-lg hover:text-secondary hover:bg-gray-100 rounded font-Montserrat font-bold"
                   aria-current="page"
                 >
                   Log In

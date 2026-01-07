@@ -13,28 +13,28 @@ export const PropertyCard = ({
   cancellation,
 }) => {
   return (
-    <div className="h-full max-w-md mx-auto mt-8 ">
-      <div className="bg-white overflow-hidden rounded-lg shadow-md">
+    <div className="h-full w-full max-w-sm sm:max-w-md mx-auto mt-6 sm:mt-8">
+      <div className="bg-white overflow-hidden rounded-lg shadow-md hover:shadow-lg transition-shadow">
         <Image
           src={image}
           alt="Listing Image"
-          className="w-full h-48 object-cover object-center"
+          className="w-full h-40 sm:h-48 object-cover object-center"
         />
 
-        <div className="p-5">
-          <h2 className="text-xl font-semibold mb-2">{title}</h2>
-          <p className="text-gray-600 mb-2">{distance} kilometers away</p>
-          <p className="text-gray-600 mb-2">Mar 25 - 30</p>
+        <div className="p-4 sm:p-5">
+          <h2 className="text-lg sm:text-xl font-semibold mb-2 truncate">{title}</h2>
+          <p className="text-gray-600 mb-2 text-sm sm:text-base">{distance} kilometers away</p>
+          <p className="text-gray-600 mb-2 text-sm sm:text-base">Mar 25 - 30</p>
 
           <div className="flex items-center justify-between mb-2">
             <div>
-              <span className="text-green-500">${price}</span>
-              <span className="text-gray-500">/night</span>
+              <span className="text-green-500 text-base sm:text-lg font-semibold">${price}</span>
+              <span className="text-gray-500 text-sm sm:text-base">/night</span>
             </div>
           </div>
 
           <div className="text-right">
-            <Link href="#" className="text-blue-500 hover:underline">
+            <Link href="#" className="text-blue-500 hover:underline text-sm sm:text-base">
               View details
             </Link>
           </div>

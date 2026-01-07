@@ -45,22 +45,22 @@ const Properties = (props) => {
 
   return (
     <>
-      <div className="grid grid-cols-8 md:grid-cols-6 lg:grid-cols-8 md:container md:mx-auto p-5 md:p-5 font-customFont">
-        <div className="col-span-8 md:col-span-6 lg:col-span-4">
-          <h3 className="text-2xl font-bold py-2">ENTIRE APPATRMENT</h3>
-          <div className="flex flex-col sm:flex-row justify-between">
-            <div>
-              <h1 className="text-4xl font-black">
+      <div className="grid grid-cols-1 lg:grid-cols-8 md:container md:mx-auto p-4 sm:p-5 gap-6 font-customFont">
+        <div className="col-span-1 lg:col-span-5">
+          <h3 className="text-xl sm:text-2xl font-bold py-2">ENTIRE APPATRMENT</h3>
+          <div className="flex flex-col sm:flex-row justify-between gap-4">
+            <div className="flex-1">
+              <h1 className="text-2xl sm:text-3xl lg:text-4xl font-black">
                 Graceful SeaView Duplex 2BR @ Georgetown
               </h1>
-              <p className="text-2xl font-bold py-2 text-slate">Georgetown</p>
+              <p className="text-xl sm:text-2xl font-bold py-2 text-slate">Georgetown</p>
             </div>
           </div>
           <div>
             <Imageslider />
           </div>
-          <h1 className="text-2xl py-3">General Description</h1>
-          <p className="text-slate mr-5">
+          <h1 className="text-xl sm:text-2xl py-3">General Description</h1>
+          <p className="text-slate text-sm sm:text-base leading-relaxed">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -78,22 +78,22 @@ const Properties = (props) => {
           <div className="py-5">
             <Dropdown title="Read more about the space" />
           </div>
-          <div>
-            <h3 className="text-2xl font-bold text-dodgerBlue">Contact Host</h3>
-            <p className="text-1xl my-2">+9123456789</p>
+          <div className="py-4">
+            <h3 className="text-xl sm:text-2xl font-bold text-dodgerBlue">Contact Host</h3>
+            <p className="text-base sm:text-lg my-2">+9123456789</p>
           </div>
-          <hr className="my-8 border border-lite_gray rounded dark:bg-gray-700 mr-6" />
+          <hr className="my-6 sm:my-8 border border-lite_gray rounded dark:bg-gray-700" />
           <div>
-            <div class="grid grid-cols-1 text-slate">
+            <div className="grid grid-cols-1 text-slate">
               <Services />
             </div>
           </div>
 
           <TestimonialsCarousel />
         </div>
-        <div className="bg-gray-800 text-white col-span-8 md:col-span-4 flex justify-center flex-shrink-0 z-20">
-          <div className="flex justify-center rounded md:p-5">
-            <div className="w-full md:w-auto items-center flex flex-col">
+        <div className="col-span-1 lg:col-span-3 bg-gray-800 text-white flex justify-center items-start lg:sticky lg:top-4 lg:h-fit">
+          <div className="flex justify-center rounded p-4 sm:p-5 w-full">
+            <div className="w-full items-center flex flex-col">
               <BookingCard />
             </div>
           </div>
